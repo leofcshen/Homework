@@ -51,7 +51,7 @@ namespace Homework
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error code = {ex.Message}, 請檢查程式碼", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   Form00_MessageBox.msgError(ex);
                 }
             }                        
         }

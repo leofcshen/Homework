@@ -16,9 +16,10 @@ namespace Homework
         {
             InitializeComponent();
         }
-
+        
         private void btnHello_Click(object sender, EventArgs e)
         {
+            // 點擊按鈕：Say Hello!
             string Cname = txtCname.Text;
             string Ename = txtEname.Text;
             string Sex = txtSex.Text;
@@ -43,12 +44,13 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error code = {ex.Message}, 請檢查程式碼", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               Form00_MessageBox.msgError(ex);
             }
         }
 
         private void btnHi_Click(object sender, EventArgs e)
         {
+            // 點擊按鈕：Say Hi!
             string Cname = txtCname.Text;
             string Ename = txtEname.Text;
             string Sex = txtSex.Text;
@@ -73,7 +75,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error code = {ex.Message}, 請檢查程式碼", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               Form00_MessageBox.msgError(ex);
             }
         }
     }

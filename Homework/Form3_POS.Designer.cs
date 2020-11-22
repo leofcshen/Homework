@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3_POS));
             this.gpbMenu = new System.Windows.Forms.GroupBox();
-            this.btnmenu4 = new System.Windows.Forms.Button();
-            this.btnMenu3 = new System.Windows.Forms.Button();
-            this.btnMenu2 = new System.Windows.Forms.Button();
-            this.btnMenu1 = new System.Windows.Forms.Button();
+            this.btnmenuD = new System.Windows.Forms.Button();
+            this.btnMenuC = new System.Windows.Forms.Button();
+            this.btnMenuB = new System.Windows.Forms.Button();
+            this.btnMenuA = new System.Windows.Forms.Button();
             this.gpbTotal = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.gpbPayWay = new System.Windows.Forms.GroupBox();
@@ -41,8 +41,8 @@
             this.btnCredit = new System.Windows.Forms.Button();
             this.btnCash = new System.Windows.Forms.Button();
             this.gpbList = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
             this.lblList = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.gpbMenu.SuspendLayout();
             this.gpbTotal.SuspendLayout();
             this.gpbPayWay.SuspendLayout();
@@ -51,10 +51,10 @@
             // 
             // gpbMenu
             // 
-            this.gpbMenu.Controls.Add(this.btnmenu4);
-            this.gpbMenu.Controls.Add(this.btnMenu3);
-            this.gpbMenu.Controls.Add(this.btnMenu2);
-            this.gpbMenu.Controls.Add(this.btnMenu1);
+            this.gpbMenu.Controls.Add(this.btnmenuD);
+            this.gpbMenu.Controls.Add(this.btnMenuC);
+            this.gpbMenu.Controls.Add(this.btnMenuB);
+            this.gpbMenu.Controls.Add(this.btnMenuA);
             this.gpbMenu.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.gpbMenu.Location = new System.Drawing.Point(12, 12);
             this.gpbMenu.Name = "gpbMenu";
@@ -63,61 +63,60 @@
             this.gpbMenu.TabStop = false;
             this.gpbMenu.Text = "菜單";
             // 
-            // btnmenu4
+            // btnmenuD
             // 
-            this.btnmenu4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmenu4.BackgroundImage")));
-            this.btnmenu4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnmenu4.Font = new System.Drawing.Font("微軟正黑體", 36F);
-            this.btnmenu4.ForeColor = System.Drawing.Color.Red;
-            this.btnmenu4.Location = new System.Drawing.Point(288, 376);
-            this.btnmenu4.Name = "btnmenu4";
-            this.btnmenu4.Size = new System.Drawing.Size(446, 316);
-            this.btnmenu4.TabIndex = 3;
-            this.btnmenu4.Text = "320元";
-            this.btnmenu4.UseVisualStyleBackColor = true;
-            this.btnmenu4.Click += new System.EventHandler(this.btnmenu4_Click);
+            this.btnmenuD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmenuD.BackgroundImage")));
+            this.btnmenuD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnmenuD.Font = new System.Drawing.Font("微軟正黑體", 36F);
+            this.btnmenuD.ForeColor = System.Drawing.Color.Red;
+            this.btnmenuD.Location = new System.Drawing.Point(288, 376);
+            this.btnmenuD.Name = "btnmenuD";
+            this.btnmenuD.Size = new System.Drawing.Size(446, 316);
+            this.btnmenuD.TabIndex = 3;
+            this.btnmenuD.Text = "320元";
+            this.btnmenuD.UseVisualStyleBackColor = true;
+            this.btnmenuD.Click += new System.EventHandler(this.btnMenuD_Click);
             // 
-            // btnMenu3
+            // btnMenuC
             // 
-            this.btnMenu3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenu3.BackgroundImage")));
-            this.btnMenu3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMenu3.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMenu3.ForeColor = System.Drawing.Color.Red;
-            this.btnMenu3.Location = new System.Drawing.Point(24, 376);
-            this.btnMenu3.Name = "btnMenu3";
-            this.btnMenu3.Size = new System.Drawing.Size(258, 316);
-            this.btnMenu3.TabIndex = 2;
-            this.btnMenu3.Text = "350 元";
-            this.btnMenu3.UseVisualStyleBackColor = true;
-            this.btnMenu3.Click += new System.EventHandler(this.btnMenu3_Click);
+            this.btnMenuC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuC.BackgroundImage")));
+            this.btnMenuC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenuC.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMenuC.ForeColor = System.Drawing.Color.Red;
+            this.btnMenuC.Location = new System.Drawing.Point(24, 376);
+            this.btnMenuC.Name = "btnMenuC";
+            this.btnMenuC.Size = new System.Drawing.Size(258, 316);
+            this.btnMenuC.TabIndex = 2;
+            this.btnMenuC.Text = "350 元";
+            this.btnMenuC.UseVisualStyleBackColor = true;
+            this.btnMenuC.Click += new System.EventHandler(this.btnMenuC_Click);
             // 
-            // btnMenu2
+            // btnMenuB
             // 
-            this.btnMenu2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenu2.BackgroundImage")));
-            this.btnMenu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMenu2.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMenu2.ForeColor = System.Drawing.Color.Red;
-            this.btnMenu2.Location = new System.Drawing.Point(288, 41);
-            this.btnMenu2.Name = "btnMenu2";
-            this.btnMenu2.Size = new System.Drawing.Size(255, 338);
-            this.btnMenu2.TabIndex = 1;
-            this.btnMenu2.Text = "180 元";
-            this.btnMenu2.UseVisualStyleBackColor = true;
-            this.btnMenu2.Click += new System.EventHandler(this.btnMenu2_Click);
+            this.btnMenuB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenuB.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMenuB.ForeColor = System.Drawing.Color.Red;
+            this.btnMenuB.Location = new System.Drawing.Point(288, 41);
+            this.btnMenuB.Name = "btnMenuB";
+            this.btnMenuB.Size = new System.Drawing.Size(255, 338);
+            this.btnMenuB.TabIndex = 1;
+            this.btnMenuB.Text = "180 元";
+            this.btnMenuB.UseVisualStyleBackColor = true;
+            this.btnMenuB.Click += new System.EventHandler(this.btnMenuB_Click);
             // 
-            // btnMenu1
+            // btnMenuA
             // 
-            this.btnMenu1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenu1.BackgroundImage")));
-            this.btnMenu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMenu1.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMenu1.ForeColor = System.Drawing.Color.Red;
-            this.btnMenu1.Location = new System.Drawing.Point(24, 41);
-            this.btnMenu1.Name = "btnMenu1";
-            this.btnMenu1.Size = new System.Drawing.Size(258, 338);
-            this.btnMenu1.TabIndex = 0;
-            this.btnMenu1.Text = "120 元";
-            this.btnMenu1.UseVisualStyleBackColor = true;
-            this.btnMenu1.Click += new System.EventHandler(this.btnMenu1_Click);
+            this.btnMenuA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuA.BackgroundImage")));
+            this.btnMenuA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenuA.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMenuA.ForeColor = System.Drawing.Color.Red;
+            this.btnMenuA.Location = new System.Drawing.Point(24, 41);
+            this.btnMenuA.Name = "btnMenuA";
+            this.btnMenuA.Size = new System.Drawing.Size(258, 338);
+            this.btnMenuA.TabIndex = 0;
+            this.btnMenuA.Text = "120 元";
+            this.btnMenuA.UseVisualStyleBackColor = true;
+            this.btnMenuA.Click += new System.EventHandler(this.btnMenuA_Click);
             // 
             // gpbTotal
             // 
@@ -187,31 +186,31 @@
             this.gpbList.Controls.Add(this.lblList);
             this.gpbList.Controls.Add(this.btnClear);
             this.gpbList.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.gpbList.Location = new System.Drawing.Point(800, 30);
+            this.gpbList.Location = new System.Drawing.Point(758, 30);
             this.gpbList.Name = "gpbList";
-            this.gpbList.Size = new System.Drawing.Size(264, 289);
+            this.gpbList.Size = new System.Drawing.Size(331, 289);
             this.gpbList.TabIndex = 2;
             this.gpbList.TabStop = false;
             this.gpbList.Text = "購物清單";
             // 
+            // lblList
+            // 
+            this.lblList.Font = new System.Drawing.Font("細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblList.Location = new System.Drawing.Point(6, 35);
+            this.lblList.Name = "lblList";
+            this.lblList.Size = new System.Drawing.Size(319, 186);
+            this.lblList.TabIndex = 1;
+            this.lblList.Text = "尚未點餐";
+            // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(133, 224);
+            this.btnClear.Location = new System.Drawing.Point(200, 237);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(125, 46);
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "清除清單";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // lblList
-            // 
-            this.lblList.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblList.Location = new System.Drawing.Point(16, 35);
-            this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(242, 186);
-            this.lblList.TabIndex = 1;
-            this.lblList.Text = "尚未點餐";
             // 
             // Form3_POS
             // 
@@ -243,10 +242,10 @@
         private System.Windows.Forms.Label lblOnSale;
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnCash;
-        private System.Windows.Forms.Button btnmenu4;
-        private System.Windows.Forms.Button btnMenu3;
-        private System.Windows.Forms.Button btnMenu2;
-        private System.Windows.Forms.Button btnMenu1;
+        private System.Windows.Forms.Button btnmenuD;
+        private System.Windows.Forms.Button btnMenuC;
+        private System.Windows.Forms.Button btnMenuB;
+        private System.Windows.Forms.Button btnMenuA;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblList;

@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form00_MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form00_MessageBox.Designer.cs">
+      <DependentUpon>Form00_MessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2_Loan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     <Compile Include="Form5_StudentGrade.Designer.cs">
       <DependentUpon>Form5_StudentGrade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8_Caculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8_Caculator.Designer.cs">
+      <DependentUpon>Form8_Caculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +101,7 @@
     <Compile Include="Form1_Hello.Designer.cs">
       <DependentUpon>Form1_Hello.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grade.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form2_Loan.resx">
@@ -106,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5_StudentGrade.resx">
       <DependentUpon>Form5_StudentGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8_Caculator.resx">
+      <DependentUpon>Form8_Caculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>

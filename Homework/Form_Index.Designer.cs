@@ -43,11 +43,12 @@ namespace Homework
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.sslblTimer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.buttonCal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -98,6 +99,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.buttonCal);
             this.splitContainer2.Panel1.Controls.Add(this.btnStuGrade);
             this.splitContainer2.Panel1.Controls.Add(this.btnGrade);
             this.splitContainer2.Panel1.Controls.Add(this.btnPOS);
@@ -130,7 +132,7 @@ namespace Homework
             this.btnGrade.Name = "btnGrade";
             this.btnGrade.Size = new System.Drawing.Size(187, 36);
             this.btnGrade.TabIndex = 5;
-            this.btnGrade.Text = "Grade";
+            this.btnGrade.Text = "strGrade";
             this.btnGrade.UseVisualStyleBackColor = true;
             this.btnGrade.Click += new System.EventHandler(this.btnGrade_Click);
             // 
@@ -200,7 +202,6 @@ namespace Homework
             // 
             // statusStrip1
             // 
-            this.statusStrip1.AutoSize = false;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sslblTimer,
@@ -208,7 +209,7 @@ namespace Homework
             this.toolStripSplitButton1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 40);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1205, 49);
+            this.statusStrip1.Size = new System.Drawing.Size(344, 42);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -216,8 +217,24 @@ namespace Homework
             // 
             this.sslblTimer.Font = new System.Drawing.Font("Microsoft JhengHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.sslblTimer.Name = "sslblTimer";
-            this.sslblTimer.Size = new System.Drawing.Size(95, 44);
+            this.sslblTimer.Size = new System.Drawing.Size(95, 37);
             this.sslblTimer.Text = "Timer";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(200, 37);
+            this.toolStripStatusLabel1.Text = "Edit by Leo Shen";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 40);
+            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
             // lblBless
             // 
@@ -241,21 +258,15 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // toolStripStatusLabel1
+            // buttonCal
             // 
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(200, 44);
-            this.toolStripStatusLabel1.Text = "Edit by Leo Shen";
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 47);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.buttonCal.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonCal.Location = new System.Drawing.Point(12, 303);
+            this.buttonCal.Name = "buttonCal";
+            this.buttonCal.Size = new System.Drawing.Size(187, 36);
+            this.buttonCal.TabIndex = 7;
+            this.buttonCal.Text = "StudentGrade";
+            this.buttonCal.UseVisualStyleBackColor = true;
             // 
             // Form_Index
             // 
@@ -304,6 +315,7 @@ namespace Homework
         private System.Windows.Forms.Button btnStuGrade;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.Button buttonCal;
     }
 }
 

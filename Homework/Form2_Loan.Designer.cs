@@ -116,7 +116,7 @@ namespace Homework
             this.btnPMT.Name = "btnPMT";
             this.btnPMT.Size = new System.Drawing.Size(164, 50);
             this.btnPMT.TabIndex = 22;
-            this.btnPMT.Text = "月付額(PMT)";
+            this.btnPMT.Text = "月付款(PMT)";
             this.btnPMT.UseVisualStyleBackColor = true;
             this.btnPMT.Click += new System.EventHandler(this.btnPMT_Click);
             // 
@@ -156,7 +156,7 @@ namespace Homework
             this.btnMonthPay.Name = "btnMonthPay";
             this.btnMonthPay.Size = new System.Drawing.Size(164, 50);
             this.btnMonthPay.TabIndex = 31;
-            this.btnMonthPay.Text = "月付額(公式)";
+            this.btnMonthPay.Text = "月付款(公式)";
             this.btnMonthPay.UseVisualStyleBackColor = true;
             this.btnMonthPay.Click += new System.EventHandler(this.btnMonthPay_Click);
             // 
