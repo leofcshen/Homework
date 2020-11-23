@@ -221,16 +221,18 @@ namespace Homework
 			int iD = ID;
 			while (ID < iD + 20)
 			{
-				strGrade[ID].Name = Convert.ToString(ID + 1);
+				strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
 				strGrade[ID].CN = R.Next(0, 100);
 				strGrade[ID].EN = R.Next(0, 100);
 				strGrade[ID].Math = R.Next(0, 100);
 				strGrade[ID].Sum = strGrade[ID].CN + strGrade[ID].EN + strGrade[ID].Math;
 				strGrade[ID].Avg = strGrade[ID].Sum / 3.0;
 				MaxAndMin();
-				Label gradeShowLabel = lblGrade;
-				gradeShowLabel.Text = gradeShowLabel.Text + string.Format("{0,-6}{1,6}{2,6}", strGrade[ID].Name, strGrade[ID].CN, strGrade[ID].EN) + string.Format("{0,6}{1,6}{2,8:f1}", strGrade[ID].Math, strGrade[ID].Sum, strGrade[ID].Avg) + string.Format("{0,6}{1,6}\n", strGrade[ID].MajorMin, strGrade[ID].MajorMax);
+				lblGrade.Text += string.Format("{0,2}{1,6}{2,6}{3,6}{4,6}{5,8:f1}{6,8}{7,8}\n",
+				strGrade[ID].Name, strGrade[ID].CN, strGrade[ID].EN, strGrade[ID].Math, strGrade[ID].Sum, strGrade[ID].Avg, strGrade[ID].MajorMin, strGrade[ID].MajorMax);
 				ID++;
+				txtCurrent.Text = ID.ToString();
+				txtLeft.Text = (100 - ID).ToString();
 			}
 			if (ID == 100)
 			{
