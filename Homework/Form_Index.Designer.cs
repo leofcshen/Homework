@@ -220,7 +220,7 @@ namespace Homework
             this.toolStripSplitButton1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 40);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(344, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(445, 42);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -235,8 +235,8 @@ namespace Homework
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(200, 37);
-            this.toolStripStatusLabel1.Text = "Edit by Leo Shen";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(270, 37);
+            this.toolStripStatusLabel1.Text = "Edit by Leo Shen (阿錡)";
             // 
             // toolStripSplitButton1
             // 
