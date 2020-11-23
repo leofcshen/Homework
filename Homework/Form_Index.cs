@@ -107,6 +107,7 @@ namespace Homework
         {
             DateTime time = DateTime.Now;
             sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
+            
         }
 
         private void btnGrade_Click(object sender, EventArgs e)

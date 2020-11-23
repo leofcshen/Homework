@@ -32,9 +32,9 @@ namespace Homework
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpbAlarm = new System.Windows.Forms.GroupBox();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.gpbAlarm.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -62,18 +62,18 @@ namespace Homework
             this.textBox1.Size = new System.Drawing.Size(95, 39);
             this.textBox1.TabIndex = 2;
             // 
-            // groupBox1
+            // gpbAlarm
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(232, 56);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 340);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gpbAlarm.Controls.Add(this.textBox1);
+            this.gpbAlarm.Controls.Add(this.label2);
+            this.gpbAlarm.Controls.Add(this.label1);
+            this.gpbAlarm.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gpbAlarm.Location = new System.Drawing.Point(232, 56);
+            this.gpbAlarm.Name = "gpbAlarm";
+            this.gpbAlarm.Size = new System.Drawing.Size(368, 340);
+            this.gpbAlarm.TabIndex = 3;
+            this.gpbAlarm.TabStop = false;
+            this.gpbAlarm.Text = "Select Time";
             // 
             // lblTimer
             // 
@@ -91,11 +91,11 @@ namespace Homework
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpbAlarm);
             this.Name = "Form16_Alarm";
             this.Text = "Form16_Alarm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpbAlarm.ResumeLayout(false);
+            this.gpbAlarm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +106,7 @@ namespace Homework
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbAlarm;
         private System.Windows.Forms.Label lblTimer;
     }
 }

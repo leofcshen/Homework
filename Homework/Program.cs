@@ -23,9 +23,11 @@ namespace Homework
             //Application.Run(new Form03_POS());
             //Application.Run(new Form04_Grade());
             //Application.Run(new Form05_StudentGrade());
+            //Application.Run(new Form06_StudentGrade_List());
+            Application.Run(new Form07_Method());
             //Application.Run(new Form08_Caculator());
             //Application.Run(new Form10_OOXX());
-            Application.Run(new Form13_DrawPaint());
+            //Application.Run(new Form13_DrawPaint());
             //Application.Run(new Form14_PicViewer());
             //Application.Run(new Form15_GuessNumber());
 
