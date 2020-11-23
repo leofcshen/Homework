@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form4_Grade : Form
+    public partial class Form04_Grade : Form
     {      
 		private StructGrade strGrade; // 宣告 strGrade
-		public Form4_Grade()
+		public Form04_Grade()
         {
             InitializeComponent();
         }

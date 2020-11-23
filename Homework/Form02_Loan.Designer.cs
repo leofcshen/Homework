@@ -1,7 +1,7 @@
 ﻿
 namespace Homework
 {
-    partial class Form2_Loan
+    partial class Form02_Loan
     {
         /// <summary>
         /// Required designer variable.
@@ -171,7 +171,7 @@ namespace Homework
             this.btnTotal2.UseVisualStyleBackColor = true;
             this.btnTotal2.Click += new System.EventHandler(this.btnTotal2_Click);
             // 
-            // Form2_Loan
+            // Form02_Loan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,8 @@ namespace Homework
             this.Controls.Add(this.btnPMT);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.lblAmonut);
-            this.Name = "Form2_Loan";
-            this.Text = "Form1";
+            this.Name = "Form02_Loan";
+            this.Text = "Form02_Loan";
             this.ResumeLayout(false);
             this.PerformLayout();
 

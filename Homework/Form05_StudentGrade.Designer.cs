@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form5_StudentGrade
+    partial class Form05_StudentGrade
     {
         /// <summary>
         /// Required designer variable.
@@ -42,10 +42,10 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnRngX = new System.Windows.Forms.Button();
             this.pnlGarde = new System.Windows.Forms.Panel();
+            this.lblIndex = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
             this.pnlCaculate = new System.Windows.Forms.Panel();
             this.lblCaculate = new System.Windows.Forms.Label();
-            this.lblIndex = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrent = new System.Windows.Forms.TextBox();
             this.txtRam = new System.Windows.Forms.TextBox();
@@ -197,6 +197,15 @@
             this.pnlGarde.Size = new System.Drawing.Size(543, 286);
             this.pnlGarde.TabIndex = 43;
             // 
+            // lblIndex
+            // 
+            this.lblIndex.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblIndex.Location = new System.Drawing.Point(3, 5);
+            this.lblIndex.Name = "lblIndex";
+            this.lblIndex.Size = new System.Drawing.Size(516, 16);
+            this.lblIndex.TabIndex = 1;
+            this.lblIndex.Text = "姓名         國文  英文  數學  總分   平均   最低      最高";
+            // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
@@ -224,15 +233,6 @@
             this.lblCaculate.Name = "lblCaculate";
             this.lblCaculate.Size = new System.Drawing.Size(0, 16);
             this.lblCaculate.TabIndex = 0;
-            // 
-            // lblIndex
-            // 
-            this.lblIndex.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblIndex.Location = new System.Drawing.Point(3, 5);
-            this.lblIndex.Name = "lblIndex";
-            this.lblIndex.Size = new System.Drawing.Size(516, 16);
-            this.lblIndex.TabIndex = 1;
-            this.lblIndex.Text = "姓名         國文  英文  數學  總分   平均   最低      最高";
             // 
             // label1
             // 
@@ -297,7 +297,7 @@
             this.btnRngX2.UseVisualStyleBackColor = true;
             this.btnRngX2.Click += new System.EventHandler(this.btnRngX2_Click);
             // 
-            // Form5_StudentGrade
+            // Form05_StudentGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -324,8 +324,8 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
-            this.Name = "Form5_StudentGrade";
-            this.Text = "Form5_StudentGrade";
+            this.Name = "Form05_StudentGrade";
+            this.Text = "Form05_StudentGrade";
             this.pnlGarde.ResumeLayout(false);
             this.pnlGarde.PerformLayout();
             this.pnlCaculate.ResumeLayout(false);

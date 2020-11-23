@@ -1,7 +1,7 @@
 ﻿
 namespace Homework
 {
-    partial class Form8_Caculator
+    partial class Form08_Caculator
     {
         /// <summary>
         /// Required designer variable.
@@ -171,14 +171,14 @@ namespace Homework
             this.lblEquation.TabIndex = 10;
             this.lblEquation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Form8_Caculator
+            // Form08_Caculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gpbCaculator);
-            this.Name = "Form8_Caculator";
-            this.Text = "Form8_Caculator";
+            this.Name = "Form08_Caculator";
+            this.Text = "Form08_Caculator";
             this.gpbCaculator.ResumeLayout(false);
             this.gpbCaculator.PerformLayout();
             this.ResumeLayout(false);

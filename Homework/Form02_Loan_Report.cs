@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form2_LoanReport : Form
+    public partial class Form02_Loan_Report : Form
     {
-        public Form2_LoanReport()
+        public Form02_Loan_Report()
         {
             InitializeComponent();
         }

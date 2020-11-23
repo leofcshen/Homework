@@ -25,7 +25,7 @@ namespace Homework
         private void btnHello_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form1_Hello fh = new Form1_Hello();
+            Form01_Hello fh = new Form01_Hello();
             fh.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fh);            
             fh.Show();
@@ -34,7 +34,7 @@ namespace Homework
         private void btnLoan_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form2_Loan fl = new Form2_Loan();
+            Form02_Loan fl = new Form02_Loan();
             fl.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fl);
             // 設定預設值
@@ -97,7 +97,7 @@ namespace Homework
         private void btnPOS_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form3_POS fp = new Form3_POS();
+            Form03_POS fp = new Form03_POS();
             fp.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fp);
             fp.Show();
@@ -112,7 +112,7 @@ namespace Homework
         private void btnGrade_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form4_Grade fg = new Form4_Grade();
+            Form04_Grade fg = new Form04_Grade();
             fg.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fg);
             fg.Show();
@@ -121,7 +121,7 @@ namespace Homework
         private void btnStuGrade_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form5_StudentGrade fsg = new Form5_StudentGrade();
+            Form05_StudentGrade fsg = new Form05_StudentGrade();
             fsg.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fsg);
             fsg.Show();
@@ -130,7 +130,7 @@ namespace Homework
         private void btnCal_Click(object sender, EventArgs e)
         {
             splitContainer3.Panel1.Controls.Clear();
-            Form8_Caculator fc = new Form8_Caculator();
+            Form08_Caculator fc = new Form08_Caculator();
             fc.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fc);
             fc.Show();

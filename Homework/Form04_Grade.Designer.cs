@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form4_Grade
+    partial class Form04_Grade
     {
         /// <summary>
         /// Required designer variable.
@@ -204,7 +204,7 @@
             this.btnMinMax3.UseVisualStyleBackColor = true;
             this.btnMinMax3.Click += new System.EventHandler(this.btnMinMax3_Click);
             // 
-            // Form4_Grade
+            // Form04_Grade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,8 +223,8 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
-            this.Name = "Form4_Grade";
-            this.Text = "Form_CountPoint";
+            this.Name = "Form04_Grade";
+            this.Text = "Form04_Grade";
             this.gpbGrade.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

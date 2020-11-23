@@ -32,13 +32,13 @@ namespace Homework
                 label2.BackColor = colorDialog1.Color;
             }
         }
-        private void DrawPaint_MouseDown(object sender, MouseEventArgs e)
+        private void Form13_DrawPaint_MouseDown(object sender, MouseEventArgs e)
         {
             flag = true;
             poi.X = e.X;
             poi.Y = e.Y;
         }
-        private void DrawPaint_MouseMove(object sender, MouseEventArgs e)
+        private void Form13_DrawPaint_MouseMove(object sender, MouseEventArgs e)
         {
             if (flag)
             {
@@ -47,11 +47,16 @@ namespace Homework
                 poi.Y = e.Y;
             }
         }
+        
+        private void Form13_DrawPaint_MouseUp(object sender, MouseEventArgs e)
+        {
+            flag = false;
+        }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label1.Text = string.Concat(trackBar1.Value);
             p.Width = trackBar1.Value;
         }
     }
-
 }

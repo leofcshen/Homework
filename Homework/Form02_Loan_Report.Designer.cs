@@ -1,7 +1,7 @@
 ﻿
 namespace Homework
 {
-    partial class Form2_LoanReport
+    partial class Form02_Loan_Report
     {
         /// <summary>
         /// Required designer variable.

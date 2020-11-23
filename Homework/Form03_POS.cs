@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form3_POS : Form
+    public partial class Form03_POS : Form
     {		
-		public Form3_POS()
+		public Form03_POS()
         {
             InitializeComponent();
         }

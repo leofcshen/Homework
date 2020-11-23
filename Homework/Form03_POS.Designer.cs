@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form3_POS
+    partial class Form03_POS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3_POS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form03_POS));
             this.gpbMenu = new System.Windows.Forms.GroupBox();
             this.btnmenuD = new System.Windows.Forms.Button();
             this.btnMenuC = new System.Windows.Forms.Button();
@@ -213,7 +213,7 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // Form3_POS
+            // Form03_POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,8 +222,8 @@
             this.Controls.Add(this.gpbPayWay);
             this.Controls.Add(this.gpbTotal);
             this.Controls.Add(this.gpbMenu);
-            this.Name = "Form3_POS";
-            this.Text = "Form3_POS";
+            this.Name = "Form03_POS";
+            this.Text = "Form03_POS";
             this.gpbMenu.ResumeLayout(false);
             this.gpbTotal.ResumeLayout(false);
             this.gpbTotal.PerformLayout();

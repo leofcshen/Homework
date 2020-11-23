@@ -1,7 +1,7 @@
 ﻿
 namespace Homework
 {
-    partial class Form1_Hello
+    partial class Form01_Hello
     {
         /// <summary>
         /// Required designer variable.
@@ -135,7 +135,7 @@ namespace Homework
             this.lblCname.TabIndex = 10;
             this.lblCname.Text = "姓名";
             // 
-            // Form1_Hello
+            // Form01_Hello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,8 +150,8 @@ namespace Homework
             this.Controls.Add(this.btnHello);
             this.Controls.Add(this.txtCname);
             this.Controls.Add(this.lblCname);
-            this.Name = "Form1_Hello";
-            this.Text = "Form1_Hello";
+            this.Name = "Form01_Hello";
+            this.Text = "Form01_Hello";
             this.ResumeLayout(false);
             this.PerformLayout();
 

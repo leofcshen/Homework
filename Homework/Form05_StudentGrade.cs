@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form5_StudentGrade : Form
+    public partial class Form05_StudentGrade : Form
     {        
-        public Form5_StudentGrade()
+        public Form05_StudentGrade()
         {
             InitializeComponent();			
 		}

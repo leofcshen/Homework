@@ -89,41 +89,47 @@
     <Compile Include="Form15_GuessNumber.Designer.cs">
       <DependentUpon>Form15_GuessNumber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2_Loan.cs">
+    <Compile Include="Form02_Loan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_Loan.Designer.cs">
-      <DependentUpon>Form2_Loan.cs</DependentUpon>
+    <Compile Include="Form02_Loan.Designer.cs">
+      <DependentUpon>Form02_Loan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2_LoanReport.cs">
+    <Compile Include="Form02_Loan_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_LoanReport.Designer.cs">
-      <DependentUpon>Form2_LoanReport.cs</DependentUpon>
+    <Compile Include="Form02_Loan_Report.Designer.cs">
+      <DependentUpon>Form02_Loan_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3_POS.cs">
+    <Compile Include="Form03_POS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3_POS.Designer.cs">
-      <DependentUpon>Form3_POS.cs</DependentUpon>
+    <Compile Include="Form03_POS.Designer.cs">
+      <DependentUpon>Form03_POS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4_Grade.cs">
+    <Compile Include="Form04_Grade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4_Grade.Designer.cs">
-      <DependentUpon>Form4_Grade.cs</DependentUpon>
+    <Compile Include="Form04_Grade.Designer.cs">
+      <DependentUpon>Form04_Grade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5_StudentGrade.cs">
+    <Compile Include="Form05_StudentGrade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5_StudentGrade.Designer.cs">
-      <DependentUpon>Form5_StudentGrade.cs</DependentUpon>
+    <Compile Include="Form05_StudentGrade.Designer.cs">
+      <DependentUpon>Form05_StudentGrade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8_Caculator.cs">
+    <Compile Include="Form08_Caculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8_Caculator.Designer.cs">
-      <DependentUpon>Form8_Caculator.cs</DependentUpon>
+    <Compile Include="Form08_Caculator.Designer.cs">
+      <DependentUpon>Form08_Caculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form16_Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16_Alarm.Designer.cs">
+      <DependentUpon>Form16_Alarm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
@@ -131,11 +137,11 @@
     <Compile Include="Form_Index.Designer.cs">
       <DependentUpon>Form_Index.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1_Hello.cs">
+    <Compile Include="Form01_Hello.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1_Hello.Designer.cs">
-      <DependentUpon>Form1_Hello.cs</DependentUpon>
+    <Compile Include="Form01_Hello.Designer.cs">
+      <DependentUpon>Form01_Hello.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
@@ -158,29 +164,32 @@
     <EmbeddedResource Include="Form15_GuessNumber.resx">
       <DependentUpon>Form15_GuessNumber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2_Loan.resx">
-      <DependentUpon>Form2_Loan.cs</DependentUpon>
+    <EmbeddedResource Include="Form02_Loan.resx">
+      <DependentUpon>Form02_Loan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2_LoanReport.resx">
-      <DependentUpon>Form2_LoanReport.cs</DependentUpon>
+    <EmbeddedResource Include="Form02_Loan_Report.resx">
+      <DependentUpon>Form02_Loan_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3_POS.resx">
-      <DependentUpon>Form3_POS.cs</DependentUpon>
+    <EmbeddedResource Include="Form03_POS.resx">
+      <DependentUpon>Form03_POS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4_Grade.resx">
-      <DependentUpon>Form4_Grade.cs</DependentUpon>
+    <EmbeddedResource Include="Form04_Grade.resx">
+      <DependentUpon>Form04_Grade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5_StudentGrade.resx">
-      <DependentUpon>Form5_StudentGrade.cs</DependentUpon>
+    <EmbeddedResource Include="Form05_StudentGrade.resx">
+      <DependentUpon>Form05_StudentGrade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8_Caculator.resx">
-      <DependentUpon>Form8_Caculator.cs</DependentUpon>
+    <EmbeddedResource Include="Form08_Caculator.resx">
+      <DependentUpon>Form08_Caculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16_Alarm.resx">
+      <DependentUpon>Form16_Alarm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1_Hello.resx">
-      <DependentUpon>Form1_Hello.cs</DependentUpon>
+    <EmbeddedResource Include="Form01_Hello.resx">
+      <DependentUpon>Form01_Hello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

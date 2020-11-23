@@ -11,9 +11,9 @@ using Microsoft.VisualBasic;
 
 namespace Homework
 {
-    public partial class Form2_Loan : Form
+    public partial class Form02_Loan : Form
     {
-        public Form2_Loan()
+        public Form02_Loan()
         {
             InitializeComponent();
         }
@@ -114,7 +114,7 @@ namespace Homework
             // 點擊按鈕：Report)
             try
             {
-                Form2_LoanReport flr = new Form2_LoanReport();
+                Form02_Loan_Report flr = new Form02_Loan_Report();
                 // 不同 form取控件值需要修改權限
                 flr.txtRAmount.Text = txtAmount.Text;
                 flr.txtRYear.Text = txtYear.Text;
