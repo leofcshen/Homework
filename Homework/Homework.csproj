@@ -53,6 +53,18 @@
     <Compile Include="Form00_MessageBox.Designer.cs">
       <DependentUpon>Form00_MessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form14_PicViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14_PicViewer.Designer.cs">
+      <DependentUpon>Form14_PicViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10_OOXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10_OOXX.Designer.cs">
+      <DependentUpon>Form10_OOXX.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2_Loan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form10_OOXX.resx">
+      <DependentUpon>Form10_OOXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14_PicViewer.resx">
+      <DependentUpon>Form14_PicViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2_Loan.resx">
       <DependentUpon>Form2_Loan.cs</DependentUpon>
     </EmbeddedResource>

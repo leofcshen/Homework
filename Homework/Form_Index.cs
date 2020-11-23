@@ -135,5 +135,23 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fc);
             fc.Show();
         }
+
+        private void btnXO_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form10_OOXX fo = new Form10_OOXX();
+            fo.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fo);
+            fo.Show();
+        }
+
+        private void btnPicViewer_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form14_PicViewer fp = new Form14_PicViewer();
+            fp.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fp);
+            fp.Show();
+        }
     }
 }

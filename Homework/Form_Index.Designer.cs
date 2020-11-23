@@ -34,6 +34,8 @@ namespace Homework
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnPicViewer = new System.Windows.Forms.Button();
+            this.btnXO = new System.Windows.Forms.Button();
             this.btnCal = new System.Windows.Forms.Button();
             this.btnStuGrade = new System.Windows.Forms.Button();
             this.btnGrade = new System.Windows.Forms.Button();
@@ -99,6 +101,8 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnPicViewer);
+            this.splitContainer2.Panel1.Controls.Add(this.btnXO);
             this.splitContainer2.Panel1.Controls.Add(this.btnCal);
             this.splitContainer2.Panel1.Controls.Add(this.btnStuGrade);
             this.splitContainer2.Panel1.Controls.Add(this.btnGrade);
@@ -113,6 +117,28 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 700);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnPicViewer
+            // 
+            this.btnPicViewer.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPicViewer.Location = new System.Drawing.Point(12, 402);
+            this.btnPicViewer.Name = "btnPicViewer";
+            this.btnPicViewer.Size = new System.Drawing.Size(187, 36);
+            this.btnPicViewer.TabIndex = 9;
+            this.btnPicViewer.Text = "PictureViewer";
+            this.btnPicViewer.UseVisualStyleBackColor = true;
+            this.btnPicViewer.Click += new System.EventHandler(this.btnPicViewer_Click);
+            // 
+            // btnXO
+            // 
+            this.btnXO.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnXO.Location = new System.Drawing.Point(12, 364);
+            this.btnXO.Name = "btnXO";
+            this.btnXO.Size = new System.Drawing.Size(187, 36);
+            this.btnXO.TabIndex = 8;
+            this.btnXO.Text = "OOXX";
+            this.btnXO.UseVisualStyleBackColor = true;
+            this.btnXO.Click += new System.EventHandler(this.btnXO_Click);
             // 
             // btnCal
             // 
@@ -220,7 +246,7 @@ namespace Homework
             this.toolStripSplitButton1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 40);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(445, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(414, 42);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -317,6 +343,8 @@ namespace Homework
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.Button btnCal;
+        private System.Windows.Forms.Button btnXO;
+        private System.Windows.Forms.Button btnPicViewer;
     }
 }
 
