@@ -53,6 +53,18 @@
     <Compile Include="Form00_MessageBox.Designer.cs">
       <DependentUpon>Form00_MessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13_DrawPaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13_DrawPaint.Designer.cs">
+      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form14_PicViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +140,14 @@
     <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form10_OOXX.resx">
       <DependentUpon>Form10_OOXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13_DrawPaint.resx">
+      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form14_PicViewer.resx">
       <DependentUpon>Form14_PicViewer.cs</DependentUpon>

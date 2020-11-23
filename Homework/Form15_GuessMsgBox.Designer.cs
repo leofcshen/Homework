@@ -37,9 +37,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCancel.Location = new System.Drawing.Point(507, 248);
+            this.btnCancel.Location = new System.Drawing.Point(391, 117);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(183, 52);
+            this.btnCancel.Size = new System.Drawing.Size(108, 52);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEnter.Location = new System.Drawing.Point(507, 162);
+            this.btnEnter.Location = new System.Drawing.Point(391, 31);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(108, 52);
             this.btnEnter.TabIndex = 4;
@@ -60,7 +60,7 @@
             // 
             this.lblRange.AutoSize = true;
             this.lblRange.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblRange.Location = new System.Drawing.Point(238, 162);
+            this.lblRange.Location = new System.Drawing.Point(48, 31);
             this.lblRange.Name = "lblRange";
             this.lblRange.Size = new System.Drawing.Size(169, 30);
             this.lblRange.TabIndex = 3;
@@ -68,7 +68,7 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(225, 328);
+            this.txtNumber.Location = new System.Drawing.Point(35, 197);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(464, 22);
             this.txtNumber.TabIndex = 6;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(519, 238);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEnter);

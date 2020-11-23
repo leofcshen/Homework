@@ -162,5 +162,14 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fg);
             fg.Show();
         }
+
+        private void btnDrawPaint_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form13_DrawPaint fd = new Form13_DrawPaint();
+            fd.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fd);
+            fd.Show();
+        }
     }
 }

@@ -60,9 +60,7 @@ namespace Homework
                 MessageBox.Show($"請輸入{Min}~{Max}之間的數字。", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             txtNumber.Focus();
-            txtNumber.SelectAll();
-
-        
+            txtNumber.SelectAll();        
         }
     }
 }
