@@ -216,29 +216,36 @@ namespace Homework
 
         private void btnRngX_Click(object sender, EventArgs e)
 		{
-			// 按鈕：隨機加入20筆
-			btnTotal.Enabled = true;
-			int iD = ID;
-			while (ID < iD + 20)
-			{
-				strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
-				strGrade[ID].CN = R.Next(0, 100);
-				strGrade[ID].EN = R.Next(0, 100);
-				strGrade[ID].Math = R.Next(0, 100);
-				strGrade[ID].Sum = strGrade[ID].CN + strGrade[ID].EN + strGrade[ID].Math;
-				strGrade[ID].Avg = strGrade[ID].Sum / 3.0;
-				MaxAndMin();
-				lblGrade.Text += string.Format("{0,2}{1,6}{2,6}{3,6}{4,6}{5,8:f1}{6,8}{7,8}\n",
-				strGrade[ID].Name, strGrade[ID].CN, strGrade[ID].EN, strGrade[ID].Math, strGrade[ID].Sum, strGrade[ID].Avg, strGrade[ID].MajorMin, strGrade[ID].MajorMax);
-				ID++;
-				txtCurrent.Text = ID.ToString();
-				txtLeft.Text = (100 - ID).ToString();
+            // 按鈕：隨機加入20筆
+            try
+            {
+				btnTotal.Enabled = true;
+				int iD = ID;
+				while (ID < iD + 20)
+				{
+					strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
+					strGrade[ID].CN = R.Next(0, 100);
+					strGrade[ID].EN = R.Next(0, 100);
+					strGrade[ID].Math = R.Next(0, 100);
+					strGrade[ID].Sum = strGrade[ID].CN + strGrade[ID].EN + strGrade[ID].Math;
+					strGrade[ID].Avg = strGrade[ID].Sum / 3.0;
+					MaxAndMin();
+					lblGrade.Text += string.Format("{0,2}{1,6}{2,6}{3,6}{4,6}{5,8:f1}{6,8}{7,8}\n",
+					strGrade[ID].Name, strGrade[ID].CN, strGrade[ID].EN, strGrade[ID].Math, strGrade[ID].Sum, strGrade[ID].Avg, strGrade[ID].MajorMin, strGrade[ID].MajorMax);
+					ID++;
+					txtCurrent.Text = ID.ToString();
+					txtLeft.Text = (100 - ID).ToString();
+				}
+				if (ID == 100)
+				{
+					MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					btnAdd.Enabled = false;
+				}
 			}
-			if (ID == 100)
-			{
-				MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				btnAdd.Enabled = false;
-			}
+			catch(Exception ex)
+            {
+				Form00_MessageBox.msgError(ex);
+            }
 		}
 
         private void btnRngX2_Click(object sender, EventArgs e)
