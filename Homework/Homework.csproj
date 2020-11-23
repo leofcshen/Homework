@@ -65,6 +65,18 @@
     <Compile Include="Form10_OOXX.Designer.cs">
       <DependentUpon>Form10_OOXX.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form15_GuessMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15_GuessMsgBox.Designer.cs">
+      <DependentUpon>Form15_GuessMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15_GuessNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15_GuessNumber.Designer.cs">
+      <DependentUpon>Form15_GuessNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2_Loan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form14_PicViewer.resx">
       <DependentUpon>Form14_PicViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15_GuessMsgBox.resx">
+      <DependentUpon>Form15_GuessMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15_GuessNumber.resx">
+      <DependentUpon>Form15_GuessNumber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2_Loan.resx">
       <DependentUpon>Form2_Loan.cs</DependentUpon>

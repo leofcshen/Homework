@@ -15,9 +15,10 @@ namespace Homework
         public Form14_PicViewer()
         {
             InitializeComponent();
+            // 找出所有控制元件 in flowLayoutPanel1
             foreach (Control control in flowLayoutPanel1.Controls)
             {
-                if (control is PictureBox)
+                if (control is PictureBox) // 如果該元件是 PictureBox
                 {
                     control.Click += Pic_Click;
                 }
@@ -26,6 +27,7 @@ namespace Homework
 
         private void Pic_Click(object sender, EventArgs e)
         {
+            // 點擊圖片開啟視窗
             Form form = new Form();
             form.BackgroundImage = ((PictureBox)sender).Image;
             form.BackgroundImageLayout = ImageLayout.Zoom;

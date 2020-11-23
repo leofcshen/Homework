@@ -153,5 +153,14 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fp);
             fp.Show();
         }
+
+        private void btnGuessNumber_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form15_GuessNumber fg = new Form15_GuessNumber();
+            fg.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fg);
+            fg.Show();
+        }
     }
 }

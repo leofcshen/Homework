@@ -51,6 +51,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
+            this.btnGuessNumber = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -101,6 +102,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnGuessNumber);
             this.splitContainer2.Panel1.Controls.Add(this.btnPicViewer);
             this.splitContainer2.Panel1.Controls.Add(this.btnXO);
             this.splitContainer2.Panel1.Controls.Add(this.btnCal);
@@ -187,9 +189,9 @@ namespace Homework
             // btnNote
             // 
             this.btnNote.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnNote.Location = new System.Drawing.Point(12, 444);
+            this.btnNote.Location = new System.Drawing.Point(12, 646);
             this.btnNote.Name = "btnNote";
-            this.btnNote.Size = new System.Drawing.Size(178, 42);
+            this.btnNote.Size = new System.Drawing.Size(187, 42);
             this.btnNote.TabIndex = 3;
             this.btnNote.Text = "顯示/關閉說明";
             this.btnNote.UseVisualStyleBackColor = true;
@@ -295,6 +297,17 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
+            // btnGuessNumber
+            // 
+            this.btnGuessNumber.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnGuessNumber.Location = new System.Drawing.Point(12, 444);
+            this.btnGuessNumber.Name = "btnGuessNumber";
+            this.btnGuessNumber.Size = new System.Drawing.Size(187, 36);
+            this.btnGuessNumber.TabIndex = 10;
+            this.btnGuessNumber.Text = "考試_終極密碼";
+            this.btnGuessNumber.UseVisualStyleBackColor = true;
+            this.btnGuessNumber.Click += new System.EventHandler(this.btnGuessNumber_Click);
+            // 
             // Form_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -345,6 +358,7 @@ namespace Homework
         private System.Windows.Forms.Button btnCal;
         private System.Windows.Forms.Button btnXO;
         private System.Windows.Forms.Button btnPicViewer;
+        private System.Windows.Forms.Button btnGuessNumber;
     }
 }
 
