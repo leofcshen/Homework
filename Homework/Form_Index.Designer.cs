@@ -34,6 +34,7 @@ namespace Homework
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnCal = new System.Windows.Forms.Button();
             this.btnStuGrade = new System.Windows.Forms.Button();
             this.btnGrade = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.buttonCal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -99,7 +99,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.buttonCal);
+            this.splitContainer2.Panel1.Controls.Add(this.btnCal);
             this.splitContainer2.Panel1.Controls.Add(this.btnStuGrade);
             this.splitContainer2.Panel1.Controls.Add(this.btnGrade);
             this.splitContainer2.Panel1.Controls.Add(this.btnPOS);
@@ -113,6 +113,17 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 700);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnCal
+            // 
+            this.btnCal.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCal.Location = new System.Drawing.Point(12, 303);
+            this.btnCal.Name = "btnCal";
+            this.btnCal.Size = new System.Drawing.Size(187, 36);
+            this.btnCal.TabIndex = 7;
+            this.btnCal.Text = "Caculator";
+            this.btnCal.UseVisualStyleBackColor = true;
+            this.btnCal.Click += new System.EventHandler(this.btnCal_Click);
             // 
             // btnStuGrade
             // 
@@ -258,16 +269,6 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // buttonCal
-            // 
-            this.buttonCal.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonCal.Location = new System.Drawing.Point(12, 303);
-            this.buttonCal.Name = "buttonCal";
-            this.buttonCal.Size = new System.Drawing.Size(187, 36);
-            this.buttonCal.TabIndex = 7;
-            this.buttonCal.Text = "StudentGrade";
-            this.buttonCal.UseVisualStyleBackColor = true;
-            // 
             // Form_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -315,7 +316,7 @@ namespace Homework
         private System.Windows.Forms.Button btnStuGrade;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.Button buttonCal;
+        private System.Windows.Forms.Button btnCal;
     }
 }
 

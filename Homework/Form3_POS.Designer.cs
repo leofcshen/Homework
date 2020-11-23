@@ -93,6 +93,7 @@
             // 
             // btnMenuB
             // 
+            this.btnMenuB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuB.BackgroundImage")));
             this.btnMenuB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMenuB.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnMenuB.ForeColor = System.Drawing.Color.Red;

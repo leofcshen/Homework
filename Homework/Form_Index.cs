@@ -120,11 +120,20 @@ namespace Homework
 
         private void btnStuGrade_Click(object sender, EventArgs e)
         {
-            //splitContainer3.Panel1.Controls.Clear();
-            //Form5_StudentGrade fsg = new Form5_StudentGrade();
-            //fsg.TopLevel = false;
-            //splitContainer3.Panel1.Controls.Add(fsg);
-            //fsg.Show();
-        }       
+            splitContainer3.Panel1.Controls.Clear();
+            Form5_StudentGrade fsg = new Form5_StudentGrade();
+            fsg.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fsg);
+            fsg.Show();
+        }
+
+        private void btnCal_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form8_Caculator fc = new Form8_Caculator();
+            fc.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fc);
+            fc.Show();
+        }
     }
 }
