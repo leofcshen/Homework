@@ -233,7 +233,7 @@ namespace Homework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1152, 450);
             this.Controls.Add(this.lblShowResult);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.txtNumber);

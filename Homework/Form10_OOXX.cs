@@ -110,6 +110,7 @@ namespace Homework
 
 		private void Form10_OOXX_KeyDown(object sender, KeyEventArgs e)
 		{
+			// TODO 鍵盤功能
 			if (e.KeyCode == Keys.R)
 			{
 				this.btnReset_Click(this, e);
