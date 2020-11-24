@@ -29,7 +29,6 @@ namespace Homework
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRngX2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRam = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,37 +41,32 @@ namespace Homework
             this.txtLeft = new System.Windows.Forms.TextBox();
             this.pnlGarde = new System.Windows.Forms.Panel();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnTotal = new System.Windows.Forms.Button();
-            this.btnRngX = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.txtMath = new System.Windows.Forms.TextBox();
             this.lblMath = new System.Windows.Forms.Label();
             this.txtEng = new System.Windows.Forms.TextBox();
             this.lblEng = new System.Windows.Forms.Label();
             this.txtCN = new System.Windows.Forms.TextBox();
             this.lblCN = new System.Windows.Forms.Label();
-            this.btnRng = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnTotal = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblDash = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.pnlCaculate.SuspendLayout();
             this.pnlGarde.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnRngX2
-            // 
-            this.btnRngX2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRngX2.Location = new System.Drawing.Point(143, 403);
-            this.btnRngX2.Name = "btnRngX2";
-            this.btnRngX2.Size = new System.Drawing.Size(40, 39);
-            this.btnRngX2.TabIndex = 71;
-            this.btnRngX2.Text = "(2)";
-            this.btnRngX2.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(14, 327);
+            this.label3.Location = new System.Drawing.Point(152, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 69;
@@ -80,7 +74,7 @@ namespace Homework
             // 
             // txtRam
             // 
-            this.txtRam.Location = new System.Drawing.Point(93, 282);
+            this.txtRam.Location = new System.Drawing.Point(231, 169);
             this.txtRam.Name = "txtRam";
             this.txtRam.Size = new System.Drawing.Size(52, 22);
             this.txtRam.TabIndex = 67;
@@ -90,7 +84,7 @@ namespace Homework
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(14, 284);
+            this.label2.Location = new System.Drawing.Point(152, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 68;
@@ -98,7 +92,7 @@ namespace Homework
             // 
             // txtCurrent
             // 
-            this.txtCurrent.Location = new System.Drawing.Point(93, 305);
+            this.txtCurrent.Location = new System.Drawing.Point(231, 192);
             this.txtCurrent.Name = "txtCurrent";
             this.txtCurrent.Size = new System.Drawing.Size(52, 22);
             this.txtCurrent.TabIndex = 50;
@@ -107,7 +101,7 @@ namespace Homework
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(14, 307);
+            this.label1.Location = new System.Drawing.Point(152, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 51;
@@ -152,7 +146,7 @@ namespace Homework
             // 
             // txtLeft
             // 
-            this.txtLeft.Location = new System.Drawing.Point(93, 325);
+            this.txtLeft.Location = new System.Drawing.Point(231, 212);
             this.txtLeft.Name = "txtLeft";
             this.txtLeft.Size = new System.Drawing.Size(52, 22);
             this.txtLeft.TabIndex = 70;
@@ -172,33 +166,25 @@ namespace Homework
             // 
             this.btnReset.Enabled = false;
             this.btnReset.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnReset.Location = new System.Drawing.Point(13, 358);
+            this.btnReset.Location = new System.Drawing.Point(13, 291);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(124, 39);
             this.btnReset.TabIndex = 63;
-            this.btnReset.Text = "重設所有資料";
+            this.btnReset.Text = "清除所有資料";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // btnTotal
+            // btnRemove
             // 
-            this.btnTotal.Enabled = false;
-            this.btnTotal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnTotal.Location = new System.Drawing.Point(13, 242);
-            this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(124, 39);
-            this.btnTotal.TabIndex = 62;
-            this.btnTotal.Text = "各科統計";
-            this.btnTotal.UseVisualStyleBackColor = true;
-            // 
-            // btnRngX
-            // 
-            this.btnRngX.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRngX.Location = new System.Drawing.Point(13, 403);
-            this.btnRngX.Name = "btnRngX";
-            this.btnRngX.Size = new System.Drawing.Size(124, 39);
-            this.btnRngX.TabIndex = 64;
-            this.btnRngX.Text = "隨機加入20筆";
-            this.btnRngX.UseVisualStyleBackColor = true;
+            this.btnRemove.Enabled = false;
+            this.btnRemove.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRemove.Location = new System.Drawing.Point(13, 242);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(124, 39);
+            this.btnRemove.TabIndex = 62;
+            this.btnRemove.Text = "移除資料";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // txtMath
             // 
@@ -254,15 +240,16 @@ namespace Homework
             this.lblCN.TabIndex = 56;
             this.lblCN.Text = "國文";
             // 
-            // btnRng
+            // btnInsert
             // 
-            this.btnRng.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRng.Location = new System.Drawing.Point(13, 197);
-            this.btnRng.Name = "btnRng";
-            this.btnRng.Size = new System.Drawing.Size(124, 39);
-            this.btnRng.TabIndex = 55;
-            this.btnRng.Text = "隨機儲存資料";
-            this.btnRng.UseVisualStyleBackColor = true;
+            this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnInsert.Location = new System.Drawing.Point(13, 197);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(124, 39);
+            this.btnInsert.TabIndex = 55;
+            this.btnInsert.Text = "插入儲存資料";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnAdd
             // 
@@ -273,6 +260,7 @@ namespace Homework
             this.btnAdd.TabIndex = 54;
             this.btnAdd.Text = "加入學生資料";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtName
             // 
@@ -292,12 +280,73 @@ namespace Homework
             this.lblName.TabIndex = 52;
             this.lblName.Text = "姓名";
             // 
+            // btnTotal
+            // 
+            this.btnTotal.Enabled = false;
+            this.btnTotal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnTotal.Location = new System.Drawing.Point(143, 403);
+            this.btnTotal.Name = "btnTotal";
+            this.btnTotal.Size = new System.Drawing.Size(95, 39);
+            this.btnTotal.TabIndex = 72;
+            this.btnTotal.Text = "各科統計";
+            this.btnTotal.UseVisualStyleBackColor = true;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSearch.Location = new System.Drawing.Point(13, 403);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(124, 39);
+            this.btnSearch.TabIndex = 73;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(18, 371);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(37, 22);
+            this.textBox1.TabIndex = 74;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(91, 371);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(37, 22);
+            this.textBox2.TabIndex = 75;
+            // 
+            // lblDash
+            // 
+            this.lblDash.AutoSize = true;
+            this.lblDash.Location = new System.Drawing.Point(67, 374);
+            this.lblDash.Name = "lblDash";
+            this.lblDash.Size = new System.Drawing.Size(9, 12);
+            this.lblDash.TabIndex = 76;
+            this.lblDash.Text = "-";
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblSearch.Location = new System.Drawing.Point(15, 340);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(166, 24);
+            this.lblSearch.TabIndex = 77;
+            this.lblSearch.Text = "搜尋國文成績範圍:";
+            // 
             // Form06_StudentGrade_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRngX2);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.lblDash);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtRam);
             this.Controls.Add(this.label2);
@@ -307,15 +356,14 @@ namespace Homework
             this.Controls.Add(this.txtLeft);
             this.Controls.Add(this.pnlGarde);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnTotal);
-            this.Controls.Add(this.btnRngX);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txtMath);
             this.Controls.Add(this.lblMath);
             this.Controls.Add(this.txtEng);
             this.Controls.Add(this.lblEng);
             this.Controls.Add(this.txtCN);
             this.Controls.Add(this.lblCN);
-            this.Controls.Add(this.btnRng);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
@@ -331,8 +379,6 @@ namespace Homework
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnRngX2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRam;
         private System.Windows.Forms.Label label2;
@@ -345,17 +391,22 @@ namespace Homework
         private System.Windows.Forms.TextBox txtLeft;
         private System.Windows.Forms.Panel pnlGarde;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnTotal;
-        private System.Windows.Forms.Button btnRngX;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.TextBox txtMath;
         private System.Windows.Forms.Label lblMath;
         private System.Windows.Forms.TextBox txtEng;
         private System.Windows.Forms.Label lblEng;
         private System.Windows.Forms.TextBox txtCN;
         private System.Windows.Forms.Label lblCN;
-        private System.Windows.Forms.Button btnRng;
+        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnTotal;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblDash;
+        private System.Windows.Forms.Label lblSearch;
     }
 }

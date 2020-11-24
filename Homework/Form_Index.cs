@@ -172,5 +172,14 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fd);
             fd.Show();
         }
+
+        private void btnStudenGradeList_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form06_StudentGrade_List fsl = new Form06_StudentGrade_List();
+            fsl.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fsl);
+            fsl.Show();
+        }
     }
 }

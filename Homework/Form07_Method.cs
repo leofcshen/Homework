@@ -158,11 +158,17 @@ namespace Homework
 			}
 		}
 
-		private static void swaparr(ref int x, ref int y) // 方法 Swap
+		private static void swap(ref int x, ref int y) // 方法 Swap
 		{
 			int num = x;
 			x = y;
 			y = num;
+		}
+		private static void swap2(ref int x, ref int y) // 方法 Swap 2
+		{
+			x = x * y;
+			y = x / y;
+			x = x / y;
 		}
 
 		private static void sumarr(int[] array, out int arrSum) // 方法：Array 總和
@@ -269,7 +275,7 @@ namespace Homework
 			int x = 100;
 			int y = 200;
 			lblShowResult.Text = $"換位前n1={x} , n2={y}";
-			swaparr(ref x, ref y);
+			swap(ref x, ref y);
 			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
 		}
 
@@ -319,6 +325,16 @@ namespace Homework
             }
 
             lblShowResult.Text = $"陣列arrayStr [ {arrayList}]\n有C 及 c的名字共有 {num} 個";			
+		}
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+			int x = 100;
+			int y = 200;
+			lblShowResult.Text = $"使用方法2：不建立新的變數\n\n換位前n1={x} , n2={y}";
+			swap2(ref x, ref y);
+			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
+			lblShowResult.Text += $"\n\nx = x * y ;\ny = x / y ;\nx = x / y ;";
 		}
     }
 }

@@ -193,7 +193,7 @@ namespace Homework
 			catch (Exception ex)
             {
 				Form00_MessageBox.msgError(ex);
-            }			
+            }
 		}
 
         private void btnReset_Click(object sender, EventArgs e)

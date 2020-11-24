@@ -34,6 +34,9 @@ namespace Homework
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnDrawPaint = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuessNumber = new System.Windows.Forms.Button();
             this.btnPicViewer = new System.Windows.Forms.Button();
             this.btnXO = new System.Windows.Forms.Button();
             this.btnCal = new System.Windows.Forms.Button();
@@ -51,9 +54,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnGuessNumber = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDrawPaint = new System.Windows.Forms.Button();
+            this.btnStudenGradeList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,6 +105,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnStudenGradeList);
             this.splitContainer2.Panel1.Controls.Add(this.btnDrawPaint);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.btnGuessNumber);
@@ -123,6 +125,38 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 700);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnDrawPaint
+            // 
+            this.btnDrawPaint.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDrawPaint.Location = new System.Drawing.Point(12, 457);
+            this.btnDrawPaint.Name = "btnDrawPaint";
+            this.btnDrawPaint.Size = new System.Drawing.Size(187, 36);
+            this.btnDrawPaint.TabIndex = 12;
+            this.btnDrawPaint.Text = "DrawPaint";
+            this.btnDrawPaint.UseVisualStyleBackColor = true;
+            this.btnDrawPaint.Click += new System.EventHandler(this.btnDrawPaint_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(12, 345);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 36);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "PictureViewer";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnGuessNumber
+            // 
+            this.btnGuessNumber.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnGuessNumber.Location = new System.Drawing.Point(12, 546);
+            this.btnGuessNumber.Name = "btnGuessNumber";
+            this.btnGuessNumber.Size = new System.Drawing.Size(187, 36);
+            this.btnGuessNumber.TabIndex = 10;
+            this.btnGuessNumber.Text = "考試_終極密碼";
+            this.btnGuessNumber.UseVisualStyleBackColor = true;
+            this.btnGuessNumber.Click += new System.EventHandler(this.btnGuessNumber_Click);
             // 
             // btnPicViewer
             // 
@@ -301,37 +335,16 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // btnGuessNumber
+            // btnStudenGradeList
             // 
-            this.btnGuessNumber.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGuessNumber.Location = new System.Drawing.Point(12, 546);
-            this.btnGuessNumber.Name = "btnGuessNumber";
-            this.btnGuessNumber.Size = new System.Drawing.Size(187, 36);
-            this.btnGuessNumber.TabIndex = 10;
-            this.btnGuessNumber.Text = "考試_終極密碼";
-            this.btnGuessNumber.UseVisualStyleBackColor = true;
-            this.btnGuessNumber.Click += new System.EventHandler(this.btnGuessNumber_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(12, 345);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "PictureViewer";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnDrawPaint
-            // 
-            this.btnDrawPaint.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDrawPaint.Location = new System.Drawing.Point(12, 457);
-            this.btnDrawPaint.Name = "btnDrawPaint";
-            this.btnDrawPaint.Size = new System.Drawing.Size(187, 36);
-            this.btnDrawPaint.TabIndex = 12;
-            this.btnDrawPaint.Text = "DrawPaint";
-            this.btnDrawPaint.UseVisualStyleBackColor = true;
-            this.btnDrawPaint.Click += new System.EventHandler(this.btnDrawPaint_Click);
+            this.btnStudenGradeList.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnStudenGradeList.Location = new System.Drawing.Point(12, 235);
+            this.btnStudenGradeList.Name = "btnStudenGradeList";
+            this.btnStudenGradeList.Size = new System.Drawing.Size(187, 36);
+            this.btnStudenGradeList.TabIndex = 13;
+            this.btnStudenGradeList.Text = "StudentGrade_List";
+            this.btnStudenGradeList.UseVisualStyleBackColor = true;
+            this.btnStudenGradeList.Click += new System.EventHandler(this.btnStudenGradeList_Click);
             // 
             // Form_Index
             // 
@@ -386,6 +399,7 @@ namespace Homework
         private System.Windows.Forms.Button btnGuessNumber;
         private System.Windows.Forms.Button btnDrawPaint;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStudenGradeList;
     }
 }
 
