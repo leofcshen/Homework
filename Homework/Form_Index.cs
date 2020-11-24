@@ -188,5 +188,14 @@ namespace Homework
             Form11_ScreenSaver fs = new Form11_ScreenSaver();            
             fs.Show();
         }
+
+        private void btnMethod_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form07_Method fm = new Form07_Method();
+            fm.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fm);
+            fm.Show();
+        }
     }
 }

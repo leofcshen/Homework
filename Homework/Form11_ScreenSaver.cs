@@ -23,7 +23,7 @@ namespace Homework
         private int upwhere = 2;
         private bool exit = true;         
     
-        private void Picture(PictureBox pic, ref int gowhere, ref int upwhere)
+        private void Picture(PictureBox pic, ref int gowhere, ref int upwhere) // 方法：圖片移動
         {
             pic.Left += gowhere;
             pic.Top += upwhere;
@@ -37,12 +37,12 @@ namespace Homework
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // timer1 
         {
             Picture(pictureBox1, ref gowhere, ref upwhere);
         }
 
-        private void ScreenSaver_MouseMove(object sender, MouseEventArgs e)
+        private void ScreenSaver_MouseMove(object sender, MouseEventArgs e) // 滑鼠移動
         {
             if (exit)
             {
@@ -55,6 +55,5 @@ namespace Homework
                 Close();
             }
         }
-
     }
 }

@@ -34,9 +34,9 @@ namespace Homework
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnScreenSaver = new System.Windows.Forms.Button();
             this.btnStudenGradeList = new System.Windows.Forms.Button();
             this.btnDrawPaint = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnGuessNumber = new System.Windows.Forms.Button();
             this.btnPicViewer = new System.Windows.Forms.Button();
             this.btnXO = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnScreenSaver = new System.Windows.Forms.Button();
+            this.btnMethod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -106,10 +106,10 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnMethod);
             this.splitContainer2.Panel1.Controls.Add(this.btnScreenSaver);
             this.splitContainer2.Panel1.Controls.Add(this.btnStudenGradeList);
             this.splitContainer2.Panel1.Controls.Add(this.btnDrawPaint);
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.btnGuessNumber);
             this.splitContainer2.Panel1.Controls.Add(this.btnPicViewer);
             this.splitContainer2.Panel1.Controls.Add(this.btnXO);
@@ -127,6 +127,17 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 700);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnScreenSaver
+            // 
+            this.btnScreenSaver.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnScreenSaver.Location = new System.Drawing.Point(12, 361);
+            this.btnScreenSaver.Name = "btnScreenSaver";
+            this.btnScreenSaver.Size = new System.Drawing.Size(187, 36);
+            this.btnScreenSaver.TabIndex = 14;
+            this.btnScreenSaver.Text = "Screen Saver";
+            this.btnScreenSaver.UseVisualStyleBackColor = true;
+            this.btnScreenSaver.Click += new System.EventHandler(this.btnScreenSaver_Click);
             // 
             // btnStudenGradeList
             // 
@@ -149,16 +160,6 @@ namespace Homework
             this.btnDrawPaint.Text = "DrawPaint";
             this.btnDrawPaint.UseVisualStyleBackColor = true;
             this.btnDrawPaint.Click += new System.EventHandler(this.btnDrawPaint_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(12, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "PictureViewer";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnGuessNumber
             // 
@@ -196,7 +197,7 @@ namespace Homework
             // btnCal
             // 
             this.btnCal.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCal.Location = new System.Drawing.Point(12, 303);
+            this.btnCal.Location = new System.Drawing.Point(12, 319);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(187, 36);
             this.btnCal.TabIndex = 7;
@@ -348,16 +349,16 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // btnScreenSaver
+            // btnMethod
             // 
-            this.btnScreenSaver.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnScreenSaver.Location = new System.Drawing.Point(12, 343);
-            this.btnScreenSaver.Name = "btnScreenSaver";
-            this.btnScreenSaver.Size = new System.Drawing.Size(187, 36);
-            this.btnScreenSaver.TabIndex = 14;
-            this.btnScreenSaver.Text = "Screen Saver";
-            this.btnScreenSaver.UseVisualStyleBackColor = true;
-            this.btnScreenSaver.Click += new System.EventHandler(this.btnScreenSaver_Click);
+            this.btnMethod.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMethod.Location = new System.Drawing.Point(12, 277);
+            this.btnMethod.Name = "btnMethod";
+            this.btnMethod.Size = new System.Drawing.Size(187, 36);
+            this.btnMethod.TabIndex = 15;
+            this.btnMethod.Text = "Method";
+            this.btnMethod.UseVisualStyleBackColor = true;
+            this.btnMethod.Click += new System.EventHandler(this.btnMethod_Click);
             // 
             // Form_Index
             // 
@@ -411,9 +412,9 @@ namespace Homework
         private System.Windows.Forms.Button btnPicViewer;
         private System.Windows.Forms.Button btnGuessNumber;
         private System.Windows.Forms.Button btnDrawPaint;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnStudenGradeList;
         private System.Windows.Forms.Button btnScreenSaver;
+        private System.Windows.Forms.Button btnMethod;
     }
 }
 
