@@ -34,6 +34,7 @@ namespace Homework
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnStudenGradeList = new System.Windows.Forms.Button();
             this.btnDrawPaint = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuessNumber = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnStudenGradeList = new System.Windows.Forms.Button();
+            this.btnScreenSaver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -105,6 +106,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnScreenSaver);
             this.splitContainer2.Panel1.Controls.Add(this.btnStudenGradeList);
             this.splitContainer2.Panel1.Controls.Add(this.btnDrawPaint);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
@@ -126,10 +128,21 @@ namespace Homework
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
             // 
+            // btnStudenGradeList
+            // 
+            this.btnStudenGradeList.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnStudenGradeList.Location = new System.Drawing.Point(12, 235);
+            this.btnStudenGradeList.Name = "btnStudenGradeList";
+            this.btnStudenGradeList.Size = new System.Drawing.Size(187, 36);
+            this.btnStudenGradeList.TabIndex = 13;
+            this.btnStudenGradeList.Text = "StudentGrade_List";
+            this.btnStudenGradeList.UseVisualStyleBackColor = true;
+            this.btnStudenGradeList.Click += new System.EventHandler(this.btnStudenGradeList_Click);
+            // 
             // btnDrawPaint
             // 
             this.btnDrawPaint.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDrawPaint.Location = new System.Drawing.Point(12, 457);
+            this.btnDrawPaint.Location = new System.Drawing.Point(12, 487);
             this.btnDrawPaint.Name = "btnDrawPaint";
             this.btnDrawPaint.Size = new System.Drawing.Size(187, 36);
             this.btnDrawPaint.TabIndex = 12;
@@ -140,7 +153,7 @@ namespace Homework
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(12, 345);
+            this.button1.Location = new System.Drawing.Point(12, 385);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 36);
             this.button1.TabIndex = 11;
@@ -150,7 +163,7 @@ namespace Homework
             // btnGuessNumber
             // 
             this.btnGuessNumber.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGuessNumber.Location = new System.Drawing.Point(12, 546);
+            this.btnGuessNumber.Location = new System.Drawing.Point(12, 571);
             this.btnGuessNumber.Name = "btnGuessNumber";
             this.btnGuessNumber.Size = new System.Drawing.Size(187, 36);
             this.btnGuessNumber.TabIndex = 10;
@@ -161,7 +174,7 @@ namespace Homework
             // btnPicViewer
             // 
             this.btnPicViewer.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPicViewer.Location = new System.Drawing.Point(12, 494);
+            this.btnPicViewer.Location = new System.Drawing.Point(12, 529);
             this.btnPicViewer.Name = "btnPicViewer";
             this.btnPicViewer.Size = new System.Drawing.Size(187, 36);
             this.btnPicViewer.TabIndex = 9;
@@ -172,7 +185,7 @@ namespace Homework
             // btnXO
             // 
             this.btnXO.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnXO.Location = new System.Drawing.Point(12, 397);
+            this.btnXO.Location = new System.Drawing.Point(12, 445);
             this.btnXO.Name = "btnXO";
             this.btnXO.Size = new System.Drawing.Size(187, 36);
             this.btnXO.TabIndex = 8;
@@ -335,16 +348,16 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // btnStudenGradeList
+            // btnScreenSaver
             // 
-            this.btnStudenGradeList.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnStudenGradeList.Location = new System.Drawing.Point(12, 235);
-            this.btnStudenGradeList.Name = "btnStudenGradeList";
-            this.btnStudenGradeList.Size = new System.Drawing.Size(187, 36);
-            this.btnStudenGradeList.TabIndex = 13;
-            this.btnStudenGradeList.Text = "StudentGrade_List";
-            this.btnStudenGradeList.UseVisualStyleBackColor = true;
-            this.btnStudenGradeList.Click += new System.EventHandler(this.btnStudenGradeList_Click);
+            this.btnScreenSaver.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnScreenSaver.Location = new System.Drawing.Point(12, 343);
+            this.btnScreenSaver.Name = "btnScreenSaver";
+            this.btnScreenSaver.Size = new System.Drawing.Size(187, 36);
+            this.btnScreenSaver.TabIndex = 14;
+            this.btnScreenSaver.Text = "Screen Saver";
+            this.btnScreenSaver.UseVisualStyleBackColor = true;
+            this.btnScreenSaver.Click += new System.EventHandler(this.btnScreenSaver_Click);
             // 
             // Form_Index
             // 
@@ -400,6 +413,7 @@ namespace Homework
         private System.Windows.Forms.Button btnDrawPaint;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnStudenGradeList;
+        private System.Windows.Forms.Button btnScreenSaver;
     }
 }
 

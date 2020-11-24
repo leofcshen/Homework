@@ -29,16 +29,12 @@ namespace Homework
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRam = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtCurrent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCaculate = new System.Windows.Forms.Label();
             this.pnlCaculate = new System.Windows.Forms.Panel();
             this.lblIndex = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
-            this.txtLeft = new System.Windows.Forms.TextBox();
             this.pnlGarde = new System.Windows.Forms.Panel();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -62,39 +58,11 @@ namespace Homework
             this.pnlGarde.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(152, 214);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "剩餘筆數";
-            // 
-            // txtRam
-            // 
-            this.txtRam.Location = new System.Drawing.Point(231, 169);
-            this.txtRam.Name = "txtRam";
-            this.txtRam.Size = new System.Drawing.Size(52, 22);
-            this.txtRam.TabIndex = 67;
-            this.txtRam.Text = "100";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(152, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "記憶體";
-            // 
             // txtCurrent
             // 
-            this.txtCurrent.Location = new System.Drawing.Point(231, 192);
+            this.txtCurrent.Location = new System.Drawing.Point(156, 217);
             this.txtCurrent.Name = "txtCurrent";
-            this.txtCurrent.Size = new System.Drawing.Size(52, 22);
+            this.txtCurrent.Size = new System.Drawing.Size(62, 22);
             this.txtCurrent.TabIndex = 50;
             // 
             // label1
@@ -143,13 +111,6 @@ namespace Homework
             this.lblGrade.Name = "lblGrade";
             this.lblGrade.Size = new System.Drawing.Size(2, 18);
             this.lblGrade.TabIndex = 0;
-            // 
-            // txtLeft
-            // 
-            this.txtLeft.Location = new System.Drawing.Point(231, 212);
-            this.txtLeft.Name = "txtLeft";
-            this.txtLeft.Size = new System.Drawing.Size(52, 22);
-            this.txtLeft.TabIndex = 70;
             // 
             // pnlGarde
             // 
@@ -330,7 +291,7 @@ namespace Homework
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblSearch.Location = new System.Drawing.Point(15, 340);
+            this.lblSearch.Location = new System.Drawing.Point(16, 340);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(166, 24);
             this.lblSearch.TabIndex = 77;
@@ -347,13 +308,9 @@ namespace Homework
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnTotal);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtRam);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCurrent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCaculate);
-            this.Controls.Add(this.txtLeft);
             this.Controls.Add(this.pnlGarde);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnRemove);
@@ -379,16 +336,12 @@ namespace Homework
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtRam;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCurrent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCaculate;
         private System.Windows.Forms.Panel pnlCaculate;
         private System.Windows.Forms.Label lblIndex;
         private System.Windows.Forms.Label lblGrade;
-        private System.Windows.Forms.TextBox txtLeft;
         private System.Windows.Forms.Panel pnlGarde;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnRemove;

@@ -181,5 +181,12 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fsl);
             fsl.Show();
         }
+
+        private void btnScreenSaver_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form11_ScreenSaver fs = new Form11_ScreenSaver();            
+            fs.Show();
+        }
     }
 }

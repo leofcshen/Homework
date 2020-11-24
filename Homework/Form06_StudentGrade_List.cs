@@ -21,7 +21,7 @@ namespace Homework
 		private StructGrade strGrade = default(StructGrade);
 
 		private StructStatistics strSta = default(StructStatistics);
-		internal void EnterList()
+		internal void EnterList() // 方法 Enter
 		{
 			strGrade.Name = txtName.Text;
 			strGrade.CN = int.Parse(txtCN.Text);
@@ -31,7 +31,7 @@ namespace Homework
 			strGrade.Avg = strGrade.Sum / 3.0;
 		}
 
-		internal void MaxAndMin()
+		internal void MaxAndMin() // 方法：計算最高最低分
 		{
 			// 方法：計算最高最低分科目
 			int max = -1; // 最高分
@@ -72,16 +72,17 @@ namespace Homework
 			}
 		}
 
-		internal void ShowGrade()
+		internal void ShowGrade() // 方法：顯示 Grade Label
 		{
 			lblGrade.Text = string.Empty;
 			for (int i = 0; i < GradeList.Count; i++)
 			{
 				Label gradeShowLabel = lblGrade;
 				gradeShowLabel.Text = gradeShowLabel.Text + string.Format("{0,-10}{1,6}{2,6}", GradeList[i].Name, GradeList[i].CN, GradeList[i].EN) + string.Format("{0,6}{1,6}{2,6:f1}", GradeList[i].Math, GradeList[i].Sum, GradeList[i].Avg) + string.Format("{0,8}{1,8}\n", GradeList[i].MajorMin, GradeList[i].MajorMax);
+				txtCurrent.Text = GradeList.Count.ToString();
 			}
 		}
-		internal void Notify()
+		internal void Notify() // 方法：輸入值測試
 		{
 			if (txtName.Text == string.Empty)
 			{
@@ -100,8 +101,9 @@ namespace Homework
 				MessageBox.Show("請輸入數學成績。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 		}
-		private void btnAdd_Click(object sender, EventArgs e)
+		private void btnAdd_Click(object sender, EventArgs e) // 按鈕：加入學生資料
         {
+			btnRemove.Enabled = true;
 			btnTotal.Enabled = true;
 			btnReset.Enabled = true;
 			Notify();
@@ -123,14 +125,27 @@ namespace Homework
 		}
 
         private void btnRemove_Click(object sender, EventArgs e) // 按鈕：移除資料
-        {
-			GradeList.RemoveAt(0);
-			MaxAndMin();
-			ShowGrade();
+        {			
+			try
+            {
+				if (GradeList.Count == 0)
+				{
+					MessageBox.Show("沒東西了，你再刪我要叫了。");
+					return;
+				}
+
+				GradeList.RemoveAt(0);
+				MaxAndMin();
+				ShowGrade();
+			}
+			catch(Exception ex)
+            {
+				Form00_MessageBox.msgError(ex);
+            }			
 		}
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
+        private void btnReset_Click(object sender, EventArgs e) // 按鈕：清除所有資料
+		{
 			GradeList.Clear();
 			ShowGrade();
 			lblCaculate.Text = string.Empty;
@@ -193,19 +208,26 @@ namespace Homework
 			}
 		}
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-			int num = int.Parse(textBox1.Text);
-			int num2 = int.Parse(textBox2.Text);
-			lblGrade.Text = string.Empty;
-			for (int i = 0; i < GradeList.Count; i++)
-			{
-				if (num <= GradeList[i].CN && num2 >= GradeList[i].CN)
+        private void btnSearch_Click(object sender, EventArgs e)  // 按鈕：Search
+		{
+			try
+            {
+				int num = int.Parse(textBox1.Text);
+				int num2 = int.Parse(textBox2.Text);
+				lblGrade.Text = string.Empty;
+				for (int i = 0; i < GradeList.Count; i++)
 				{
-					Label gradeShowLabel = lblGrade;
-					gradeShowLabel.Text = gradeShowLabel.Text + string.Format("{0,-6}{1,6}{2,6}", GradeList[i].Name, GradeList[i].CN, GradeList[i].EN) + string.Format("{0,6}{1,6}{2,6:N1}", GradeList[i].Math, GradeList[i].Sum, GradeList[i].Avg) + string.Format("{0,6}{1,6}\n", GradeList[i].MajorMin, GradeList[i].MajorMax);
+					if (num <= GradeList[i].CN && num2 >= GradeList[i].CN)
+					{
+						Label gradeShowLabel = lblGrade;
+						gradeShowLabel.Text = gradeShowLabel.Text + string.Format("{0,-6}{1,6}{2,6}", GradeList[i].Name, GradeList[i].CN, GradeList[i].EN) + string.Format("{0,6}{1,6}{2,6:N1}", GradeList[i].Math, GradeList[i].Sum, GradeList[i].Avg) + string.Format("{0,6}{1,6}\n", GradeList[i].MajorMin, GradeList[i].MajorMax);
+					}
 				}
 			}
+			catch(Exception ex)
+            {
+				Form00_MessageBox.msgError(ex);
+            }
 		}
     }
 }
