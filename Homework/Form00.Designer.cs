@@ -1,7 +1,7 @@
 ﻿
 namespace Homework
 {
-    partial class Form00_MessageBox
+    partial class Form00
     {
         /// <summary>
         /// Required designer variable.

@@ -31,6 +31,7 @@ namespace Homework
             //Application.Run(new Form13_DrawPaint());
             //Application.Run(new Form14_PicViewer());
             //Application.Run(new Form15_GuessNumber());
+            //Application.Run(new Form16_Alarm());
             //Application.Run(new Form1());
         }
     }

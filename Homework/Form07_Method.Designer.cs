@@ -47,6 +47,22 @@ namespace Homework
             this.lblResult = new System.Windows.Forms.Label();
             this.lblShowResult = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.txtRow = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBinary = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtStep = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -240,11 +256,170 @@ namespace Homework
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(914, 76);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(55, 28);
+            this.button15.TabIndex = 18;
+            this.button15.Text = "for";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(914, 118);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(55, 27);
+            this.button16.TabIndex = 19;
+            this.button16.Text = "while";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(914, 157);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(55, 27);
+            this.button17.TabIndex = 20;
+            this.button17.Text = "do";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(1032, 36);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(80, 36);
+            this.button18.TabIndex = 21;
+            this.button18.Text = "直角聖誕樹";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(1032, 78);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(80, 36);
+            this.button19.TabIndex = 22;
+            this.button19.Text = "九九乘法表";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(1048, 129);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(64, 36);
+            this.button20.TabIndex = 23;
+            this.button20.Text = "的二進位";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(1008, 171);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(104, 36);
+            this.button21.TabIndex = 24;
+            this.button21.Text = "樂透號碼不重覆";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // txtRow
+            // 
+            this.txtRow.Location = new System.Drawing.Point(1075, 8);
+            this.txtRow.Name = "txtRow";
+            this.txtRow.Size = new System.Drawing.Size(37, 22);
+            this.txtRow.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1035, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 12);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Rows:";
+            // 
+            // txtBinary
+            // 
+            this.txtBinary.Location = new System.Drawing.Point(1008, 139);
+            this.txtBinary.Name = "txtBinary";
+            this.txtBinary.Size = new System.Drawing.Size(37, 22);
+            this.txtBinary.TabIndex = 27;
+            this.txtBinary.Text = "100";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(812, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 12);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "From";
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.Location = new System.Drawing.Point(851, 81);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(57, 22);
+            this.txtFrom.TabIndex = 29;
+            // 
+            // txtTo
+            // 
+            this.txtTo.Location = new System.Drawing.Point(851, 118);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(57, 22);
+            this.txtTo.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(812, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 12);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "To";
+            // 
+            // txtStep
+            // 
+            this.txtStep.Location = new System.Drawing.Point(851, 157);
+            this.txtStep.Name = "txtStep";
+            this.txtStep.Size = new System.Drawing.Size(57, 22);
+            this.txtStep.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(812, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 12);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Step";
+            // 
             // Form07_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1152, 450);
+            this.Controls.Add(this.txtStep);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtFrom);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtBinary);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtRow);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.button20);
+            this.Controls.Add(this.button19);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button17);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.lblShowResult);
             this.Controls.Add(this.lblResult);
@@ -290,5 +465,21 @@ namespace Homework
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label lblShowResult;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox txtRow;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBinary;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFrom;
+        private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtStep;
+        private System.Windows.Forms.Label label4;
     }
 }

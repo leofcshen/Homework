@@ -33,7 +33,8 @@ namespace Homework
 			"Motherfacker"
 		};
 		private int[,] grid= new int[10, 10];
-		
+		private Random R = new Random();
+
 		private static void OddEven(int number, out string oddeven) // 方法：判定奇偶
 		{			
 			oddeven = $"輸入的數 {number} 為 {((number % 2 != 0) ? "奇數" : "偶數")}。";
@@ -203,8 +204,54 @@ namespace Homework
 				}
 			}
 		}
+		private static int SumFor(int from, int to, int step) // 方法：總和 For
+		{
+			int num = 0;
+		   for(int i = from; i <= to; i+=step)
+			{
+				num += from;				
+			}
+			return num;
+		}
 
-        private void button1_Click(object sender, EventArgs e) // 按鈕：判定奇偶
+		private static int SumWhile(int from, int to, int step) // 方法：總和 While
+		{
+			int num = 0;
+			while (from <= to)
+			{
+				num += from;
+				from += step;
+			}
+			return num;
+		}
+
+		private static int SumDo(int from, int to, int step)  // 方法：總和 Do 
+		{
+			int num = 0;
+			do
+			{
+				num += from;
+				from += step;
+			}
+			while (from <= to);
+			return num;
+		}
+
+		private static string SingleSideTree(int rows) //方法：直角聖誕樹
+		{
+			string text = "";
+			for (int i = 0; i < rows; i++)
+			{
+				for (int j = 0; j < rows; j++)
+				{
+					text = ((j > i) ? (text + " ") : (text + "*"));
+				}
+				text += "\n";
+			}
+			return text;
+		}
+
+		private void button1_Click(object sender, EventArgs e) // 按鈕：判定奇偶
         {
 			if (int.TryParse(txtNumber.Text, out var result))
 			{
@@ -335,6 +382,114 @@ namespace Homework
 			swap2(ref x, ref y);
 			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
 			lblShowResult.Text += $"\n\nx = x * y ;\ny = x / y ;\nx = x / y ;";
+		}
+
+        private void button18_Click(object sender, EventArgs e) // 按鈕：直角聖誕樹
+        {
+			if (int.TryParse(txtRow.Text, out var result))
+			{
+				lblShowResult.Text = SingleSideTree(result);
+				return;
+			}
+			MessageBox.Show("請輸入數值");
+			txtRow.Focus();
+			txtRow.SelectAll();
+		}
+
+        private void button20_Click(object sender, EventArgs e) // 按鈕：100的二進位
+        {
+			if(int.TryParse(txtBinary.Text,out int number))
+            {
+				lblShowResult.Text = "";
+				while (number / 2 > 0)
+				{
+					lblShowResult.Text = number % 2 + lblShowResult.Text;
+					number /= 2;
+				}
+				if (number / 2 == 0)
+				{
+					lblShowResult.Text = number + lblShowResult.Text;
+				}
+				return;
+			}
+			MessageBox.Show("請確認數值");
+			txtBinary.Focus();
+			txtBinary.SelectAll();
+
+		}
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+			int[] array = new int[6];
+			lblShowResult.Text = "樂透號碼\n";
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = R.Next(1, 49);
+				for (int j = 0; j < i; j++)
+				{
+					while (array[j] == array[i])
+					{
+						array[i] = R.Next(1, 49);
+						j = 0;
+					}
+				}
+				lblShowResult.Text += $" {array[i]}";
+			}
+		}
+
+        private void button19_Click(object sender, EventArgs e) // 按鈕：九九乘法表
+        {
+			lblShowResult.Text = "九九乘法表\n";
+			for (int i = 1; i <= 9; i++)
+			{
+				for (int j = 2; j <= 9; j++)
+				{
+					lblShowResult.Text += string.Format("{0,2}x{1,2}={2,2}|", j, i, j * i);
+				}
+				lblShowResult.Text += "\n";
+			}
+		}
+
+        private void button15_Click(object sender, EventArgs e) // 按鈕：For
+        {
+			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
+			{
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nFor 迴圈加總為 {SumFor(from, to, step)}";
+			}
+			else
+			{
+				MessageBox.Show("請檢查數值");
+				txtFrom.Focus();
+				txtFrom.SelectAll();
+			}
+		}
+
+        private void button16_Click(object sender, EventArgs e) // 按扭：While
+        {
+			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
+			{
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nWhile 迴圈加總為 {SumWhile(from, to, step)}";
+			}
+			else
+			{
+				MessageBox.Show("請檢查數值");
+				txtFrom.Focus();
+				txtFrom.SelectAll();
+			}
+		}
+
+        private void button17_Click(object sender, EventArgs e) // 按扭：Do
+		{
+			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
+			{
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nDo 迴圈加總為 {SumDo(from, to, step)}";
+			}
+			else
+			{
+				MessageBox.Show("請檢查數值");
+				txtFrom.Focus();
+				txtFrom.SelectAll();
+			}
 		}
     }
 }

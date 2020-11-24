@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form1 : Form
+    public partial class Form20_1 : Form
     {
-        public Form1()
+        private Form20 frm;
+        public Form20_1( Form20 form1)
         {
+            frm = form1;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            Form1_1 f = new Form1_1(this);            
-            f.Show();
-
+        {            
+            frm.lblA.Text = textBox1.Text;
         }
     }
 }

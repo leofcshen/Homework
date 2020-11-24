@@ -51,7 +51,7 @@ namespace Homework
                 }
                 catch (Exception ex)
                 {
-                   Form00_MessageBox.msgError(ex);
+                   Form00.msgError(ex);
                 }
             }                        
         }

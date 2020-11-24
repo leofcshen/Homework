@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form00_MessageBox : Form
+    public partial class Form00 : Form
     {        
-        public Form00_MessageBox()
+        public Form00()
         {
             InitializeComponent();
         }

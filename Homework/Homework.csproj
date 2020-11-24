@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form00_MessageBox.cs">
+    <Compile Include="Form00.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form00_MessageBox.Designer.cs">
-      <DependentUpon>Form00_MessageBox.cs</DependentUpon>
+    <Compile Include="Form00.Designer.cs">
+      <DependentUpon>Form00.cs</DependentUpon>
     </Compile>
     <Compile Include="Form06_StudentGrade_List.cs">
       <SubType>Form</SubType>
@@ -66,11 +66,11 @@
     <Compile Include="Form07_Method.Designer.cs">
       <DependentUpon>Form07_Method.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form20.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form20.Designer.cs">
+      <DependentUpon>Form20.cs</DependentUpon>
     </Compile>
     <Compile Include="Form11_ScreenSaver.cs">
       <SubType>Form</SubType>
@@ -150,11 +150,11 @@
     <Compile Include="Form16_Alarm.Designer.cs">
       <DependentUpon>Form16_Alarm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1_1.cs">
+    <Compile Include="Form20_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1_1.Designer.cs">
-      <DependentUpon>Form1_1.cs</DependentUpon>
+    <Compile Include="Form20_1.Designer.cs">
+      <DependentUpon>Form20_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
@@ -177,8 +177,8 @@
     <EmbeddedResource Include="Form07_Method.resx">
       <DependentUpon>Form07_Method.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form20.resx">
+      <DependentUpon>Form20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form10_OOXX.resx">
       <DependentUpon>Form10_OOXX.cs</DependentUpon>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="Form16_Alarm.resx">
       <DependentUpon>Form16_Alarm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1_1.resx">
-      <DependentUpon>Form1_1.cs</DependentUpon>
+    <EmbeddedResource Include="Form20_1.resx">
+      <DependentUpon>Form20_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>

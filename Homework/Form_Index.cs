@@ -18,11 +18,35 @@ namespace Homework
 
             // timer 設定一秒時間才會更新，進程式先跳一次當前時間。
             DateTime time = DateTime.Now;
+            sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);            
+        }
+        private bool faOpen = false;
+
+        // 跑馬燈設定
+        private string bless = "溫馨小祝福：歡迎互相討論再以自己的理解編寫才會進步，一味照抄者祝您廁所都沒衛生紙，手遊抽卡都是 N。~^^   ";
+        //private string bless = "test 1234567890~^^   ";
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string bless_one = bless.Substring(0, 1);
+            bless = bless.Substring(1, bless.Length - 1) + bless_one;  // 新字串從第二個字開始，並把第一個字補到最後
+            lblBless.Text = bless;
+        }
+        private void tmClock_Tick(object sender, EventArgs e) // 時間 Tick
+        {
+            DateTime time = DateTime.Now;
             sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
 
+            foreach (Form f in splitContainer3.Panel1.Controls) //尋找 Form16 的 Label 設定時間
+            {
+                foreach (Control c in f.Controls)
+                {
+                    if (c is Label && c.Name == "lblTimer")
+                        c.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
+                }
+            }
         }
 
-        private void btnHello_Click(object sender, EventArgs e)
+        private void btnHello_Click(object sender, EventArgs e) // 按鈕：Hello
         {
             splitContainer3.Panel1.Controls.Clear();
             Form01_Hello fh = new Form01_Hello();
@@ -31,7 +55,7 @@ namespace Homework
             fh.Show();
         }
 
-        private void btnLoan_Click(object sender, EventArgs e)
+        private void btnLoan_Click(object sender, EventArgs e) // 按鈕：Loan
         {
             splitContainer3.Panel1.Controls.Clear();
             Form02_Loan fl = new Form02_Loan();
@@ -46,7 +70,123 @@ namespace Homework
             fl.Show();
         }
 
-        private void btnNote_Click(object sender, EventArgs e)
+        private void btnPOS_Click(object sender, EventArgs e) // 按鈕：POS
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form03_POS fp = new Form03_POS();
+            fp.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fp);
+            fp.Show();
+        }        
+
+        private void btnGrade_Click(object sender, EventArgs e) // 按鈕：StructForm
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form04_Grade fg = new Form04_Grade();
+            fg.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fg);
+            fg.Show();
+        }
+
+        private void btnStuGrade_Click(object sender, EventArgs e) // 按鈕：Grade
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form05_StudentGrade fsg = new Form05_StudentGrade();
+            fsg.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fsg);
+            fsg.Show();
+        }
+
+        private void btnStudenGradeList_Click(object sender, EventArgs e) // 按鈕：Grade_List
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form06_StudentGrade_List fsl = new Form06_StudentGrade_List();
+            fsl.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fsl);
+            fsl.Show();
+        }
+
+        private void btnMethod_Click(object sender, EventArgs e) // 按鈕：Method
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form07_Method fm = new Form07_Method();
+            fm.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fm);
+            fm.Show();
+        }
+
+        private void btnCal_Click(object sender, EventArgs e) // 按鈕：Caculator
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form08_Caculator fc = new Form08_Caculator();
+            fc.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fc);
+            fc.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e) // 按鈕：For Do While
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form07_Method fm = new Form07_Method();
+            fm.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fm);
+            fm.Show();
+        }
+
+        private void btnXO_Click(object sender, EventArgs e) // 按鈕：OOXX
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form10_OOXX fo = new Form10_OOXX();
+            fo.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fo);
+            fo.Show();
+        }
+
+        private void btnScreenSaver_Click(object sender, EventArgs e) // 按鈕：Screen Saver
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form11_ScreenSaver fs = new Form11_ScreenSaver();
+            fs.Show();
+        }
+
+        private void btnDrawPaint_Click(object sender, EventArgs e) // 按鈕：小畫家
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form13_DrawPaint fd = new Form13_DrawPaint();
+            fd.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fd);
+            fd.Show();
+        }
+
+        private void btnPicViewer_Click(object sender, EventArgs e) //按鈕：Picture Viewer
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form14_PicViewer fp = new Form14_PicViewer();
+            fp.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fp);
+            fp.Show();
+        }
+
+        private void btnGuessNumber_Click(object sender, EventArgs e) // 按鈕：終極密碼
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form15_GuessNumber fg = new Form15_GuessNumber();
+            fg.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fg);
+            fg.Show();
+        }
+        
+        private void btnAlarm_Click(object sender, EventArgs e) // 按鈕：Alarm
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form16_Alarm fa = new Form16_Alarm(this);
+            fa.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fa);
+            fa.Show();
+            faOpen = true;
+        }
+
+        private void btnNote_Click(object sender, EventArgs e) // 按鈕：說明
         {
             // lblHint 不存在時動態產生
             if (splitContainer3.Panel1.Controls.ContainsKey("lblHint") == false)
@@ -62,8 +202,8 @@ namespace Homework
                     "跑馬燈新增設定 timer，Enable = ture，Interval 預設 100(數字越大越跑馬燈快)\n" +
                     "功能視窗預設在右下Panel 開啟，開啟前先設定清空panel，不然會開一堆重覆視窗。";
                 lblHint.Height = 200;
-                lblHint.Width =1200;
-                
+                lblHint.Width = 1200;
+
                 splitContainer3.Panel1.Controls.Add(lblHint);
                 lblHint.Show();
             }
@@ -74,7 +214,7 @@ namespace Homework
                 {
                     if (c is Label && c.Name == "lblHint" && c.Visible == false)
                     {
-                        c.Visible = true; 
+                        c.Visible = true;
                     }
                     else
                     {
@@ -82,120 +222,6 @@ namespace Homework
                     }
                 }
             }
-        }
-
-        // 跑馬燈設定
-        private string bless = "溫馨小祝福：歡迎互相討論再以自己的理解編寫，照抄者祝您廁所都沒衛生紙，手遊抽卡都是 N。~^^   ";
-        //private string bless = "test 1234567890~^^   ";
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            string bless_one = bless.Substring(0, 1);
-            bless = bless.Substring(1, bless.Length - 1) + bless_one;  // 新字串從第二個字開始，並把第一個字補到最後
-            lblBless.Text = bless;
-        }
-
-        private void btnPOS_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form03_POS fp = new Form03_POS();
-            fp.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fp);
-            fp.Show();
-        }
-        
-        private void tmClock_Tick(object sender, EventArgs e)
-        {
-            DateTime time = DateTime.Now;
-            sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
-            
-        }
-
-        private void btnGrade_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form04_Grade fg = new Form04_Grade();
-            fg.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fg);
-            fg.Show();
-        }
-
-        private void btnStuGrade_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form05_StudentGrade fsg = new Form05_StudentGrade();
-            fsg.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fsg);
-            fsg.Show();
-        }
-
-        private void btnCal_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form08_Caculator fc = new Form08_Caculator();
-            fc.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fc);
-            fc.Show();
-        }
-
-        private void btnXO_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form10_OOXX fo = new Form10_OOXX();
-            fo.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fo);
-            fo.Show();
-        }
-
-        private void btnPicViewer_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form14_PicViewer fp = new Form14_PicViewer();
-            fp.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fp);
-            fp.Show();
-        }
-
-        private void btnGuessNumber_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form15_GuessNumber fg = new Form15_GuessNumber();
-            fg.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fg);
-            fg.Show();
-        }
-
-        private void btnDrawPaint_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form13_DrawPaint fd = new Form13_DrawPaint();
-            fd.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fd);
-            fd.Show();
-        }
-
-        private void btnStudenGradeList_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form06_StudentGrade_List fsl = new Form06_StudentGrade_List();
-            fsl.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fsl);
-            fsl.Show();
-        }
-
-        private void btnScreenSaver_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form11_ScreenSaver fs = new Form11_ScreenSaver();            
-            fs.Show();
-        }
-
-        private void btnMethod_Click(object sender, EventArgs e)
-        {
-            splitContainer3.Panel1.Controls.Clear();
-            Form07_Method fm = new Form07_Method();
-            fm.TopLevel = false;
-            splitContainer3.Panel1.Controls.Add(fm);
-            fm.Show();
-        }
+        }        
     }
 }

@@ -33,7 +33,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
                 return 0;
             }
         }        
@@ -51,7 +51,7 @@ namespace Homework
             }
             catch(Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
             }
         }
 
@@ -68,7 +68,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
             }
         }
         
@@ -87,7 +87,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
             }
         }
         private void btnReport_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace Homework
             }
             catch (Exception ex)
             {
-                Form00_MessageBox.msgError(ex);
+                Form00.msgError(ex);
             }
         }
     }

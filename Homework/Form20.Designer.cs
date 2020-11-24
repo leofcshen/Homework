@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form1
+    partial class Form20
     {
         /// <summary>
         /// Required designer variable.

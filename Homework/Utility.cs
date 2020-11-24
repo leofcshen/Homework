@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Homework
 {
-	internal struct StructGrade
-	{
-		// Struct 分數
+	internal struct StructGrade // Struct 分數
+	{		
 		internal string Name; // 姓名		
 		internal int CN; // 國文分數
 		internal int EN; // 英文分數
@@ -18,9 +17,8 @@ namespace Homework
 		internal double Avg; // 平均分數
 		internal double Sum; // 總和分數
 	}
-	internal struct StructStatistics
-	{
-		// Struct 統計
+	internal struct StructStatistics // Struct 統計
+	{		
 		internal int MaxEN; // 英文最高分
 		internal int MaxCN; // 中文最高分
 		internal int MaxMath; // 數學最高分
