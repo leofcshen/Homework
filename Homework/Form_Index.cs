@@ -204,6 +204,16 @@ namespace Homework
             fs.Show();
         }
 
+        private void btnNotepad_Click(object sender, EventArgs e) // 按鈕：Notepad
+        {
+            //splitContainer3.Panel1.Controls.Clear();
+            //Form12_Notepad fn = new Form12_Notepad();
+            //fn.TopLevel = false;
+            //splitContainer3.Panel1.Controls.Add(fn);
+            //fn.Show();
+            MessageBox.Show("施工中");
+        }
+
         private void btnDrawPaint_Click(object sender, EventArgs e) // 按鈕：小畫家
         {
             splitContainer3.Panel1.Controls.Clear();
@@ -304,5 +314,6 @@ namespace Homework
                 }
             }
         }
+                
     }
 }

@@ -35,6 +35,8 @@ namespace Homework
             this.btnMode = new System.Windows.Forms.Button();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnNotepad = new System.Windows.Forms.Button();
+            this.btnDataCross = new System.Windows.Forms.Button();
             this.btnNoteTest = new System.Windows.Forms.Button();
             this.btnNote = new System.Windows.Forms.Button();
             this.btnForDoWhile = new System.Windows.Forms.Button();
@@ -60,7 +62,6 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnDataCross = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,8 +91,8 @@ namespace Homework
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1421, 857);
-            this.splitContainer1.SplitterDistance = 90;
+            this.splitContainer1.Size = new System.Drawing.Size(1421, 957);
+            this.splitContainer1.SplitterDistance = 100;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnMode
@@ -123,6 +124,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnNotepad);
             this.splitContainer2.Panel1.Controls.Add(this.btnDataCross);
             this.splitContainer2.Panel1.Controls.Add(this.btnNoteTest);
             this.splitContainer2.Panel1.Controls.Add(this.btnNote);
@@ -146,9 +148,31 @@ namespace Homework
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(1421, 763);
+            this.splitContainer2.Size = new System.Drawing.Size(1421, 853);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnNotepad
+            // 
+            this.btnNotepad.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnNotepad.Location = new System.Drawing.Point(12, 487);
+            this.btnNotepad.Name = "btnNotepad";
+            this.btnNotepad.Size = new System.Drawing.Size(187, 36);
+            this.btnNotepad.TabIndex = 20;
+            this.btnNotepad.Text = "Notepad";
+            this.btnNotepad.UseVisualStyleBackColor = true;
+            this.btnNotepad.Click += new System.EventHandler(this.btnNotepad_Click);
+            // 
+            // btnDataCross
+            // 
+            this.btnDataCross.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDataCross.Location = new System.Drawing.Point(12, 109);
+            this.btnDataCross.Name = "btnDataCross";
+            this.btnDataCross.Size = new System.Drawing.Size(187, 36);
+            this.btnDataCross.TabIndex = 19;
+            this.btnDataCross.Text = "DataCross";
+            this.btnDataCross.UseVisualStyleBackColor = true;
+            this.btnDataCross.Visible = false;
             // 
             // btnNoteTest
             // 
@@ -165,7 +189,7 @@ namespace Homework
             // btnNote
             // 
             this.btnNote.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnNote.Location = new System.Drawing.Point(12, 706);
+            this.btnNote.Location = new System.Drawing.Point(12, 697);
             this.btnNote.Name = "btnNote";
             this.btnNote.Size = new System.Drawing.Size(187, 42);
             this.btnNote.TabIndex = 18;
@@ -199,7 +223,7 @@ namespace Homework
             // btnAlarm
             // 
             this.btnAlarm.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAlarm.Location = new System.Drawing.Point(12, 613);
+            this.btnAlarm.Location = new System.Drawing.Point(12, 655);
             this.btnAlarm.Name = "btnAlarm";
             this.btnAlarm.Size = new System.Drawing.Size(187, 36);
             this.btnAlarm.TabIndex = 16;
@@ -243,7 +267,7 @@ namespace Homework
             // btnDrawPaint
             // 
             this.btnDrawPaint.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDrawPaint.Location = new System.Drawing.Point(12, 487);
+            this.btnDrawPaint.Location = new System.Drawing.Point(12, 529);
             this.btnDrawPaint.Name = "btnDrawPaint";
             this.btnDrawPaint.Size = new System.Drawing.Size(187, 36);
             this.btnDrawPaint.TabIndex = 12;
@@ -254,7 +278,7 @@ namespace Homework
             // btnGuessNumber
             // 
             this.btnGuessNumber.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGuessNumber.Location = new System.Drawing.Point(12, 571);
+            this.btnGuessNumber.Location = new System.Drawing.Point(12, 613);
             this.btnGuessNumber.Name = "btnGuessNumber";
             this.btnGuessNumber.Size = new System.Drawing.Size(187, 36);
             this.btnGuessNumber.TabIndex = 10;
@@ -265,7 +289,7 @@ namespace Homework
             // btnPicViewer
             // 
             this.btnPicViewer.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPicViewer.Location = new System.Drawing.Point(12, 529);
+            this.btnPicViewer.Location = new System.Drawing.Point(12, 571);
             this.btnPicViewer.Name = "btnPicViewer";
             this.btnPicViewer.Size = new System.Drawing.Size(187, 36);
             this.btnPicViewer.TabIndex = 9;
@@ -366,8 +390,8 @@ namespace Homework
             // 
             this.splitContainer3.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer3.Panel2.Controls.Add(this.lblBless);
-            this.splitContainer3.Size = new System.Drawing.Size(1205, 763);
-            this.splitContainer3.SplitterDistance = 670;
+            this.splitContainer3.Size = new System.Drawing.Size(1205, 853);
+            this.splitContainer3.SplitterDistance = 748;
             this.splitContainer3.TabIndex = 0;
             // 
             // statusStrip1
@@ -418,22 +442,11 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // btnDataCross
-            // 
-            this.btnDataCross.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDataCross.Location = new System.Drawing.Point(12, 109);
-            this.btnDataCross.Name = "btnDataCross";
-            this.btnDataCross.Size = new System.Drawing.Size(187, 36);
-            this.btnDataCross.TabIndex = 19;
-            this.btnDataCross.Text = "DataCross";
-            this.btnDataCross.UseVisualStyleBackColor = true;
-            this.btnDataCross.Visible = false;
-            // 
             // Form_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1421, 857);
+            this.ClientSize = new System.Drawing.Size(1421, 957);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form_Index";
             this.Text = "Form1";
@@ -489,6 +502,7 @@ namespace Homework
         private System.Windows.Forms.Button btnMode;
         private System.Windows.Forms.Button btnNote;
         private System.Windows.Forms.Button btnDataCross;
+        private System.Windows.Forms.Button btnNotepad;
     }
 }
 

@@ -209,7 +209,8 @@ namespace Homework
 			int num = 0;
 		   for(int i = from; i <= to; i+=step)
 			{
-				num += from;				
+				num += from;
+				from += step;
 			}
 			return num;
 		}
