@@ -113,7 +113,7 @@
             this.button4.Size = new System.Drawing.Size(92, 91);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = true;            
             // 
             // button5
             // 

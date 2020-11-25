@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form20
+    partial class FormT03_DataCrossForm
     {
         /// <summary>
         /// Required designer variable.

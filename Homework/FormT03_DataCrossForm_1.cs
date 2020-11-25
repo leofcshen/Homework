@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form20_1 : Form
+    public partial class FormT03_DataCrossForm_1 : Form
     {
-        private Form20 frm;
-        public Form20_1( Form20 form1)
+        private FormT03_DataCrossForm frm;
+        public FormT03_DataCrossForm_1( FormT03_DataCrossForm form1)
         {
             frm = form1;
             InitializeComponent();

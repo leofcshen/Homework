@@ -115,6 +115,6 @@ namespace Homework
 			{
 				this.btnReset_Click(this, e);
 			}
-		}
-	}
+		}       
+    }
 }

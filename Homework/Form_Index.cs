@@ -21,6 +21,7 @@ namespace Homework
             sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);            
         }
         private bool faOpen = false;
+        private bool Mode = true;
 
         // 跑馬燈設定
         private string bless = "溫馨小祝福：歡迎互相討論再以自己的理解編寫才會進步，一味照抄者祝您廁所都沒衛生紙，手遊抽卡都是 N。~^^   ";
@@ -44,6 +45,60 @@ namespace Homework
                         c.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
                 }
             }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e) // 按鈕：切換模式
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            if (Mode)
+            {
+                btnMode.Text = "Function Mode";
+                btnHello.Visible = false;
+                btnLoan.Visible = false;
+                btnPOS.Visible = false;
+                btnStructForm.Visible = false;
+                btnGrade.Visible = false;
+                btnGrade_List.Visible = false;
+                btnMethod.Visible = false;
+                btnCal.Visible = false;
+                btnForDoWhile.Visible = false;
+                btnOOXX.Visible = false;
+                btnScreenSaver.Visible = false;
+                btnDrawPaint.Visible = false;
+                btnPicViewer.Visible = false;
+                btnGuessNumber.Visible = false;
+                btnAlarm.Visible = false;
+                btnNoteTest.Visible = false;                
+
+                btnNoteTest.Visible = true;
+                btnConsole.Visible = true;
+                btnDataCross.Visible = true;
+            }
+            else
+            {
+                btnMode.Text = "Test Mode";
+                btnHello.Visible = true;
+                btnLoan.Visible = true;
+                btnPOS.Visible = true;
+                btnStructForm.Visible = true;
+                btnGrade.Visible = true;
+                btnGrade_List.Visible = true;
+                btnMethod.Visible = true;
+                btnCal.Visible = true;
+                btnForDoWhile.Visible = true;
+                btnOOXX.Visible = true;
+                btnScreenSaver.Visible = true;
+                btnDrawPaint.Visible = true;
+                btnPicViewer.Visible = true;
+                btnGuessNumber.Visible = true;
+                btnAlarm.Visible = true;
+                btnNoteTest.Visible = true;
+
+                btnNoteTest.Visible = false;
+                btnConsole.Visible = false;
+                btnDataCross.Visible = false;
+            }
+            Mode = !Mode;
         }
 
         private void btnHello_Click(object sender, EventArgs e) // 按鈕：Hello
@@ -186,7 +241,33 @@ namespace Homework
             faOpen = true;
         }
 
-        private void btnNote_Click(object sender, EventArgs e) // 按鈕：說明
+        private void btnNote_Click(object sender, EventArgs e) // 按扭：顯示說明
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            Form17_Note fn = new Form17_Note();
+            fn.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fn);
+            fn.Show();
+
+            Label lblHint = new Label();
+            lblHint.Font = new Font("Tahoma", 20, FontStyle.Bold);
+            lblHint.Name = "lblHint";
+            lblHint.Text = "此為動態產生之Label\n" +
+                "動態分隔線控件 > splitcontainer >orientation > 調整垂直或水平\n" +
+                "啟動視窗最大化 > WindowState > Maximize\n" +
+                "跑馬燈新增設定 timer，Enable = ture，Interval 預設 100(數字越大越跑馬燈快)\n" +
+                "功能視窗預設在右下Panel 開啟，開啟前先設定清空panel，不然會開一堆重覆視窗。";
+            lblHint.Height = 200;
+            lblHint.Width = 1200;
+            fn.Controls.Add(lblHint);
+        }
+
+        private void btnConsole_Click(object sender, EventArgs e) // 測試按鈕：Console
+        {
+            FormT01_Console f = new FormT01_Console();
+            f.Show();
+        }
+        private void btnTNote_Click(object sender, EventArgs e) // 測試按鈕：顯示說明
         {
             // lblHint 不存在時動態產生
             if (splitContainer3.Panel1.Controls.ContainsKey("lblHint") == false)
@@ -222,6 +303,6 @@ namespace Homework
                     }
                 }
             }
-        }        
+        }
     }
 }
