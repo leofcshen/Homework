@@ -94,11 +94,10 @@ namespace Homework
 			{
 				for (int j = 0; j < grid.GetLength(1); j++)
 				{
-					if (i == 0 || i == grid.GetLength(0) - 1 || j == 0 || j == grid.GetLength(1) - 1)
+					if (i == 0 || i == grid.GetLength(0) - 1 || j == 0 || j == grid.GetLength(1) - 1) // 邊界判定 [ i =0 || i = i 維度長度, j =0 || j = j 的維度長度] 
 					{
 						gridstring += string.Format("{0,0} ", grid[i, j] = 1);
-					}
-					
+					}					
 					else
 					{
 						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
@@ -115,7 +114,7 @@ namespace Homework
 			{
 				for (int j = 0; j < grid.GetLength(1); j++)
 				{
-					if (i == 0 || i == grid.GetLength(0) - 1 || j == 0 || j == grid.GetLength(1) - 1)
+					if (i == 0 || i == grid.GetLength(0) - 1 || j == 0 || j == grid.GetLength(1) - 1) // 邊界判定 [ i =0 || i = i 維度長度, j =0 || j = j 的維度長度] 
 					{
 						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
 					}
@@ -374,7 +373,7 @@ namespace Homework
             lblShowResult.Text = $"陣列arrayStr [ {arrayList}]\n有C 及 c的名字共有 {num} 個";			
 		}
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e) // 按鈕：Swap(2)
         {
 			int x = 100;
 			int y = 200;
@@ -415,28 +414,26 @@ namespace Homework
 			MessageBox.Show("請確認數值");
 			txtBinary.Focus();
 			txtBinary.SelectAll();
-
 		}
 
         private void button21_Click(object sender, EventArgs e) // 按鈕：樂透號碼
         {
-			int[] array = new int[6];
-			lblShowResult.Text = "樂透號碼\n";
-			for (int i = 0; i < array.Length; i++)
-			{
-				array[i] = R.Next(1, 50); // R.Next(1, 49) 不會產生 49
-				for (int j = 0; j < i; j++)
-				{
-					while (array[j] == array[i]) // 檢查重覆
-					{
-						array[i] = R.Next(1, 50);
-						j = 0;
-					}
-				}
-				lblShowResult.Text += $"{array[i]} ";
-			}
-		}
-		// TODO 樂透
+            int[] array = new int[6];
+            lblShowResult.Text = "樂透號碼\n";
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = R.Next(1, 50); // R.Next(1, 49) 不會產生 49
+                for (int j = 0; j < i; j++)
+                {
+                    while (array[j] == array[i]) // 檢查重覆
+                    {
+                        array[i] = R.Next(1, 50);
+                        j = 0;
+                    }
+                }
+                lblShowResult.Text += $"{array[i]} ";
+            }
+        }
 
         private void button19_Click(object sender, EventArgs e) // 按鈕：九九乘法表
         {
@@ -490,11 +487,11 @@ namespace Homework
 				MessageBox.Show("請檢查數值");
 				txtFrom.Focus();
 				txtFrom.SelectAll();
-			}
+		}
 		}
 
 		private void button22_Click(object sender, EventArgs e) // 按鈕：樂透號碼不重覆2
-		{			
+		{
 			List<int> numberList = new List<int>();
 			for (int i = 0; i < 6; i++) // 產生6個數
 			{
@@ -512,8 +509,7 @@ namespace Homework
 			foreach (int r in numberList)
 			{
 				lblShowResult.Text += r + " ";
-			}
-			
+			}			
 		}
     }
 }

@@ -65,6 +65,7 @@ namespace Homework
                 btnForDoWhile.Visible = false;
                 btnOOXX.Visible = false;
                 btnScreenSaver.Visible = false;
+                btnNotepad.Visible = false;
                 btnDrawPaint.Visible = false;
                 btnPicViewer.Visible = false;
                 btnGuessNumber.Visible = false;
@@ -89,6 +90,7 @@ namespace Homework
                 btnForDoWhile.Visible = true;
                 btnOOXX.Visible = true;
                 btnScreenSaver.Visible = true;
+                btnNotepad.Visible = true;
                 btnDrawPaint.Visible = true;
                 btnPicViewer.Visible = true;
                 btnGuessNumber.Visible = true;
