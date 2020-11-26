@@ -28,6 +28,7 @@ namespace Homework
             //Application.Run(new Form08_Caculator());
             //Application.Run(new Form10_OOXX());
             //Application.Run(new Form11_ScreenSaver());
+            //Application.Run(new Form12_Notepad());
             //Application.Run(new Form13_DrawPaint());
             //Application.Run(new Form14_PicViewer());
             //Application.Run(new Form15_GuessNumber());

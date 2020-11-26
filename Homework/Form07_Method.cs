@@ -136,20 +136,21 @@ namespace Homework
 				{
 					if (i % 2 == 0)
 					{
-						if (j % 2 == 0)
+						if (j % 2 == 0) //  i、j 都能被2整除
 						{
 							gridstring += string.Format("{0,0} ", grid[i, j] = 1);
 						}
-						else
+						else // i 整除、j 沒整除
 						{
 							gridstring += string.Format("{0,0} ", grid[i, j] = 0);
 						}
 					}
-					else if (j % 2 == 0)
+					else if (j % 2 == 0) // i 沒整除、j 整除
 					{
 						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
-					}
-					else
+						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
+					}					
+					else // i、j 都沒整除	
 					{
 						gridstring += string.Format("{0,0} ", grid[i, j] = 1);
 					}

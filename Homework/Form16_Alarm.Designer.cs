@@ -32,12 +32,12 @@ namespace Homework
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.gpbMTB = new System.Windows.Forms.GroupBox();
-            this.lblDTP = new System.Windows.Forms.Label();
-            this.btnDTP = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblMTB = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.ckbSetAlarm = new System.Windows.Forms.CheckBox();
+            this.lblDTP = new System.Windows.Forms.Label();
+            this.btnDTP = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblTimer = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -70,34 +70,6 @@ namespace Homework
             this.gpbMTB.TabStop = false;
             this.gpbMTB.Text = "MaskedTextBox";
             // 
-            // lblDTP
-            // 
-            this.lblDTP.AutoSize = true;
-            this.lblDTP.Location = new System.Drawing.Point(88, 83);
-            this.lblDTP.Name = "lblDTP";
-            this.lblDTP.Size = new System.Drawing.Size(133, 30);
-            this.lblDTP.TabIndex = 9;
-            this.lblDTP.Text = "鬧鐘未設定";
-            // 
-            // btnDTP
-            // 
-            this.btnDTP.Location = new System.Drawing.Point(146, 187);
-            this.btnDTP.Name = "btnDTP";
-            this.btnDTP.Size = new System.Drawing.Size(102, 38);
-            this.btnDTP.TabIndex = 8;
-            this.btnDTP.Text = "設定";
-            this.btnDTP.UseVisualStyleBackColor = true;
-            this.btnDTP.Click += new System.EventHandler(this.btnDTP_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "hh:mm:ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(93, 129);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 39);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
             // lblMTB
             // 
             this.lblMTB.AutoSize = true;
@@ -128,6 +100,34 @@ namespace Homework
             this.ckbSetAlarm.UseVisualStyleBackColor = true;
             this.ckbSetAlarm.CheckedChanged += new System.EventHandler(this.ckbSetAlarm_CheckedChanged);
             // 
+            // lblDTP
+            // 
+            this.lblDTP.AutoSize = true;
+            this.lblDTP.Location = new System.Drawing.Point(88, 83);
+            this.lblDTP.Name = "lblDTP";
+            this.lblDTP.Size = new System.Drawing.Size(133, 30);
+            this.lblDTP.TabIndex = 9;
+            this.lblDTP.Text = "鬧鐘未設定";
+            // 
+            // btnDTP
+            // 
+            this.btnDTP.Location = new System.Drawing.Point(146, 187);
+            this.btnDTP.Name = "btnDTP";
+            this.btnDTP.Size = new System.Drawing.Size(102, 38);
+            this.btnDTP.TabIndex = 8;
+            this.btnDTP.Text = "設定";
+            this.btnDTP.UseVisualStyleBackColor = true;
+            this.btnDTP.Click += new System.EventHandler(this.btnDTP_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "hh:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(93, 129);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 39);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
@@ -140,8 +140,6 @@ namespace Homework
             // 
             // timer2
             // 
-            this.timer2.Enabled = false;
-            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer1

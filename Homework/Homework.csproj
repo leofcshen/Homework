@@ -195,6 +195,9 @@
     <EmbeddedResource Include="Form07_Method.resx">
       <DependentUpon>Form07_Method.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form12_Notepad.resx">
+      <DependentUpon>Form12_Notepad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form17_Note.resx">
       <DependentUpon>Form17_Note.cs</DependentUpon>
     </EmbeddedResource>

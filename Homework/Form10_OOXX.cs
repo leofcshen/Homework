@@ -38,7 +38,7 @@ namespace Homework
 		private void reset()
 		{
 			foreach (Button control in panel1.Controls)
-			{
+			{				
 				control.Text = "";
 				control.Enabled = true;
 			}

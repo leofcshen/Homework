@@ -19,7 +19,7 @@ namespace Homework
             InitializeComponent();
         }
         private bool flag = false;
-        private bool flagCKB = false;
+        private bool flagCKB = false;       
         private string AlarmTimeDTP;
         private string AlarmTimeMTB;
         private string NowTime;
@@ -28,7 +28,7 @@ namespace Homework
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (flag)
-            {
+            {                
                 BackColor = Color.Red;
                 //gpbDTP.BackColor = SystemColors.Control; 
             }
@@ -38,6 +38,7 @@ namespace Homework
                 //gpbDTP.BackColor = SystemColors.Control;
             }
             flag = !flag;
+            
          }
 
         private void timer1_Tick(object sender, EventArgs e) // 鬧鐘時間比對
@@ -57,7 +58,6 @@ namespace Homework
             if (AlarmTimeDTP == NowTime1)
             {
                 timer2.Enabled = true;
-                MessageBox.Show(timer2.Enabled.ToString());
             }
             else
             {
@@ -100,6 +100,7 @@ namespace Homework
             AlarmTimeDTP = "";
             gpbDTP.BackColor = SystemColors.Control;
             lblDTP.Text = "鬧鐘未設定";
+            BackColor = DefaultBackColor;
         }
     }
 }
