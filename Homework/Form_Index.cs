@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 namespace Homework
 {
     public partial class Form_Index : Form
-    {
+    {        
         public Form_Index()
         {
             InitializeComponent();
@@ -271,12 +272,7 @@ namespace Homework
             lblHint.Width = 1200;
             fn.Controls.Add(lblHint);
         }
-
-        private void btnConsole_Click(object sender, EventArgs e) // 測試按鈕：Console
-        {
-            FormT01_Console f = new FormT01_Console();
-            f.Show();
-        }
+       
         private void btnTNote_Click(object sender, EventArgs e) // 測試按鈕：顯示說明
         {
             // lblHint 不存在時動態產生
@@ -314,6 +310,49 @@ namespace Homework
                 }
             }
         }
-                
+
+        private void btnDataCross_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            FormT03_DataCrossForm fd = new FormT03_DataCrossForm();
+            fd.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fd);
+            fd.Show();
+        }
+
+        [DllImport("kernel32.dll")]
+        static extern bool FreeConsole();
+        [DllImport("kernel32.dll")]
+        public static extern bool AllocConsole();
+        private void btnConsole_Click(object sender, EventArgs e) // 測試按鈕：Console
+        {
+            AllocConsole();
+            ConsoleColor oriColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("* Don't close this console window or the application will also close.");
+            Console.WriteLine();
+            Console.ForegroundColor = oriColor;
+
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 2; j < 6; j++)
+                {
+                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+                }
+                Console.Write("\n");
+            }
+            Console.WriteLine("\r");
+
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 6; j < 10; j++)
+                {
+                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+                }
+                Console.Write("\n");
+            }
+            Console.ReadLine();
+
+        }        
     }
 }

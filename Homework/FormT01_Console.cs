@@ -12,7 +12,12 @@ using System.Windows.Forms;
 namespace Homework
 {
     public partial class FormT01_Console : Form
-    {       
+    {
+
+        [DllImport("kernel32.dll")]
+        static extern bool FreeConsole();
+        [DllImport("kernel32.dll")]
+        public static extern bool AllocConsole();
         public FormT01_Console()
         {
             InitializeComponent();
@@ -26,11 +31,5 @@ namespace Homework
 
             Console.WriteLine("123456");
         }
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
-
-        [DllImport("Kernel32")]
-        public static extern void FreeConsole();        
     }
 }

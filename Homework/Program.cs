@@ -13,7 +13,7 @@ namespace Homework
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Index());
@@ -32,7 +32,7 @@ namespace Homework
             //Application.Run(new Form14_PicViewer());
             //Application.Run(new Form15_GuessNumber());
             //Application.Run(new Form16_Alarm());
-            //Application.Run(new Form1());
+            //Application.Run(new Form1());            
         }
     }
 }

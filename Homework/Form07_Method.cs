@@ -419,7 +419,7 @@ namespace Homework
 
 		}
 
-        private void button21_Click(object sender, EventArgs e)
+        private void button21_Click(object sender, EventArgs e) // 按鈕：樂透號碼
         {
 			int[] array = new int[6];
 			lblShowResult.Text = "樂透號碼\n";

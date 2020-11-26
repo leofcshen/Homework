@@ -44,19 +44,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(331, 133);
+            this.textBox1.Location = new System.Drawing.Point(275, 133);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // Form1_1
+            // FormT03_DataCrossForm_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1_1";
+            this.Name = "FormT03_DataCrossForm_1";
             this.Text = "Form1_1";
             this.ResumeLayout(false);
             this.PerformLayout();

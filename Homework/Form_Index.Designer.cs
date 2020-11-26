@@ -173,6 +173,7 @@ namespace Homework
             this.btnDataCross.Text = "DataCross";
             this.btnDataCross.UseVisualStyleBackColor = true;
             this.btnDataCross.Visible = false;
+            this.btnDataCross.Click += new System.EventHandler(this.btnDataCross_Click);
             // 
             // btnNoteTest
             // 

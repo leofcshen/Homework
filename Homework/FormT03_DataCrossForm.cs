@@ -21,7 +21,6 @@ namespace Homework
         {
             FormT03_DataCrossForm_1 f = new FormT03_DataCrossForm_1(this);            
             f.Show();
-
-        }
+        }        
     }
 }
