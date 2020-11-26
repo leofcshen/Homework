@@ -27,7 +27,7 @@ namespace Homework
         // 跑馬燈設定
         private string bless = "溫馨小祝福：歡迎互相討論再以自己的理解編寫才會進步，一味照抄者祝您廁所都沒衛生紙，手遊抽卡都是 N。~^^   ";
         //private string bless = "test 1234567890~^^   ";
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // 跑馬燈 Tick
         {
             string bless_one = bless.Substring(0, 1);
             bless = bless.Substring(1, bless.Length - 1) + bless_one;  // 新字串從第二個字開始，並把第一個字補到最後
@@ -267,7 +267,8 @@ namespace Homework
                 "動態分隔線控件 > splitcontainer >orientation > 調整垂直或水平\n" +
                 "啟動視窗最大化 > WindowState > Maximize\n" +
                 "跑馬燈新增設定 timer，Enable = ture，Interval 預設 100(數字越大越跑馬燈快)\n" +
-                "功能視窗預設在右下Panel 開啟，開啟前先設定清空panel，不然會開一堆重覆視窗。";
+                "功能視窗預設在右下Panel 開啟，開啟前先設定清空panel，不然會開一堆重覆視窗。\n" +
+                "Random.Next(number1, number2) 是 number1 <= 隨機數 < number2，要注意number2 是否需要加1。";
             lblHint.Height = 200;
             lblHint.Width = 1200;
             fn.Controls.Add(lblHint);
@@ -333,25 +334,34 @@ namespace Homework
             Console.WriteLine();
             Console.ForegroundColor = oriColor;
 
-            for (int i = 1; i < 10; i++)
-            {
-                for (int j = 2; j < 6; j++)
-                {
-                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
-                }
-                Console.Write("\n");
-            }
-            Console.WriteLine("\r");
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    for (int j = 2; j < 6; j++)
+            //    {
+            //        Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+            //    }
+            //    Console.Write("\n");
+            //}
+            //Console.WriteLine("\r");
 
-            for (int i = 1; i < 10; i++)
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    for (int j = 6; j < 10; j++)
+            //    {
+            //        Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+            //    }
+            //    Console.Write("\n");
+            //}
+            //Console.ReadLine();
+
+            Random R = new Random();
+            for (int i =1; i < 1000; i++)
             {
-                for (int j = 6; j < 10; j++)
-                {
-                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
-                }
-                Console.Write("\n");
+                int j = R.Next(1, 50);
+                if (j==49)
+                    Console.WriteLine(j);
             }
-            Console.ReadLine();
+            
 
         }        
     }

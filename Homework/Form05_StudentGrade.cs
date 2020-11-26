@@ -113,9 +113,9 @@ namespace Homework
 			{
 				btnTotal.Enabled = true;
 				strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
-				strGrade[ID].CN = R.Next(0, 100);
-				strGrade[ID].EN = R.Next(0, 100);
-				strGrade[ID].Math = R.Next(0, 100);
+				strGrade[ID].CN = R.Next(0, 101); // R.Next(0, 100) 不會產生 100
+				strGrade[ID].EN = R.Next(0, 101);
+				strGrade[ID].Math = R.Next(0, 101);
 				strGrade[ID].Sum = strGrade[ID].CN + strGrade[ID].EN + strGrade[ID].Math;
 				strGrade[ID].Avg = strGrade[ID].Sum / 3.0;
 				MaxAndMin();
@@ -245,9 +245,9 @@ namespace Homework
 				while (ID < iD + 20)
 				{
 					strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
-					strGrade[ID].CN = R.Next(0, 100);
-					strGrade[ID].EN = R.Next(0, 100);
-					strGrade[ID].Math = R.Next(0, 100);
+					strGrade[ID].CN = R.Next(0, 101); // R.Next(0,100) 不會產生 100
+					strGrade[ID].EN = R.Next(0, 101);
+					strGrade[ID].Math = R.Next(0, 101);
 					strGrade[ID].Sum = strGrade[ID].CN + strGrade[ID].EN + strGrade[ID].Math;
 					strGrade[ID].Avg = strGrade[ID].Sum / 3.0;
 					MaxAndMin();
@@ -271,7 +271,7 @@ namespace Homework
 
         private void btnRngX2_Click(object sender, EventArgs e)
         {			
-            //按鈕：隨機加入20筆(2)_偷吃步 直接觸發20次隨機單筆
+            //按鈕：隨機加入20筆(2)_偷吃步 直接觸發20次隨機單筆的按鈕
             for (int i = 0; i < 20; i++)
             {
 				btnRng_Click(this, e);

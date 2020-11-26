@@ -63,6 +63,7 @@ namespace Homework
             this.label3 = new System.Windows.Forms.Label();
             this.txtStep = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button22 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -398,12 +399,23 @@ namespace Homework
             this.label4.TabIndex = 32;
             this.label4.Text = "Step";
             // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(1118, 171);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(28, 36);
+            this.button22.TabIndex = 34;
+            this.button22.Text = "(2)";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // Form07_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1152, 450);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.txtStep);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTo);
@@ -481,5 +493,6 @@ namespace Homework
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtStep;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button22;
     }
 }

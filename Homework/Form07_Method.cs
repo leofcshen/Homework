@@ -362,10 +362,9 @@ namespace Homework
 			for (int i = 0; i < arrayStr.Length; i++)
 				arrayList += arrayStr[i].ToString() + " ";
 
-            for (int i = 0; i < arrayStr.Length; i++)
-            {
-                Label label = lblShowResult;
-                label.Text = label.Text + "    " + arrayStr[i];
+            for (int i = 0; i < arrayStr.Length; i++) // 比對字元
+            {               
+                lblShowResult.Text = lblShowResult.Text + "    " + arrayStr[i];
                 if (arrayStr[i].IndexOf("C") != -1 || arrayStr[i].IndexOf("c") != -1)
                 {
                     num++;
@@ -425,18 +424,19 @@ namespace Homework
 			lblShowResult.Text = "樂透號碼\n";
 			for (int i = 0; i < array.Length; i++)
 			{
-				array[i] = R.Next(1, 49);
+				array[i] = R.Next(1, 50); // R.Next(1, 49) 不會產生 49
 				for (int j = 0; j < i; j++)
 				{
-					while (array[j] == array[i])
+					while (array[j] == array[i]) // 檢查重覆
 					{
-						array[i] = R.Next(1, 49);
+						array[i] = R.Next(1, 50);
 						j = 0;
 					}
 				}
-				lblShowResult.Text += $" {array[i]}";
+				lblShowResult.Text += $"{array[i]} ";
 			}
 		}
+		// TODO 樂透
 
         private void button19_Click(object sender, EventArgs e) // 按鈕：九九乘法表
         {
@@ -491,6 +491,29 @@ namespace Homework
 				txtFrom.Focus();
 				txtFrom.SelectAll();
 			}
+		}
+
+		private void button22_Click(object sender, EventArgs e) // 按鈕：樂透號碼不重覆2
+		{			
+			List<int> numberList = new List<int>();
+			for (int i = 0; i < 6; i++) // 產生6個數
+			{
+				int number = R.Next(1, 50);
+				for (int j =0; j < numberList.Count; j++) // 檢查重覆
+					if (number == numberList[j])
+                    {
+						//MessageBox.Show("亂數第"+ i +" 個數 "+number.ToString() + "已存在於第 " + (j+1) + "個數，重新亂數。");
+						number = R.Next(1, 50);
+						j = 0;
+					}
+				numberList.Add(number);
+			}
+			lblShowResult.Text = "樂透號碼(方法2)\n";
+			foreach (int r in numberList)
+			{
+				lblShowResult.Text += r + " ";
+			}
+			
 		}
     }
 }
