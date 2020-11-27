@@ -18,7 +18,6 @@ namespace Homework
             fd = form1;
             InitializeComponent();
             mtbTime.Text = DateTime.Now.ToString("hh時mm分ss秒");
-            mtbTime.Focus();
         }
         private bool flag = false;
         private bool flagCKB = false;       
