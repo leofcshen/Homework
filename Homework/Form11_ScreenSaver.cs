@@ -27,11 +27,11 @@ namespace Homework
         {
             pic.Left += gowhere;
             pic.Top += upwhere;
-            if (pic.Left + pic.Width > base.Width || pic.Left < 0)
+            if (pic.Left + pic.Width > base.Width || pic.Left < 0) // 圖片超過左右邊界，移動座標反轉
             {
                 gowhere = -gowhere;
             }
-            if (pic.Top + pic.Height > base.Height || pic.Top < 0)
+            if (pic.Top + pic.Height > base.Height || pic.Top < 0) // 圖片超過上下邊界，移動座標反轉
             {
                 upwhere = -upwhere;
             }
@@ -44,13 +44,13 @@ namespace Homework
 
         private void ScreenSaver_MouseMove(object sender, MouseEventArgs e) // 滑鼠移動
         {
-            if (exit)
+            if (exit) // 設定鼠標位置
             {
                 mouseX = e.X;
                 mouseY = e.Y;
                 exit = !exit;
             }
-            else if (Math.Abs(e.X - mouseX) > 100 || Math.Abs(e.Y - mouseY) > 100)
+            else if (Math.Abs(e.X - mouseX) > 50 || Math.Abs(e.Y - mouseY) > 50) // 移動超過設定範圍就關閉
             {
                 Close();
             }

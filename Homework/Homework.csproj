@@ -189,6 +189,9 @@
     <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form00.resx">
+      <DependentUpon>Form00.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form06_StudentGrade_List.resx">
       <DependentUpon>Form06_StudentGrade_List.cs</DependentUpon>
     </EmbeddedResource>

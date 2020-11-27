@@ -20,22 +20,22 @@ namespace Homework
 			{
 				control.BackColor = Color.Beige;
 				control.Text = "";
-				control.Click += XOGameButton_Click;
+				control.Click += OOXXButton_Click;
 			}
 		}
 		private bool turnOver = true;
 
-		private void btnEsc_Click(object sender, EventArgs e)
+		private void btnEsc_Click(object sender, EventArgs e) // 按鈕：Esc
 		{
 			Close();
 		}
 
-		private void btnReset_Click(object sender, EventArgs e)
+		private void btnReset_Click(object sender, EventArgs e) // 按鈕：Reset
 		{
 			reset();
 		}
 
-		private void reset()
+		private void reset() // 方法：Reset
 		{
 			foreach (Button control in panel1.Controls)
 			{				
@@ -46,7 +46,7 @@ namespace Homework
 			turnOver = true;
 		}
 
-		private void XOGameButton_Click(object sender, EventArgs e)
+		private void OOXXButton_Click(object sender, EventArgs e) // 按鈕：標記 OX
 		{
 			if (turnOver)
 			{
@@ -60,18 +60,15 @@ namespace Homework
 			}
 			turnOver = !turnOver;
 			((Button)sender).Enabled = false;
-			// 判斷是否獲勝
+			// 判斷 8條連線是否達成
+			// ┌　┬　┬　┐      直：123、456、789
+			// │１│２│３│      橫：147、258、369
+			// ├　┼　┼　┤      Ｘ：159、357
+			// │４│５│６│
+			// ├　┼　┼　┤
+			// │７│８│９│
+			// └　┴　┴　┘   
 			if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button1.Text == button2.Text && button2.Text == button3.Text)
-			{
-				MessageBox.Show(button1.Text + " 方獲勝!", "遊戲結束!");
-				reset();
-			}
-			else if (button1.Text != "" && button4.Text != "" && button7.Text != "" && button1.Text == button4.Text && button4.Text == button7.Text)
-			{
-				MessageBox.Show(button1.Text + " 方獲勝!", "遊戲結束!");
-				reset();
-			}
-			else if (button1.Text != "" && button5.Text != "" && button9.Text != "" && button1.Text == button5.Text && button5.Text == button9.Text)
 			{
 				MessageBox.Show(button1.Text + " 方獲勝!", "遊戲結束!");
 				reset();
@@ -86,6 +83,11 @@ namespace Homework
 				MessageBox.Show(button7.Text + " 方獲勝!", "遊戲結束!");
 				reset();
 			}
+			else if (button1.Text != "" && button4.Text != "" && button7.Text != "" && button1.Text == button4.Text && button4.Text == button7.Text)
+			{
+				MessageBox.Show(button1.Text + " 方獲勝!", "遊戲結束!");
+				reset();
+			}
 			else if (button2.Text != "" && button5.Text != "" && button8.Text != "" && button2.Text == button5.Text && button5.Text == button8.Text)
 			{
 				MessageBox.Show(button2.Text + " 方獲勝!", "遊戲結束!");
@@ -94,6 +96,11 @@ namespace Homework
 			else if (button3.Text != "" && button6.Text != "" && button9.Text != "" && button3.Text == button6.Text && button6.Text == button9.Text)
 			{
 				MessageBox.Show(button3.Text + " 方獲勝!", "遊戲結束!");
+				reset();
+			}
+			else if (button1.Text != "" && button5.Text != "" && button9.Text != "" && button1.Text == button5.Text && button5.Text == button9.Text)
+			{
+				MessageBox.Show(button1.Text + " 方獲勝!", "遊戲結束!");
 				reset();
 			}
 			else if (button3.Text != "" && button5.Text != "" && button7.Text != "" && button3.Text == button5.Text && button5.Text == button7.Text)
@@ -113,6 +120,8 @@ namespace Homework
 			// TODO 鍵盤功能
 			if (e.KeyCode == Keys.R)
 			{
+
+				
 				this.btnReset_Click(this, e);
 			}
 		}       
