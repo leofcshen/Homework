@@ -55,5 +55,10 @@ namespace Homework
                 Close();
             }
         }
+        private void ScreenSaver_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                Close();
+        }
     }
 }

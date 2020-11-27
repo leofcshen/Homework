@@ -113,17 +113,21 @@ namespace Homework
 				MessageBox.Show("平手! 按下確定重新開始", "遊戲結束");
 				reset();
 			}
+            ActiveControl = null; // 跳出 Focus
 		}
 
-		private void Form10_OOXX_KeyDown(object sender, KeyEventArgs e)
+		private void Form10_OOXX_KeyDown(object sender, KeyEventArgs e) // 鍵盤事件
 		{
-			// TODO 鍵盤功能
+			// 鍵盤功能：R
 			if (e.KeyCode == Keys.R)
 			{
-
-				
-				this.btnReset_Click(this, e);
+				btnReset_Click(this, e);
 			}
-		}       
-    }
+			// 鍵盤功能：Esc
+			if (e.KeyCode == Keys.Escape)
+			{
+				btnEsc_Click(this, e);
+			}
+		}
+	}
 }

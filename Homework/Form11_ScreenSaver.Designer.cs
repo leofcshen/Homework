@@ -62,6 +62,7 @@
             this.Name = "Form11_ScreenSaver";
             this.Text = "Form11_ScreenSaver";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ScreenSaver_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
