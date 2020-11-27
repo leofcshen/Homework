@@ -55,7 +55,7 @@ namespace Homework
                 Close();
             }
         }
-        private void ScreenSaver_MouseClick(object sender, MouseEventArgs e)
+        private void ScreenSaver_MouseClick(object sender, MouseEventArgs e) // 滑鼠左鍵點擊就關閉
         {
             if (e.Button == MouseButtons.Left)
                 Close();

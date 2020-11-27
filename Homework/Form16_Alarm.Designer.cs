@@ -30,10 +30,9 @@ namespace Homework
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label2 = new System.Windows.Forms.Label();
             this.gpbMTB = new System.Windows.Forms.GroupBox();
             this.lblMTB = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTime = new System.Windows.Forms.MaskedTextBox();
             this.ckbSetAlarm = new System.Windows.Forms.CheckBox();
             this.lblDTP = new System.Windows.Forms.Label();
             this.btnDTP = new System.Windows.Forms.Button();
@@ -47,21 +46,11 @@ namespace Homework
             this.gpbDTP.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
             // gpbMTB
             // 
             this.gpbMTB.Controls.Add(this.lblMTB);
-            this.gpbMTB.Controls.Add(this.maskedTextBox1);
+            this.gpbMTB.Controls.Add(this.mtbTime);
             this.gpbMTB.Controls.Add(this.ckbSetAlarm);
-            this.gpbMTB.Controls.Add(this.label2);
             this.gpbMTB.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.gpbMTB.Location = new System.Drawing.Point(12, 42);
             this.gpbMTB.Name = "gpbMTB";
@@ -73,26 +62,26 @@ namespace Homework
             // lblMTB
             // 
             this.lblMTB.AutoSize = true;
-            this.lblMTB.Location = new System.Drawing.Point(139, 83);
+            this.lblMTB.Location = new System.Drawing.Point(87, 83);
             this.lblMTB.Name = "lblMTB";
             this.lblMTB.Size = new System.Drawing.Size(133, 30);
             this.lblMTB.TabIndex = 6;
             this.lblMTB.Text = "鬧鐘未設定";
             // 
-            // maskedTextBox1
+            // mtbTime
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(144, 129);
-            this.maskedTextBox1.Mask = "90時90分90秒";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(160, 39);
-            this.maskedTextBox1.TabIndex = 4;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.mtbTime.Location = new System.Drawing.Point(92, 129);
+            this.mtbTime.Mask = "90時90分90秒";
+            this.mtbTime.Name = "mtbTime";
+            this.mtbTime.Size = new System.Drawing.Size(172, 39);
+            this.mtbTime.TabIndex = 4;
+            this.mtbTime.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.mtbTime.Click += new System.EventHandler(this.maskedTextBox1_Click);
             // 
             // ckbSetAlarm
             // 
             this.ckbSetAlarm.AutoSize = true;
-            this.ckbSetAlarm.Location = new System.Drawing.Point(124, 187);
+            this.ckbSetAlarm.Location = new System.Drawing.Point(92, 187);
             this.ckbSetAlarm.Name = "ckbSetAlarm";
             this.ckbSetAlarm.Size = new System.Drawing.Size(142, 34);
             this.ckbSetAlarm.TabIndex = 3;
@@ -191,11 +180,10 @@ namespace Homework
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gpbMTB;
         internal System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.CheckBox ckbSetAlarm;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbTime;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblMTB;

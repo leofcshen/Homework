@@ -88,6 +88,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "Form13_DrawPaint";
             this.Text = "Form13_DrawPaint";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form13_DrawPaint_MouseDown);

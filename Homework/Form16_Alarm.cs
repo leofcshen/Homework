@@ -17,18 +17,20 @@ namespace Homework
         {
             fd = form1;
             InitializeComponent();
+            mtbTime.Text = DateTime.Now.ToString("hh時mm分ss秒");
+            mtbTime.Focus();
         }
         private bool flag = false;
         private bool flagCKB = false;       
         private string AlarmTimeDTP;
         private string AlarmTimeMTB;
         private string NowTime;
-        private string NowTime1;
+        private string NowTime1;        
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (flag)
-            {                
+            {
                 BackColor = Color.Red;
                 //gpbDTP.BackColor = SystemColors.Control; 
             }
@@ -37,8 +39,7 @@ namespace Homework
                 BackColor = Color.Black;
                 //gpbDTP.BackColor = SystemColors.Control;
             }
-            flag = !flag;
-            
+            flag = !flag;            
          }
 
         private void timer1_Tick(object sender, EventArgs e) // 鬧鐘時間比對
@@ -69,7 +70,7 @@ namespace Homework
         {
             if(!flagCKB) // 勾選就設定鬧鐘，反之復原
             {
-                AlarmTimeMTB = maskedTextBox1.MaskedTextProvider.ToString();
+                AlarmTimeMTB = mtbTime.MaskedTextProvider.ToString();
                 gpbMTB.BackColor = Color.Red;
                 lblMTB.Text = "鬧鐘已設定" + AlarmTimeMTB;                
             }
@@ -82,10 +83,14 @@ namespace Homework
             flagCKB = !flagCKB;
         }
 
+        private void maskedTextBox1_Click(object sender, EventArgs e)
+        {
+            mtbTime.Focus();
+        }
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            maskedTextBox1.Focus();
-            maskedTextBox1.SelectAll();
+            mtbTime.Focus();
+            mtbTime.SelectAll();
         }
 
         private void btnDTP_Click(object sender, EventArgs e) // 按鈕：設定DTP鬧鐘
