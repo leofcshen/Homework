@@ -29,9 +29,11 @@ namespace Homework
         {
             // 點擊圖片開啟視窗
             Form form = new Form();
+            form.Size = new Size(816, 489);
             form.BackgroundImage = ((PictureBox)sender).Image;
             form.BackgroundImageLayout = ImageLayout.Zoom;
+            form.StartPosition = FormStartPosition.CenterScreen;
             form.Show();
-        }
+        }        
     }
 }

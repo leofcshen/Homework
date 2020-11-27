@@ -147,8 +147,7 @@ namespace Homework
 					}
 					else if (j % 2 == 0) // i 沒整除、j 整除
 					{
-						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
-						gridstring += string.Format("{0,0} ", grid[i, j] = 0);
+						gridstring += string.Format("{0,0} ", grid[i, j] = 0);						
 					}					
 					else // i、j 都沒整除	
 					{
@@ -206,36 +205,36 @@ namespace Homework
 		}
 		private static int SumFor(int from, int to, int step) // 方法：總和 For
 		{
-			int num = 0;
+			int total = 0;
 		   for(int i = from; i <= to; i+=step)
 			{
-				num += from;
+				total += from;
 				from += step;
 			}
-			return num;
+			return total;
 		}
 
 		private static int SumWhile(int from, int to, int step) // 方法：總和 While
 		{
-			int num = 0;
+			int total = 0;
 			while (from <= to)
 			{
-				num += from;
+				total += from;
 				from += step;
 			}
-			return num;
+			return total;
 		}
 
 		private static int SumDo(int from, int to, int step)  // 方法：總和 Do 
 		{
-			int num = 0;
+			int total = 0;
 			do
 			{
-				num += from;
+				total += from;
 				from += step;
 			}
 			while (from <= to);
-			return num;
+			return total;
 		}
 
 		private static string SingleSideTree(int rows) //方法：直角聖誕樹
@@ -327,7 +326,17 @@ namespace Homework
 			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
 		}
 
-        private void button11_Click(object sender, EventArgs e)  // 按鈕：陣列總和
+		private void button14_Click(object sender, EventArgs e) // 按鈕：Swap(2)
+		{
+			int x = 100;
+			int y = 200;
+			lblShowResult.Text = $"使用方法2：不建立新的變數\n\n換位前n1={x} , n2={y}";
+			swap2(ref x, ref y);
+			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
+			lblShowResult.Text += $"\n\nx = x * y ;\ny = x / y ;\nx = x / y ;";
+		}
+
+		private void button11_Click(object sender, EventArgs e)  // 按鈕：陣列總和
 		{
 			string arrayList = "";			
 			for (int i = 0; i < arrayInt.Length; i++)
@@ -374,16 +383,6 @@ namespace Homework
             lblShowResult.Text = $"陣列arrayStr [ {arrayList}]\n有C 及 c的名字共有 {num} 個";			
 		}
 
-        private void button14_Click(object sender, EventArgs e) // 按鈕：Swap(2)
-        {
-			int x = 100;
-			int y = 200;
-			lblShowResult.Text = $"使用方法2：不建立新的變數\n\n換位前n1={x} , n2={y}";
-			swap2(ref x, ref y);
-			lblShowResult.Text += $"\n換位後n1={x} , n2={y}";
-			lblShowResult.Text += $"\n\nx = x * y ;\ny = x / y ;\nx = x / y ;";
-		}
-
         private void button18_Click(object sender, EventArgs e) // 按鈕：直角聖誕樹
         {
 			if (int.TryParse(txtRow.Text, out var result))
@@ -396,7 +395,7 @@ namespace Homework
 			txtRow.SelectAll();
 		}
 
-        private void button20_Click(object sender, EventArgs e) // 按鈕：100的二進位
+        private void button20_Click(object sender, EventArgs e) // 按鈕：100或某數的二進位
         {
 			if(int.TryParse(txtBinary.Text,out int number))
             {
@@ -429,14 +428,36 @@ namespace Homework
                     while (array[j] == array[i]) // 檢查重覆
                     {
                         array[i] = R.Next(1, 50);
-                        j = 0;
+                        j = 0; // 從頭開始比對
                     }
                 }
                 lblShowResult.Text += $"{array[i]} ";
             }
         }
 
-        private void button19_Click(object sender, EventArgs e) // 按鈕：九九乘法表
+		private void button22_Click(object sender, EventArgs e) // 按鈕：樂透號碼不重覆2
+		{
+			List<int> numberList = new List<int>();
+			for (int i = 0; i < 6; i++) // 產生6個數
+			{
+				int number = R.Next(1, 50);
+				for (int j = 0; j < numberList.Count; j++) // 檢查重覆
+					if (number == numberList[j])
+					{
+						//MessageBox.Show("亂數第"+ i +" 個數 "+number.ToString() + "已存在於第 " + (j+1) + "個數，重新亂數。");
+						number = R.Next(1, 50);
+						j = 0; // 從頭開始比對
+					}
+				numberList.Add(number);
+			}
+			lblShowResult.Text = "樂透號碼(方法2)\n";
+			foreach (int r in numberList)
+			{
+				lblShowResult.Text += r + " ";
+			}
+		}
+
+		private void button19_Click(object sender, EventArgs e) // 按鈕：九九乘法表
         {
 			lblShowResult.Text = "九九乘法表\n";
 			for (int i = 1; i <= 9; i++)
@@ -453,7 +474,8 @@ namespace Homework
         {
 			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
 			{
-				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nFor 迴圈加總為 {SumFor(from, to, step)}";
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\n" +
+					$"For 迴圈加總為 {SumFor(from, to, step)}";
 			}
 			else
 			{
@@ -467,7 +489,8 @@ namespace Homework
         {
 			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
 			{
-				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nWhile 迴圈加總為 {SumWhile(from, to, step)}";
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\n" +
+					$"While 迴圈加總為 {SumWhile(from, to, step)}";
 			}
 			else
 			{
@@ -481,36 +504,15 @@ namespace Homework
 		{
 			if (int.TryParse(txtFrom.Text, out var from) && int.TryParse(txtTo.Text, out var to) && int.TryParse(txtStep.Text, out var step))
 			{
-				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\nDo 迴圈加總為 {SumDo(from, to, step)}";
+				lblShowResult.Text = $"{from} 到 {to} 相隔 {step - 1}\n" +
+					$"Do 迴圈加總為 {SumDo(from, to, step)}";
 			}
 			else
 			{
 				MessageBox.Show("請檢查數值");
 				txtFrom.Focus();
-				txtFrom.SelectAll();
-		}
-		}
-
-		private void button22_Click(object sender, EventArgs e) // 按鈕：樂透號碼不重覆2
-		{
-			List<int> numberList = new List<int>();
-			for (int i = 0; i < 6; i++) // 產生6個數
-			{
-				int number = R.Next(1, 50);
-				for (int j =0; j < numberList.Count; j++) // 檢查重覆
-					if (number == numberList[j])
-                    {
-						//MessageBox.Show("亂數第"+ i +" 個數 "+number.ToString() + "已存在於第 " + (j+1) + "個數，重新亂數。");
-						number = R.Next(1, 50);
-						j = 0;
-					}
-				numberList.Add(number);
+				txtFrom.SelectAll();		
 			}
-			lblShowResult.Text = "樂透號碼(方法2)\n";
-			foreach (int r in numberList)
-			{
-				lblShowResult.Text += r + " ";
-			}			
 		}
     }
 }

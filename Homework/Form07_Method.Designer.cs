@@ -259,9 +259,10 @@ namespace Homework
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(914, 76);
+            this.button15.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button15.Location = new System.Drawing.Point(907, 12);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(55, 28);
+            this.button15.Size = new System.Drawing.Size(68, 35);
             this.button15.TabIndex = 18;
             this.button15.Text = "for";
             this.button15.UseVisualStyleBackColor = true;
@@ -269,9 +270,10 @@ namespace Homework
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(914, 118);
+            this.button16.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button16.Location = new System.Drawing.Point(907, 64);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(55, 27);
+            this.button16.Size = new System.Drawing.Size(68, 36);
             this.button16.TabIndex = 19;
             this.button16.Text = "while";
             this.button16.UseVisualStyleBackColor = true;
@@ -279,9 +281,10 @@ namespace Homework
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(914, 157);
+            this.button17.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button17.Location = new System.Drawing.Point(907, 118);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(55, 27);
+            this.button17.Size = new System.Drawing.Size(68, 36);
             this.button17.TabIndex = 20;
             this.button17.Text = "do";
             this.button17.UseVisualStyleBackColor = true;
@@ -289,9 +292,10 @@ namespace Homework
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(1032, 36);
+            this.button18.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button18.Location = new System.Drawing.Point(1078, 15);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(80, 36);
+            this.button18.Size = new System.Drawing.Size(100, 33);
             this.button18.TabIndex = 21;
             this.button18.Text = "直角聖誕樹";
             this.button18.UseVisualStyleBackColor = true;
@@ -299,9 +303,10 @@ namespace Homework
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(1032, 78);
+            this.button19.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button19.Location = new System.Drawing.Point(985, 64);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(80, 36);
+            this.button19.Size = new System.Drawing.Size(193, 36);
             this.button19.TabIndex = 22;
             this.button19.Text = "九九乘法表";
             this.button19.UseVisualStyleBackColor = true;
@@ -309,9 +314,10 @@ namespace Homework
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(1048, 129);
+            this.button20.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button20.Location = new System.Drawing.Point(1035, 118);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(64, 36);
+            this.button20.Size = new System.Drawing.Size(143, 36);
             this.button20.TabIndex = 23;
             this.button20.Text = "的二進位";
             this.button20.UseVisualStyleBackColor = true;
@@ -319,9 +325,10 @@ namespace Homework
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(1008, 171);
+            this.button21.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button21.Location = new System.Drawing.Point(983, 171);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(104, 36);
+            this.button21.Size = new System.Drawing.Size(152, 36);
             this.button21.TabIndex = 24;
             this.button21.Text = "樂透號碼不重覆";
             this.button21.UseVisualStyleBackColor = true;
@@ -329,81 +336,91 @@ namespace Homework
             // 
             // txtRow
             // 
-            this.txtRow.Location = new System.Drawing.Point(1075, 8);
+            this.txtRow.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtRow.Location = new System.Drawing.Point(1035, 18);
             this.txtRow.Name = "txtRow";
-            this.txtRow.Size = new System.Drawing.Size(37, 22);
+            this.txtRow.Size = new System.Drawing.Size(37, 29);
             this.txtRow.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1035, 11);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(981, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 12);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 26;
             this.label1.Text = "Rows:";
             // 
             // txtBinary
             // 
-            this.txtBinary.Location = new System.Drawing.Point(1008, 139);
+            this.txtBinary.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtBinary.Location = new System.Drawing.Point(985, 123);
             this.txtBinary.Name = "txtBinary";
-            this.txtBinary.Size = new System.Drawing.Size(37, 22);
+            this.txtBinary.Size = new System.Drawing.Size(38, 29);
             this.txtBinary.TabIndex = 27;
             this.txtBinary.Text = "100";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(812, 84);
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(805, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 12);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 28;
             this.label2.Text = "From";
             // 
             // txtFrom
             // 
-            this.txtFrom.Location = new System.Drawing.Point(851, 81);
+            this.txtFrom.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtFrom.Location = new System.Drawing.Point(854, 16);
             this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(57, 22);
+            this.txtFrom.Size = new System.Drawing.Size(44, 29);
             this.txtFrom.TabIndex = 29;
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(851, 118);
+            this.txtTo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTo.Location = new System.Drawing.Point(854, 69);
             this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(57, 22);
+            this.txtTo.Size = new System.Drawing.Size(44, 29);
             this.txtTo.TabIndex = 31;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(812, 121);
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(805, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 12);
+            this.label3.Size = new System.Drawing.Size(28, 20);
             this.label3.TabIndex = 30;
             this.label3.Text = "To";
             // 
             // txtStep
             // 
-            this.txtStep.Location = new System.Drawing.Point(851, 157);
+            this.txtStep.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtStep.Location = new System.Drawing.Point(854, 123);
             this.txtStep.Name = "txtStep";
-            this.txtStep.Size = new System.Drawing.Size(57, 22);
+            this.txtStep.Size = new System.Drawing.Size(44, 29);
             this.txtStep.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(812, 160);
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(805, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 12);
+            this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Step";
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(1118, 171);
+            this.button22.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button22.Location = new System.Drawing.Point(1141, 171);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(28, 36);
+            this.button22.Size = new System.Drawing.Size(37, 36);
             this.button22.TabIndex = 34;
             this.button22.Text = "(2)";
             this.button22.UseVisualStyleBackColor = true;
@@ -414,7 +431,7 @@ namespace Homework
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1152, 450);
+            this.ClientSize = new System.Drawing.Size(1206, 450);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.txtStep);
             this.Controls.Add(this.label4);

@@ -24,21 +24,19 @@ namespace Homework
         private string AlarmTimeDTP;
         private string AlarmTimeMTB;
         private string NowTime;
-        private string NowTime1;        
-
+        private string NowTime1;
+                
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (flag)
             {
-                BackColor = Color.Red;
-                //gpbDTP.BackColor = SystemColors.Control; 
+                BackColor = Color.Red;                
             }
             else
             {
-                BackColor = Color.Black;
-                //gpbDTP.BackColor = SystemColors.Control;
+                BackColor = Color.Black;                
             }
-            flag = !flag;            
+            flag = !flag;
          }
 
         private void timer1_Tick(object sender, EventArgs e) // 鬧鐘時間比對

@@ -115,7 +115,7 @@ namespace Homework
 			}
             ActiveControl = null; // 跳出 Focus
 		}
-
+		// TODO VS PC
 		private void Form10_OOXX_KeyDown(object sender, KeyEventArgs e) // 鍵盤事件
 		{
 			// 鍵盤功能：R
