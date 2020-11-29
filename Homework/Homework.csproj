@@ -72,6 +72,18 @@
     <Compile Include="Form12_Notepad.Designer.cs">
       <DependentUpon>Form12_Notepad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form12_Notepad_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12_Notepad_About.Designer.cs">
+      <DependentUpon>Form12_Notepad_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12_Notepad_Msgbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12_Notepad_Msgbox.Designer.cs">
+      <DependentUpon>Form12_Notepad_Msgbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form17_Note.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +120,11 @@
     <Compile Include="Form10_OOXX.Designer.cs">
       <DependentUpon>Form10_OOXX.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form15_GuessMsgBox.cs">
+    <Compile Include="Form15_GuessNumberMsg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form15_GuessMsgBox.Designer.cs">
-      <DependentUpon>Form15_GuessMsgBox.cs</DependentUpon>
+    <Compile Include="Form15_GuessNumberMsg.Designer.cs">
+      <DependentUpon>Form15_GuessNumberMsg.cs</DependentUpon>
     </Compile>
     <Compile Include="Form15_GuessNumber.cs">
       <SubType>Form</SubType>
@@ -201,6 +213,12 @@
     <EmbeddedResource Include="Form12_Notepad.resx">
       <DependentUpon>Form12_Notepad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form12_Notepad_About.resx">
+      <DependentUpon>Form12_Notepad_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12_Notepad_Msgbox.resx">
+      <DependentUpon>Form12_Notepad_Msgbox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form17_Note.resx">
       <DependentUpon>Form17_Note.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,8 +237,8 @@
     <EmbeddedResource Include="Form14_PicViewer.resx">
       <DependentUpon>Form14_PicViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form15_GuessMsgBox.resx">
-      <DependentUpon>Form15_GuessMsgBox.cs</DependentUpon>
+    <EmbeddedResource Include="Form15_GuessNumberMsg.resx">
+      <DependentUpon>Form15_GuessNumberMsg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form15_GuessNumber.resx">
       <DependentUpon>Form15_GuessNumber.cs</DependentUpon>

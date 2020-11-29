@@ -16,18 +16,18 @@ namespace Homework
         {
             InitializeComponent();
         }
-        private Random rand = new Random();
+        private Random R = new Random();
 private void btnGuess_Click(object sender, EventArgs e)
         {
-            Class1.x = this;
-            Class1.ans = rand.Next(1, 100);
-            Form15_GuessMsgBox formGuessMessageBox = new Form15_GuessMsgBox();
+            ClassDataPass.fg = this;
+            ClassDataPass.answer = R.Next(1, 100);
+            Form15_GuessNumberMsg formGuessMessageBox = new Form15_GuessNumberMsg();
             formGuessMessageBox.ShowDialog();
         }
 
         private void btnShowAnswer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Answer：{Class1.ans}");
+            MessageBox.Show($"Answer：{ClassDataPass.answer}");
         }
     }
 }

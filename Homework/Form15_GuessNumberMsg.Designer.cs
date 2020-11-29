@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    partial class Form15_GuessMsgBox
+    partial class Form15_GuessNumberMsg
     {
         /// <summary>
         /// Required designer variable.

@@ -95,7 +95,7 @@
         #endregion
         private System.Windows.Forms.Button btnGuess;
         private System.Windows.Forms.Button btnShowAnswer;
-        internal System.Windows.Forms.Label lblRange;
         internal System.Windows.Forms.Label lblTitle;
+        internal System.Windows.Forms.Label lblRange;
     }
 }

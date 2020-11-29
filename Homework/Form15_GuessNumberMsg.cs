@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class Form15_GuessMsgBox : Form
+    public partial class Form15_GuessNumberMsg : Form
     {
-        public Form15_GuessMsgBox()
+        public Form15_GuessNumberMsg()
         {
             InitializeComponent();
             CenterToScreen();
@@ -40,19 +40,19 @@ namespace Homework
         {
             if (TransSuccess() && GuessNumber <= Max && GuessNumber >= Min)
             {
-                if (GuessNumber < Class1.ans)
+                if (GuessNumber < ClassDataPass.answer)
                 {
                     Min = GuessNumber;
-                    Class1.x.lblRange.Text = "Too Small!!!" + Resault();
+                    ClassDataPass.fg.lblRange.Text = "Too Small!!!" + Resault();
                 }
-                else if (GuessNumber > Class1.ans)
+                else if (GuessNumber > ClassDataPass.answer)
                 {
                     Max = GuessNumber;
-                    Class1.x.lblRange.Text = "Too Large!!!" + Resault();
+                    ClassDataPass.fg.lblRange.Text = "Too Large!!!" + Resault();
                 }
-                else if (GuessNumber == Class1.ans)
+                else if (GuessNumber == ClassDataPass.answer)
                 {
-                    MessageBox.Show($"Congradulations!!! You got {Class1.ans}!!!");
+                    MessageBox.Show($"Congradulations!!! You got {ClassDataPass.answer}!!!");
                 }
             }
             else

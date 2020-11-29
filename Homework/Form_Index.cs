@@ -35,15 +35,14 @@ namespace Homework
         }
         private void tmClock_Tick(object sender, EventArgs e) // 時間 Tick
         {
-            DateTime time = DateTime.Now;
-            sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
+            DateTime time = DateTime.Now;            
 
-            foreach (Form f in splitContainer3.Panel1.Controls) //尋找 Form16 的 Label 設定時間
+            foreach (Form f in splitContainer3.Panel1.Controls) // 尋找元件
             {
                 foreach (Control c in f.Controls)
                 {
-                    if (c is Label && c.Name == "lblTimer")
-                        c.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
+                    if (c is Label && c.Name == "lblTimer") // 尋找 Form16 的 Label 設定時間
+                        c.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);                    
                 }
             }
         }
@@ -209,12 +208,13 @@ namespace Homework
 
         private void btnNotepad_Click(object sender, EventArgs e) // 按鈕：Notepad
         {
-            //splitContainer3.Panel1.Controls.Clear();
-            //Form12_Notepad fn = new Form12_Notepad();
-            //fn.TopLevel = false;
-            //splitContainer3.Panel1.Controls.Add(fn);
-            //fn.Show();
-            MessageBox.Show("施工中");
+            splitContainer3.Panel1.Controls.Clear();
+            
+            Form12_Notepad fn = new Form12_Notepad();
+            fn.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fn);
+            fn.Show();
+            //MessageBox.Show("施工中");
         }
 
         private void btnDrawPaint_Click(object sender, EventArgs e) // 按鈕：小畫家

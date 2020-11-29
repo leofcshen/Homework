@@ -32,9 +32,9 @@ namespace Homework
         internal double AvgCN; // 中文平均
         internal double AvgMath; // 數學平均
     }
-	internal class Class1
+	internal class ClassDataPass
     {
-		internal static Form15_GuessNumber x;
-		internal static int ans;
+		internal static Form15_GuessNumber fg;
+		internal static int answer;
 	}
 }
