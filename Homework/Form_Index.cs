@@ -35,7 +35,8 @@ namespace Homework
         }
         private void tmClock_Tick(object sender, EventArgs e) // 時間 Tick
         {
-            DateTime time = DateTime.Now;            
+            DateTime time = DateTime.Now;
+            sslblTimer.Text = String.Format("現在時間 {0:00}:{1:00}:{2:00}", time.Hour, time.Minute, time.Second);
 
             foreach (Form f in splitContainer3.Panel1.Controls) // 尋找元件
             {
