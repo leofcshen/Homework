@@ -210,8 +210,7 @@ namespace Homework
 
         private void btnNotepad_Click(object sender, EventArgs e) // 按鈕：Notepad
         {
-            splitContainer3.Panel1.Controls.Clear();
-            
+            splitContainer3.Panel1.Controls.Clear();            
             Form12_Notepad fn = new Form12_Notepad();
             fn.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fn);
@@ -223,12 +222,13 @@ namespace Homework
         {
             splitContainer3.Panel1.Controls.Clear();
             Form13_DrawPaint fd = new Form13_DrawPaint();
+            //Form1 fd = new Form1();
             fd.TopLevel = false;
             splitContainer3.Panel1.Controls.Add(fd);
             fd.Show();
         }
 
-        private void btnPicViewer_Click(object sender, EventArgs e) //按鈕：Picture Viewer
+        private void btnPicViewer_Click(object sender, EventArgs e) // 按鈕：Picture Viewer
         {
             splitContainer3.Panel1.Controls.Clear();
             Form14_PicViewer fp = new Form14_PicViewer();

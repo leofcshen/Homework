@@ -481,7 +481,6 @@ namespace Homework
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

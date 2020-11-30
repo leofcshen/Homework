@@ -87,6 +87,12 @@
     <Compile Include="Form12_Notepad_Msgbox.Designer.cs">
       <DependentUpon>Form12_Notepad_Msgbox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form13_DrawPaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13_DrawPaint.Designer.cs">
+      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form17_Note.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +110,6 @@
     </Compile>
     <Compile Include="Form11_ScreenSaver.Designer.cs">
       <DependentUpon>Form11_ScreenSaver.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form13_DrawPaint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form13_DrawPaint.Designer.cs">
-      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
     </Compile>
     <Compile Include="Form14_PicViewer.cs">
       <SubType>Form</SubType>
@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Form12_Notepad_Msgbox.resx">
       <DependentUpon>Form12_Notepad_Msgbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form13_DrawPaint.resx">
+      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form17_Note.resx">
       <DependentUpon>Form17_Note.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form11_ScreenSaver.resx">
       <DependentUpon>Form11_ScreenSaver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form13_DrawPaint.resx">
-      <DependentUpon>Form13_DrawPaint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form14_PicViewer.resx">
       <DependentUpon>Form14_PicViewer.cs</DependentUpon>
