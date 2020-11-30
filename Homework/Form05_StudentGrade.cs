@@ -99,6 +99,8 @@ namespace Homework
 					MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					btnRng.Enabled = false;
 				}
+
+				btnReset.Enabled = true;
 			}
 			catch (Exception ex)
 			{
@@ -132,6 +134,8 @@ namespace Homework
 					MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					btnAdd.Enabled = false;
 				}
+
+				btnReset.Enabled = true;
 			}
 			catch (Exception ex)
             {
@@ -241,8 +245,8 @@ namespace Homework
             try
             {
 				btnTotal.Enabled = true;
-				int iD = ID;
-				while (ID < iD + 20)
+				int x = ID;
+				while (ID < x + 20)
 				{
 					strGrade[ID].Name = "Student" + string.Format("{0:000}", ID + 1);
 					strGrade[ID].CN = R.Next(0, 101); // R.Next(0,100) 不會產生 100
@@ -262,6 +266,7 @@ namespace Homework
 					MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					btnAdd.Enabled = false;
 				}
+				btnReset.Enabled = true;
 			}
 			catch(Exception ex)
             {
@@ -270,13 +275,34 @@ namespace Homework
 		}
 
         private void btnRngX2_Click(object sender, EventArgs e)
-        {			
-            //按鈕：隨機加入20筆(2)_偷吃步 直接觸發20次隨機單筆的按鈕
-            for (int i = 0; i < 20; i++)
-            {
-				btnRng_Click(this, e);
-				//btnRng.PerformClick(); //另一個寫法
+        {
+			//按鈕：隨機加入20筆(2)_偷吃步 直接觸發20次隨機單筆的按鈕
+			try
+			{
+				int x = ID;
+				if (x + 20 > 100)
+                {
+					MessageBox.Show("新增20筆後會超過上限100筆，請先清除資料。");
+					return;
+                }
+
+				for (int i = 0; i < 20; i++)
+				{
+					btnRng_Click(this, e);
+					//btnRng.PerformClick(); //另一個寫法
+				}
+
+				if (ID == 100)
+				{
+					MessageBox.Show("記憶空間已滿，請先刪除舊有資料。", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					btnAdd.Enabled = false;
+				}
+				btnReset.Enabled = true;
 			}
+			catch (Exception ex)
+            {
+				Form00.msgError(ex);
+            }			
         }
     }
 }

@@ -62,6 +62,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -124,6 +125,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.btnNotepad);
             this.splitContainer2.Panel1.Controls.Add(this.btnDataCross);
             this.splitContainer2.Panel1.Controls.Add(this.btnNoteTest);
@@ -443,6 +445,17 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(12, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 36);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Console";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
             // Form_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -504,6 +517,7 @@ namespace Homework
         private System.Windows.Forms.Button btnNote;
         private System.Windows.Forms.Button btnDataCross;
         private System.Windows.Forms.Button btnNotepad;
+        private System.Windows.Forms.Button button1;
     }
 }
 

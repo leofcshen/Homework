@@ -13,23 +13,14 @@ namespace Homework
 {
     public partial class FormT01_Console : Form
     {
-
-        [DllImport("kernel32.dll")]
-        static extern bool FreeConsole();
-        [DllImport("kernel32.dll")]
-        public static extern bool AllocConsole();
         public FormT01_Console()
         {
             InitializeComponent();
-            AllocConsole();
-            Console.Beep();
-            ConsoleColor oriColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("* Don't close this console window or the application will also close.");
-            Console.WriteLine();
-            Console.ForegroundColor = oriColor;
+        }
 
-            Console.WriteLine("123456");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("123");
         }
     }
 }

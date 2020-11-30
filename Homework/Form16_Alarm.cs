@@ -29,7 +29,7 @@ namespace Homework
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (flag)
-            {
+            {                
                 BackColor = Color.Red;                
             }
             else
@@ -41,25 +41,30 @@ namespace Homework
 
         private void timer1_Tick(object sender, EventArgs e) // 鬧鐘時間比對
         {
-            // MTB 比對
-            NowTime = DateTime.Now.ToString("hh時mm分ss秒");
-            if (AlarmTimeMTB == NowTime)
-            {
-                timer2.Enabled = true;
+            if (flagCKB) // MTB 比對
+            {                
+                NowTime = DateTime.Now.ToString("hh時mm分ss秒");
+                if (AlarmTimeMTB == NowTime)
+                {
+                    timer2.Enabled = true;
+                }
+                else
+                {
+                    timer2.Enabled = false;
+                }
             }
             else
             {
-                timer2.Enabled = false;
-            }
-            // DTP 比對
-            NowTime1 = DateTime.Now.ToString("hh:mm:ss");
-            if (AlarmTimeDTP == NowTime1)
-            {
-                timer2.Enabled = true;
-            }
-            else
-            {
-                timer2.Enabled = false;
+                // DTP 比對
+                NowTime1 = DateTime.Now.ToString("hh:mm:ss");
+                if (AlarmTimeDTP == NowTime1)
+                {
+                    timer2.Enabled = true;
+                }
+                else
+                {
+                    timer2.Enabled = false;
+                }
             }
         }
 
@@ -69,13 +74,16 @@ namespace Homework
             {
                 AlarmTimeMTB = mtbTime.MaskedTextProvider.ToString();
                 gpbMTB.BackColor = Color.Red;
-                lblMTB.Text = "鬧鐘已設定" + AlarmTimeMTB;                
+                lblMTB.Text = "鬧鐘已設定" + AlarmTimeMTB;
+                btnDTP.Enabled = false;
             }
             else
             {
                 AlarmTimeMTB = "";
                 gpbMTB.BackColor = SystemColors.Control;
                 lblMTB.Text = "鬧鐘未設定";
+                BackColor = DefaultBackColor;
+                btnDTP.Enabled = true;
             }
             flagCKB = !flagCKB;
         }
@@ -95,6 +103,7 @@ namespace Homework
             AlarmTimeDTP = dateTimePicker1.Text;
             gpbDTP.BackColor = Color.Red;
             lblDTP.Text = "鬧鐘已設定" + AlarmTimeDTP;
+            ckbSetAlarm.Enabled = false;
         }
 
         private void btnCancelDTP_Click(object sender, EventArgs e) // 按鈕：取消DTP鬧鐘
@@ -103,6 +112,7 @@ namespace Homework
             gpbDTP.BackColor = SystemColors.Control;
             lblDTP.Text = "鬧鐘未設定";
             BackColor = DefaultBackColor;
+            ckbSetAlarm.Enabled = true;
         }
     }
 }

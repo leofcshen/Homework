@@ -81,8 +81,6 @@ namespace Homework
             // ckbSetAlarm
             // 
             this.ckbSetAlarm.AutoSize = true;
-            this.ckbSetAlarm.Checked = true;
-            this.ckbSetAlarm.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbSetAlarm.Location = new System.Drawing.Point(92, 187);
             this.ckbSetAlarm.Name = "ckbSetAlarm";
             this.ckbSetAlarm.Size = new System.Drawing.Size(142, 34);

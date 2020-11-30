@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
@@ -221,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form17_Note.resx">
       <DependentUpon>Form17_Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormT01_Console.resx">
+      <DependentUpon>FormT01_Console.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormT03_DataCrossForm.resx">
       <DependentUpon>FormT03_DataCrossForm.cs</DependentUpon>

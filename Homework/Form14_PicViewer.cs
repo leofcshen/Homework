@@ -20,12 +20,12 @@ namespace Homework
             {
                 if (control is PictureBox) // 如果該元件是 PictureBox
                 {
-                    control.Click += Pic_Click;
+                    control.Click += Picture_Click;
                 }
             }
         }
 
-        private void Pic_Click(object sender, EventArgs e)
+        private void Picture_Click(object sender, EventArgs e)
         {
             // 點擊圖片開啟視窗
             Form form = new Form();

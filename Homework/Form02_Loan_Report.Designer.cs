@@ -142,11 +142,11 @@ namespace Homework
             // btnMail
             // 
             this.btnMail.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMail.Location = new System.Drawing.Point(598, 362);
+            this.btnMail.Location = new System.Drawing.Point(581, 362);
             this.btnMail.Name = "btnMail";
-            this.btnMail.Size = new System.Drawing.Size(151, 54);
+            this.btnMail.Size = new System.Drawing.Size(207, 54);
             this.btnMail.TabIndex = 38;
-            this.btnMail.Text = "發送報告";
+            this.btnMail.Text = "發送報告(有功能)";
             this.btnMail.UseVisualStyleBackColor = true;
             this.btnMail.Click += new System.EventHandler(this.btnMail_Click);
             // 
@@ -168,7 +168,7 @@ namespace Homework
             this.lblTo.TabIndex = 41;
             this.lblTo.Text = "收件人";
             // 
-            // Form2_LoanReport
+            // Form02_Loan_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +186,7 @@ namespace Homework
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.txtRAmount);
             this.Controls.Add(this.lblAmonut);
-            this.Name = "Form2_LoanReport";
+            this.Name = "Form02_Loan_Report";
             this.Text = "Form2_LoanReport";
             this.ResumeLayout(false);
             this.PerformLayout();

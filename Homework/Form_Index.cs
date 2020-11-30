@@ -69,11 +69,12 @@ namespace Homework
                 btnPicViewer.Visible = false;
                 btnGuessNumber.Visible = false;
                 btnAlarm.Visible = false;
-                btnNoteTest.Visible = false;                
+                btnNoteTest.Visible = false;
 
                 btnNoteTest.Visible = true;
                 btnConsole.Visible = true;
                 btnDataCross.Visible = true;
+                button1.Visible = true;
             }
             else
             {
@@ -99,6 +100,7 @@ namespace Homework
                 btnNoteTest.Visible = false;
                 btnConsole.Visible = false;
                 btnDataCross.Visible = false;
+                button1.Visible = false;
             }
             Mode = !Mode;
         }
@@ -333,7 +335,7 @@ namespace Homework
             ConsoleColor oriColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("* Don't close this console window or the application will also close.");
-            Console.WriteLine();
+            Console.WriteLine("123");
             Console.ForegroundColor = oriColor;
 
             //for (int i = 1; i < 10; i++)
@@ -355,16 +357,6 @@ namespace Homework
             //    Console.Write("\n");
             //}
             //Console.ReadLine();
-
-            Random R = new Random();
-            for (int i =1; i < 1000; i++)
-            {
-                int j = R.Next(1, 50);
-                if (j==49)
-                    Console.WriteLine(j);
-            }
-            
-
-        }        
+        }
     }
 }
