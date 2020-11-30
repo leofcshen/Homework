@@ -76,6 +76,7 @@ namespace Homework
                 btnConsole.Visible = true;
                 btnDataCross.Visible = true;
                 button1.Visible = true;
+                btnMineSweeper.Visible = true;
             }
             else
             {
@@ -102,6 +103,7 @@ namespace Homework
                 btnConsole.Visible = false;
                 btnDataCross.Visible = false;
                 button1.Visible = false;
+                btnMineSweeper.Visible = false;
             }
             Mode = !Mode;
         }
@@ -339,25 +341,34 @@ namespace Homework
             Console.WriteLine("123");
             Console.ForegroundColor = oriColor;
 
-            //for (int i = 1; i < 10; i++)
-            //{
-            //    for (int j = 2; j < 6; j++)
-            //    {
-            //        Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
-            //    }
-            //    Console.Write("\n");
-            //}
-            //Console.WriteLine("\r");
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 2; j < 6; j++)
+                {
+                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+                }
+                Console.Write("\n");
+            }
+            Console.WriteLine("\r");
 
-            //for (int i = 1; i < 10; i++)
-            //{
-            //    for (int j = 6; j < 10; j++)
-            //    {
-            //        Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
-            //    }
-            //    Console.Write("\n");
-            //}
-            //Console.ReadLine();
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 6; j < 10; j++)
+                {
+                    Console.Write(j + "*" + i + "=" + (j * i).ToString("00") + "  ");
+                }
+                Console.Write("\n");
+            }
+            Console.ReadLine();
+        }
+
+        private void btnMineSweeper_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            FormT05_MineSweeper fm = new FormT05_MineSweeper();
+            fm.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(fm);
+            fm.Show();
         }
     }
 }

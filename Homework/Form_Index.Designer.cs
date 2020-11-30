@@ -35,6 +35,7 @@ namespace Homework
             this.btnMode = new System.Windows.Forms.Button();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnNotepad = new System.Windows.Forms.Button();
             this.btnDataCross = new System.Windows.Forms.Button();
             this.btnNoteTest = new System.Windows.Forms.Button();
@@ -62,7 +63,7 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMineSweeper = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -125,6 +126,7 @@ namespace Homework
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnMineSweeper);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.btnNotepad);
             this.splitContainer2.Panel1.Controls.Add(this.btnDataCross);
@@ -153,6 +155,17 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 853);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(12, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 36);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Console";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // btnNotepad
             // 
@@ -445,16 +458,17 @@ namespace Homework
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
             // 
-            // button1
+            // btnMineSweeper
             // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(12, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 36);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Console";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
+            this.btnMineSweeper.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMineSweeper.Location = new System.Drawing.Point(12, 193);
+            this.btnMineSweeper.Name = "btnMineSweeper";
+            this.btnMineSweeper.Size = new System.Drawing.Size(187, 36);
+            this.btnMineSweeper.TabIndex = 22;
+            this.btnMineSweeper.Text = "踩地雷";
+            this.btnMineSweeper.UseVisualStyleBackColor = true;
+            this.btnMineSweeper.Visible = false;
+            this.btnMineSweeper.Click += new System.EventHandler(this.btnMineSweeper_Click);
             // 
             // Form_Index
             // 
@@ -481,6 +495,7 @@ namespace Homework
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -517,6 +532,7 @@ namespace Homework
         private System.Windows.Forms.Button btnDataCross;
         private System.Windows.Forms.Button btnNotepad;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMineSweeper;
     }
 }
 

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FEEBEFD1-D13A-441B-AD3E-223834137284}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Homework</RootNamespace>
     <AssemblyName>Homework</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -189,6 +189,24 @@
     <Compile Include="FormT01_Console.Designer.cs">
       <DependentUpon>FormT01_Console.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormT05_MineSweeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormT05_MineSweeper.Designer.cs">
+      <DependentUpon>FormT05_MineSweeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormT05_MineSweeper_Die.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormT05_MineSweeper_Die.Designer.cs">
+      <DependentUpon>FormT05_MineSweeper_Die.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormT05_MineSweeper_Survival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormT05_MineSweeper_Survival.Designer.cs">
+      <DependentUpon>FormT05_MineSweeper_Survival.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +219,7 @@
     <Compile Include="Form01_Hello.Designer.cs">
       <DependentUpon>Form01_Hello.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheGame.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -272,6 +291,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormT03_DataCrossForm_1.resx">
       <DependentUpon>FormT03_DataCrossForm_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormT05_MineSweeper.resx">
+      <DependentUpon>FormT05_MineSweeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormT05_MineSweeper_Die.resx">
+      <DependentUpon>FormT05_MineSweeper_Die.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormT05_MineSweeper_Survival.resx">
+      <DependentUpon>FormT05_MineSweeper_Survival.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>

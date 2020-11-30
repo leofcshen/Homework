@@ -16,7 +16,7 @@ namespace Homework
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Index());
+            //Application.Run(new Form_Index());
             //Application.Run(new Form01_Hello());
             //Application.Run(new Form02_Loan());
             //Application.Run(new Form02_Loan_Report());
@@ -32,7 +32,8 @@ namespace Homework
             //Application.Run(new Form13_DrawPaint());
             //Application.Run(new Form14_PicViewer());
             //Application.Run(new Form15_GuessNumber());
-            //Application.Run(new Form16_Alarm());            
+            //Application.Run(new Form16_Alarm());
+            Application.Run(new FormT05_MineSweeper());
         }
     }
 }
