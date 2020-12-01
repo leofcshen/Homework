@@ -252,8 +252,7 @@ namespace Homework
             strr = strr.Replace("]", "");
             string[] sArray = strr.Split(',');
             int x = int.Parse(sArray[0]);
-            int y = int.Parse(sArray[1]);
-            if 
+            int y = int.Parse(sArray[1]);            
         }
     }
 }
