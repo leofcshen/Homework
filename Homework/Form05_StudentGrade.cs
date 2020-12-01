@@ -288,7 +288,7 @@ namespace Homework
 
 				for (int i = 0; i < 20; i++)
 				{
-					btnRng_Click(this, e);
+					btnRng_Click(null,null );
 					//btnRng.PerformClick(); //另一個寫法
 				}
 

@@ -33,12 +33,14 @@ namespace Homework
             txtTest.Text = testNumber.ToString();
             flagNumber = 0;
             txtFlag.Text = flagNumber.ToString();
+            txtBombLeft.Text = "0";
             row = 0;
             col = 0;
             bombNumber = 0;
             level = "";
             btnTagBomb.Enabled = true;
             btnUntagBomb.Enabled = true;
+            
 
             if (cbbLevel.Text == "")
             {
@@ -84,6 +86,7 @@ namespace Homework
 
             txtLevel.Text = level.ToString();
             txtBombNumber.Text = bombNumber.ToString();
+            txtBombLeft.Text = bombNumber.ToString();
             for (int i = 0; i < row; i++) // 產生地雷區按鈕，代入 Tag 值
             {
                 for (int j = 0; j < col; j++)
@@ -91,6 +94,7 @@ namespace Homework
                     Button btn = new Button();
                     btn.Size = new Size(30, 30);
                     btn.Location = new Point(30 + 30 * i, 30 + 30 * j);
+                    btn.Name = "btnBomb[" + i + "," + j + "]";
                     //btn.Text = g.the雷區[i, j].ToString();
                     btn.Tag = g.the雷區[i, j].ToString();                    
                     panel1.Controls.Add(btn);
@@ -100,6 +104,7 @@ namespace Homework
             {
                 control.BackColor = Color.Beige;
                 control.MouseDown += BombButton_MouseDown;
+                control.Click += BombButton_Click;
             }
             filedNumber = row * col;
         }        
@@ -125,8 +130,8 @@ namespace Homework
                     FormT05_MineSweeper_Die fmd = new FormT05_MineSweeper_Die();
                     fmd.ShowDialog();
                 }
-                else // 沒中
-                {
+                else if (((Button)sender).Tag.ToString() != "0") // 沒中雷不是0
+                {                    
                     ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                     ((Button)sender).Enabled = false; // 鎖定按扭
                     testNumber++;
@@ -139,7 +144,10 @@ namespace Homework
                         FormT05_MineSweeper_Survival fms = new FormT05_MineSweeper_Survival();
                         fms.ShowDialog();
                     }
-
+                }
+                else  // 沒中雷且是0
+                {
+                    aaa(((Button)sender).Name);
                 }
                 ActiveControl = null; // 跳出 Focus
             }
@@ -216,17 +224,36 @@ namespace Homework
         {
             MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
         }
-
+        // TODO 預設難度
+        private void BombButton_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("123");
+        }
         private void btnClickAll_Click(object sender, EventArgs e) // 按鈕：一鍵開獎
         {
-            MessageBox.Show("施工中");
-            //foreach (Button control in panel1.Controls)
-            //{
-            //    if (control.Text == "|>")
-            //    {
-            //        BombButton_MouseDown(this, e);                    
-            //    }
-            //}
+            //EventArgs繼承自MouseEventArgs,所以可以強轉
+            MouseEventArgs Mouse_e = (MouseEventArgs)e;
+
+            //MessageBox.Show("施工中");
+            foreach (Button control in panel1.Controls)
+            {
+                if (control.Text != "|>")
+                {
+                    BombButton_Click(null, null);
+                    BombButton_MouseDown(null, Mouse_e);
+                }
+            }
+        }
+
+        private void aaa(string a)
+        {
+            string strr;
+            strr = a.Substring(a.IndexOf("[") + 1);
+            strr = strr.Replace("]", "");
+            string[] sArray = strr.Split(',');
+            int x = int.Parse(sArray[0]);
+            int y = int.Parse(sArray[1]);
+            if 
         }
     }
 }

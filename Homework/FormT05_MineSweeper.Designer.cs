@@ -31,6 +31,7 @@ namespace Homework
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbBomb = new System.Windows.Forms.GroupBox();
+            this.btnClickAll = new System.Windows.Forms.Button();
             this.btnReadme = new System.Windows.Forms.Button();
             this.btnUntagBomb = new System.Windows.Forms.Button();
             this.btnTagBomb = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace Homework
             this.txtBombNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClickAll = new System.Windows.Forms.Button();
             this.gpbBomb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@ namespace Homework
             // 
             // gpbBomb
             // 
+            this.gpbBomb.Controls.Add(this.cbbLevel);
             this.gpbBomb.Controls.Add(this.btnClickAll);
             this.gpbBomb.Controls.Add(this.btnReadme);
             this.gpbBomb.Controls.Add(this.btnUntagBomb);
@@ -70,7 +71,6 @@ namespace Homework
             this.gpbBomb.Controls.Add(this.label4);
             this.gpbBomb.Controls.Add(this.txtLevel);
             this.gpbBomb.Controls.Add(this.label3);
-            this.gpbBomb.Controls.Add(this.cbbLevel);
             this.gpbBomb.Controls.Add(this.lblLevel);
             this.gpbBomb.Controls.Add(this.btnNewGame);
             this.gpbBomb.Controls.Add(this.txtBombLeft);
@@ -84,6 +84,16 @@ namespace Homework
             this.gpbBomb.TabIndex = 1;
             this.gpbBomb.TabStop = false;
             this.gpbBomb.Text = "統計";
+            // 
+            // btnClickAll
+            // 
+            this.btnClickAll.Location = new System.Drawing.Point(14, 321);
+            this.btnClickAll.Name = "btnClickAll";
+            this.btnClickAll.Size = new System.Drawing.Size(86, 38);
+            this.btnClickAll.TabIndex = 17;
+            this.btnClickAll.Text = "一鍵開獎";
+            this.btnClickAll.UseVisualStyleBackColor = true;
+            this.btnClickAll.Click += new System.EventHandler(this.btnClickAll_Click);
             // 
             // btnReadme
             // 
@@ -235,16 +245,6 @@ namespace Homework
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "總雷數：";
-            // 
-            // btnClickAll
-            // 
-            this.btnClickAll.Location = new System.Drawing.Point(14, 321);
-            this.btnClickAll.Name = "btnClickAll";
-            this.btnClickAll.Size = new System.Drawing.Size(86, 38);
-            this.btnClickAll.TabIndex = 17;
-            this.btnClickAll.Text = "一鍵開獎";
-            this.btnClickAll.UseVisualStyleBackColor = true;
-            this.btnClickAll.Click += new System.EventHandler(this.btnClickAll_Click);
             // 
             // FormT05_MineSweeper
             // 

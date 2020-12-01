@@ -121,7 +121,7 @@ namespace Homework
 			// 鍵盤功能：R
 			if (e.KeyCode == Keys.R)
 			{
-				btnReset_Click(this, e);
+				btnReset_Click(null, null);
 			}
 			// 鍵盤功能：Esc
 			if (e.KeyCode == Keys.Escape)
