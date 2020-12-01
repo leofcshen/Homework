@@ -84,7 +84,7 @@ namespace Homework
 
             txtLevel.Text = level.ToString();
             txtBombNumber.Text = bombNumber.ToString();
-            for (int i = 0; i < row; i++)
+            for (int i = 0; i < row; i++) // 產生地雷區按鈕，代入 Tag 值
             {
                 for (int j = 0; j < col; j++)
                 {
@@ -224,7 +224,7 @@ namespace Homework
             //{
             //    if (control.Text == "|>")
             //    {
-                    
+            //        BombButton_MouseDown(this, e);                    
             //    }
             //}
         }
