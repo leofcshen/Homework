@@ -38,6 +38,7 @@ namespace Homework
             bombNumber = 0;
             level = "";
             btnTagBomb.Enabled = true;
+            btnUntagBomb.Enabled = true;
 
             if (cbbLevel.Text == "")
             {
@@ -103,7 +104,7 @@ namespace Homework
             filedNumber = row * col;
         }        
         
-        private void BombButton_MouseDown(object sender, MouseEventArgs e)
+        private void BombButton_MouseDown(object sender, MouseEventArgs e) // 按鈕：地雷區
         {
             if (e.Button == MouseButtons.Left) // 左鍵踩雷
             {
@@ -112,6 +113,8 @@ namespace Homework
 
                 if ((sender as Button).Tag.ToString() == "-9") // 中雷
                 {
+                    btnUntagBomb.Enabled = false;
+                    btnTagBomb.Enabled = false;
                     foreach (Button control in panel1.Controls) // Button 全開並鎖定
                     {
                         control.Text = control.Tag.ToString();
@@ -131,6 +134,8 @@ namespace Homework
 
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
+                        btnUntagBomb.Enabled = false;
+                        btnTagBomb.Enabled = false;
                         FormT05_MineSweeper_Survival fms = new FormT05_MineSweeper_Survival();
                         fms.ShowDialog();
                     }
@@ -169,6 +174,15 @@ namespace Homework
         {
             foreach (Button control in panel1.Controls)
             {
+                if (control.Text == "|>") // 先清掉自行標記的
+                {
+                    control.Text = "";
+                    control.BackColor = Color.Beige;
+                    flagNumber--;
+                    txtFlag.Text = flagNumber.ToString();
+                    txtBombLeft.Text = (int.Parse(txtBombNumber.Text) - flagNumber).ToString();
+                }
+
                 if (control.Tag.ToString() == "-9")
                 {
                     control.Text = "|>";
@@ -179,6 +193,7 @@ namespace Homework
                 }
             }
             btnTagBomb.Enabled = false;
+            btnUntagBomb.Enabled = true;
         }
 
         private void btnUntagBomb_Click(object sender, EventArgs e) // 按鈕：取消標雷
@@ -193,13 +208,25 @@ namespace Homework
                     txtFlag.Text = flagNumber.ToString();
                     txtBombLeft.Text = (int.Parse(txtBombNumber.Text) - flagNumber).ToString();
                 }
-            }
+            }            
             btnTagBomb.Enabled = true;
         }
 
         private void btnReadme_Click(object sender, EventArgs e)
         {
             MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
+        }
+
+        private void btnClickAll_Click(object sender, EventArgs e) // 按鈕：一鍵開獎
+        {
+            MessageBox.Show("施工中");
+            //foreach (Button control in panel1.Controls)
+            //{
+            //    if (control.Text == "|>")
+            //    {
+                    
+            //    }
+            //}
         }
     }
 }

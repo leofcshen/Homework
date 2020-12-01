@@ -35,6 +35,7 @@ namespace Homework
             this.btnMode = new System.Windows.Forms.Button();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnMineSweeper = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNotepad = new System.Windows.Forms.Button();
             this.btnDataCross = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnMineSweeper = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -155,6 +155,17 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 853);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnMineSweeper
+            // 
+            this.btnMineSweeper.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMineSweeper.Location = new System.Drawing.Point(12, 745);
+            this.btnMineSweeper.Name = "btnMineSweeper";
+            this.btnMineSweeper.Size = new System.Drawing.Size(187, 36);
+            this.btnMineSweeper.TabIndex = 22;
+            this.btnMineSweeper.Text = "踩地雷";
+            this.btnMineSweeper.UseVisualStyleBackColor = true;
+            this.btnMineSweeper.Click += new System.EventHandler(this.btnMineSweeper_Click);
             // 
             // button1
             // 
@@ -457,18 +468,6 @@ namespace Homework
             this.tmClock.Enabled = true;
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
-            // 
-            // btnMineSweeper
-            // 
-            this.btnMineSweeper.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMineSweeper.Location = new System.Drawing.Point(12, 193);
-            this.btnMineSweeper.Name = "btnMineSweeper";
-            this.btnMineSweeper.Size = new System.Drawing.Size(187, 36);
-            this.btnMineSweeper.TabIndex = 22;
-            this.btnMineSweeper.Text = "踩地雷";
-            this.btnMineSweeper.UseVisualStyleBackColor = true;
-            this.btnMineSweeper.Visible = false;
-            this.btnMineSweeper.Click += new System.EventHandler(this.btnMineSweeper_Click);
             // 
             // Form_Index
             // 

@@ -31,6 +31,9 @@ namespace Homework
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbBomb = new System.Windows.Forms.GroupBox();
+            this.btnReadme = new System.Windows.Forms.Button();
+            this.btnUntagBomb = new System.Windows.Forms.Button();
+            this.btnTagBomb = new System.Windows.Forms.Button();
             this.txtTest = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFlag = new System.Windows.Forms.TextBox();
@@ -44,9 +47,7 @@ namespace Homework
             this.txtBombNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTagBomb = new System.Windows.Forms.Button();
-            this.btnUntagBomb = new System.Windows.Forms.Button();
-            this.btnReadme = new System.Windows.Forms.Button();
+            this.btnClickAll = new System.Windows.Forms.Button();
             this.gpbBomb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@ namespace Homework
             // 
             // gpbBomb
             // 
+            this.gpbBomb.Controls.Add(this.btnClickAll);
             this.gpbBomb.Controls.Add(this.btnReadme);
             this.gpbBomb.Controls.Add(this.btnUntagBomb);
             this.gpbBomb.Controls.Add(this.btnTagBomb);
@@ -82,6 +84,38 @@ namespace Homework
             this.gpbBomb.TabIndex = 1;
             this.gpbBomb.TabStop = false;
             this.gpbBomb.Text = "統計";
+            // 
+            // btnReadme
+            // 
+            this.btnReadme.Location = new System.Drawing.Point(151, 481);
+            this.btnReadme.Name = "btnReadme";
+            this.btnReadme.Size = new System.Drawing.Size(86, 38);
+            this.btnReadme.TabIndex = 16;
+            this.btnReadme.Text = "操作說明";
+            this.btnReadme.UseVisualStyleBackColor = true;
+            this.btnReadme.Click += new System.EventHandler(this.btnReadme_Click);
+            // 
+            // btnUntagBomb
+            // 
+            this.btnUntagBomb.Enabled = false;
+            this.btnUntagBomb.Location = new System.Drawing.Point(98, 130);
+            this.btnUntagBomb.Name = "btnUntagBomb";
+            this.btnUntagBomb.Size = new System.Drawing.Size(86, 38);
+            this.btnUntagBomb.TabIndex = 15;
+            this.btnUntagBomb.Text = "取消標雷";
+            this.btnUntagBomb.UseVisualStyleBackColor = true;
+            this.btnUntagBomb.Click += new System.EventHandler(this.btnUntagBomb_Click);
+            // 
+            // btnTagBomb
+            // 
+            this.btnTagBomb.Enabled = false;
+            this.btnTagBomb.Location = new System.Drawing.Point(6, 130);
+            this.btnTagBomb.Name = "btnTagBomb";
+            this.btnTagBomb.Size = new System.Drawing.Size(86, 38);
+            this.btnTagBomb.TabIndex = 14;
+            this.btnTagBomb.Text = "一鍵標雷";
+            this.btnTagBomb.UseVisualStyleBackColor = true;
+            this.btnTagBomb.Click += new System.EventHandler(this.btnTagBomb_Click);
             // 
             // txtTest
             // 
@@ -202,37 +236,15 @@ namespace Homework
             this.label1.TabIndex = 0;
             this.label1.Text = "總雷數：";
             // 
-            // btnTagBomb
+            // btnClickAll
             // 
-            this.btnTagBomb.Enabled = false;
-            this.btnTagBomb.Location = new System.Drawing.Point(6, 130);
-            this.btnTagBomb.Name = "btnTagBomb";
-            this.btnTagBomb.Size = new System.Drawing.Size(86, 38);
-            this.btnTagBomb.TabIndex = 14;
-            this.btnTagBomb.Text = "一鍵標雷";
-            this.btnTagBomb.UseVisualStyleBackColor = true;
-            this.btnTagBomb.Click += new System.EventHandler(this.btnTagBomb_Click);
-            // 
-            // btnUntagBomb
-            // 
-            this.btnUntagBomb.Enabled = false;
-            this.btnUntagBomb.Location = new System.Drawing.Point(119, 130);
-            this.btnUntagBomb.Name = "btnUntagBomb";
-            this.btnUntagBomb.Size = new System.Drawing.Size(86, 38);
-            this.btnUntagBomb.TabIndex = 15;
-            this.btnUntagBomb.Text = "取消標雷";
-            this.btnUntagBomb.UseVisualStyleBackColor = true;
-            this.btnUntagBomb.Click += new System.EventHandler(this.btnUntagBomb_Click);
-            // 
-            // btnReadme
-            // 
-            this.btnReadme.Location = new System.Drawing.Point(151, 481);
-            this.btnReadme.Name = "btnReadme";
-            this.btnReadme.Size = new System.Drawing.Size(86, 38);
-            this.btnReadme.TabIndex = 16;
-            this.btnReadme.Text = "操作說明";
-            this.btnReadme.UseVisualStyleBackColor = true;
-            this.btnReadme.Click += new System.EventHandler(this.btnReadme_Click);
+            this.btnClickAll.Location = new System.Drawing.Point(14, 321);
+            this.btnClickAll.Name = "btnClickAll";
+            this.btnClickAll.Size = new System.Drawing.Size(86, 38);
+            this.btnClickAll.TabIndex = 17;
+            this.btnClickAll.Text = "一鍵開獎";
+            this.btnClickAll.UseVisualStyleBackColor = true;
+            this.btnClickAll.Click += new System.EventHandler(this.btnClickAll_Click);
             // 
             // FormT05_MineSweeper
             // 
@@ -269,5 +281,6 @@ namespace Homework
         private System.Windows.Forms.Button btnTagBomb;
         private System.Windows.Forms.Button btnUntagBomb;
         private System.Windows.Forms.Button btnReadme;
+        private System.Windows.Forms.Button btnClickAll;
     }
 }

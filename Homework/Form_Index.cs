@@ -71,12 +71,12 @@ namespace Homework
                 btnGuessNumber.Visible = false;
                 btnAlarm.Visible = false;
                 btnNoteTest.Visible = false;
+                btnMineSweeper.Visible = false;
 
                 btnNoteTest.Visible = true;
                 btnConsole.Visible = true;
                 btnDataCross.Visible = true;
-                button1.Visible = true;
-                btnMineSweeper.Visible = true;
+                button1.Visible = true;                
             }
             else
             {
@@ -98,12 +98,12 @@ namespace Homework
                 btnGuessNumber.Visible = true;
                 btnAlarm.Visible = true;
                 btnNoteTest.Visible = true;
+                btnMineSweeper.Visible = true;
 
                 btnNoteTest.Visible = false;
                 btnConsole.Visible = false;
                 btnDataCross.Visible = false;
-                button1.Visible = false;
-                btnMineSweeper.Visible = false;
+                button1.Visible = false;                
             }
             Mode = !Mode;
         }
