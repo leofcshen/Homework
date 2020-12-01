@@ -28,7 +28,7 @@ namespace Homework
 
         private void btnNewGame_Click(object sender, EventArgs e) // 按扭：開新遊戲
         {
-            filedNumber = 0;            
+            filedNumber = 0;
             testNumber = 0;
             txtTest.Text = testNumber.ToString();
             flagNumber = 0;
@@ -147,7 +147,7 @@ namespace Homework
             {
                 if (((Button)sender).Text == "") // 空值才能標
                 {
-                    if (flagNumber == 10) // 測試標記是否已滿
+                    if (flagNumber == bombNumber) // 測試標記是否已滿
                     {
                         MessageBox.Show("標雷數已滿");
                         return;
