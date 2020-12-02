@@ -25,9 +25,11 @@ namespace Homework
         int col = 0;
         int bombNumber = 0;
         string level = "";
+        bool flag = true;
 
         private void btnNewGame_Click(object sender, EventArgs e) // 按扭：開新遊戲
         {
+            btnClickAll.Enabled = true;
             filedNumber = 0;
             testNumber = 0;
             txtTest.Text = testNumber.ToString();
@@ -40,7 +42,7 @@ namespace Homework
             level = "";
             btnTagBomb.Enabled = true;
             btnUntagBomb.Enabled = true;
-            
+            flag = true;
 
             if (cbbLevel.Text == "")
             {
@@ -87,24 +89,27 @@ namespace Homework
             txtLevel.Text = level.ToString();
             txtBombNumber.Text = bombNumber.ToString();
             txtBombLeft.Text = bombNumber.ToString();
-            for (int i = 0; i < row; i++) // 產生地雷區按鈕，代入 Tag 值
+
+            Button[,] buttons = new Button[row, col];
+            for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < col; j++)
                 {
-                    Button btn = new Button();
-                    btn.Size = new Size(30, 30);
-                    btn.Location = new Point(30 + 30 * i, 30 + 30 * j);
-                    btn.Name = "btnBomb[" + i + "," + j + "]";
-                    //btn.Text = g.the雷區[i, j].ToString();
-                    btn.Tag = g.the雷區[i, j].ToString();                    
-                    panel1.Controls.Add(btn);
+                    buttons[i, j] = new Button();
+                    buttons[i, j].Size = new Size(30, 30);
+                    buttons[i, j].Name = $"btn[{i},{j}]";
+                    buttons[i, j].Location = new Point(30 + 30 * i, 30 + 30 * j);
+                    buttons[i, j].BackColor = Color.Beige;
+                    //buttons[i, j].Text = g.the雷區[i, j].ToString();
+                    buttons[i, j].Tag = g.the雷區[i, j].ToString();
+                    panel1.Controls.Add(buttons[i, j]);
                 }
             }
             foreach (Button control in panel1.Controls)
             {
-                control.BackColor = Color.Beige;
                 control.MouseDown += BombButton_MouseDown;
             }
+
             filedNumber = row * col;
         }        
         
@@ -117,8 +122,10 @@ namespace Homework
 
                 if (((Button)sender).Tag.ToString() == "-9") // 中雷
                 {
+                    flag = false;
                     btnUntagBomb.Enabled = false;
                     btnTagBomb.Enabled = false;
+                    
                     foreach (Button control in panel1.Controls) // Button 全開並鎖定
                     {
                         control.Text = control.Tag.ToString();
@@ -129,8 +136,13 @@ namespace Homework
                     FormT05_MineSweeper_Die fmd = new FormT05_MineSweeper_Die();
                     fmd.ShowDialog();
                 }
-                else //if (((Button)sender).Tag.ToString() != "0") // 沒中雷不是0
-                {                    
+                else
+                {
+                    if (((Button)sender).Tag.ToString() == "0") // 沒中雷不是0
+                    {
+                        ((Button)sender).BackColor = Color.Blue;
+                    }
+
                     ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                     ((Button)sender).Enabled = false; // 鎖定按扭
                     testNumber++;
@@ -138,28 +150,25 @@ namespace Homework
 
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
+                        flag = false;
                         btnUntagBomb.Enabled = false;
                         btnTagBomb.Enabled = false;
                         FormT05_MineSweeper_Survival fms = new FormT05_MineSweeper_Survival();
                         fms.ShowDialog();
                     }
-                }
-                //else  // 沒中雷且是0
-                //{
-                //    aaa(((Button)sender).Name);
-                //}
+                }                
                 ActiveControl = null; // 跳出 Focus
             }
-            else if (e.Button == MouseButtons.Right) // 右鍵標雷
+            else if (e.Button == MouseButtons.Right) // 右鍵標 flag
             {
-                if (((Button)sender).Text == "") // 空值才能標
+                if (((Button)sender).Text == "") // 空值才能標 flag
                 {
                     if (flagNumber == bombNumber) // 測試標記是否已滿
                     {
                         MessageBox.Show("標雷數已滿");
                         return;
                     }
-
+                    // 標記設定
                     ((Button)sender).Text = "|>";
                     ((Button)sender).BackColor = Color.Yellow;
                     flagNumber++;
@@ -168,6 +177,7 @@ namespace Homework
                 }
                 else if (((Button)sender).Text == "|>") // 反標記
                 {
+                    //反標記設定
                     ((Button)sender).Text = "";
                     ((Button)sender).BackColor = Color.Beige;
                     flagNumber--;
@@ -190,7 +200,7 @@ namespace Homework
                     txtBombLeft.Text = (int.Parse(txtBombNumber.Text) - flagNumber).ToString();
                 }
 
-                if (control.Tag.ToString() == "-9")
+                if (control.Tag.ToString() == "-9") // 標記
                 {
                     control.Text = "|>";
                     control.BackColor = Color.Yellow;
@@ -219,7 +229,7 @@ namespace Homework
             btnTagBomb.Enabled = true;
         }
 
-        private void btnReadme_Click(object sender, EventArgs e)
+        private void btnReadme_Click(object sender, EventArgs e) // 按鈕：操作說明
         {
             MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
         }
@@ -232,32 +242,21 @@ namespace Homework
                 return;
             }
 
-            DialogResult result = MessageBox.Show("是否翻開所有未標記的雷區\n標記如有誤會引爆地雷。", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("是否翻開所有未標記的雷區？\n標記如有誤會引爆地雷！！", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                btnClickAll.Enabled = false;
                 //EventArgs繼承自MouseEventArgs,所以可以強轉
                 MouseEventArgs Mouse_e = (MouseEventArgs)e;
 
                 foreach (Button control in panel1.Controls)
                 {
-                    if (control.Text != "|>")
+                    if (control.Text != "|>" && flag == true)
                     {
                         BombButton_MouseDown(control, Mouse_e); // 觸發地雷區的按鈕
                     }
                 }
             }            
-        }
-
-                
-
-        private void aaa(string a)
-        {
-            string strr;
-            strr = a.Substring(a.IndexOf("[") + 1);
-            strr = strr.Replace("]", "");
-            string[] sArray = strr.Split(',');
-            int x = int.Parse(sArray[0]);
-            int y = int.Parse(sArray[1]);            
         }
 
         // TODO 預設難度、0的按鈕開啟

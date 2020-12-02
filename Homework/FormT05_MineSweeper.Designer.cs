@@ -31,6 +31,7 @@ namespace Homework
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbBomb = new System.Windows.Forms.GroupBox();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.btnClickAll = new System.Windows.Forms.Button();
             this.btnReadme = new System.Windows.Forms.Button();
             this.btnUntagBomb = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace Homework
             this.label4 = new System.Windows.Forms.Label();
             this.txtLevel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.lblLevel = new System.Windows.Forms.Label();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.txtBombLeft = new System.Windows.Forms.TextBox();
@@ -85,8 +85,23 @@ namespace Homework
             this.gpbBomb.TabStop = false;
             this.gpbBomb.Text = "統計";
             // 
+            // cbbLevel
+            // 
+            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLevel.Font = new System.Drawing.Font("細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Items.AddRange(new object[] {
+            "簡單  8* 8 雷數10",
+            "普通 16*16 雷數40",
+            "困難 30*16 雷數99"});
+            this.cbbLevel.Location = new System.Drawing.Point(73, 378);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(164, 24);
+            this.cbbLevel.TabIndex = 7;
+            // 
             // btnClickAll
             // 
+            this.btnClickAll.Enabled = false;
             this.btnClickAll.Location = new System.Drawing.Point(14, 321);
             this.btnClickAll.Name = "btnClickAll";
             this.btnClickAll.Size = new System.Drawing.Size(86, 38);
@@ -177,20 +192,6 @@ namespace Homework
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "難度：";
-            // 
-            // cbbLevel
-            // 
-            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLevel.Font = new System.Drawing.Font("細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbbLevel.FormattingEnabled = true;
-            this.cbbLevel.Items.AddRange(new object[] {
-            "簡單  8* 8 雷數10",
-            "普通 16*16 雷數40",
-            "困難 30*16 雷數99"});
-            this.cbbLevel.Location = new System.Drawing.Point(73, 378);
-            this.cbbLevel.Name = "cbbLevel";
-            this.cbbLevel.Size = new System.Drawing.Size(164, 24);
-            this.cbbLevel.TabIndex = 7;
             // 
             // lblLevel
             // 
