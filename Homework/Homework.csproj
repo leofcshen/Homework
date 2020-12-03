@@ -69,12 +69,6 @@
     <Compile Include="Form07_Method.Designer.cs">
       <DependentUpon>Form07_Method.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form12_Notepad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form07_Method.resx">
       <DependentUpon>Form07_Method.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form12_Notepad.resx">
       <DependentUpon>Form12_Notepad.cs</DependentUpon>

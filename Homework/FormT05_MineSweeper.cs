@@ -91,6 +91,7 @@ namespace Homework
             txtBombLeft.Text = bombNumber.ToString();
 
             Button[,] buttons = new Button[row, col];
+
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < col; j++)
@@ -109,7 +110,6 @@ namespace Homework
             {
                 control.MouseDown += BombButton_MouseDown;
             }
-
             filedNumber = row * col;
         }        
         
@@ -138,7 +138,7 @@ namespace Homework
                 }
                 else
                 {
-                    if (((Button)sender).Tag.ToString() == "0") // 沒中雷不是0
+                    if (((Button)sender).Tag.ToString() == "0") // 沒中雷是0
                     {
                         ((Button)sender).BackColor = Color.Blue;
                     }
