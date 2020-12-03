@@ -15,17 +15,18 @@ namespace Homework
         public FormT05_MineSweeper()
         {
             InitializeComponent();
-            MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
+            //MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
         }
         
         int filedNumber = 0; // 雷區數
         int testNumber = 0; // 踩雷數
         int flagNumber = 0; // 標雷數
-        int row = 0;
-        int col = 0;
+        static int row = 0;
+        static int col = 0;
         int bombNumber = 0;
         string level = "";
         bool flag = true;
+        Button[,] buttons = new Button[row, col];
 
         private void btnNewGame_Click(object sender, EventArgs e) // 按扭：開新遊戲
         {
@@ -120,6 +121,9 @@ namespace Homework
                 if (((Button)sender).Text == "|>") // 標記不能踩
                     return;
 
+                if (((Button)sender).Text != "") // 踩過不能踩
+                    return;
+
                 if (((Button)sender).Tag.ToString() == "-9") // 中雷
                 {
                     flag = false;
@@ -140,7 +144,66 @@ namespace Homework
                 {
                     if (((Button)sender).Tag.ToString() == "0") // 沒中雷是0
                     {
-                        ((Button)sender).BackColor = Color.Blue;
+                        ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
+                        ((Button)sender).Enabled = false; // 鎖定按扭
+                        testNumber++;
+                        txtTest.Text = testNumber.ToString();
+                        int x, y;
+                        ((Button)sender).BackColor =  Color.Blue;
+                        string[] sArray = eightBlock(((Button)sender).Name);
+                        x = int.Parse(sArray[0]);
+                        y = int.Parse(sArray[1]);
+
+
+                        if (x - 1 >= 0 && y - 1 >= 0)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x - 1},{y - 1}]")
+                                    BombButton_MouseDown(control, e);                               
+                            }
+                        }
+                        if (x - 1 >= 0)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x - 1},{y}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+                        if (y - 1 >= 0)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x},{y - 1}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+                        if (x + 1 <= row - 1 && y + 1 <= col - 1)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x + 1},{y + 1}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+                        if (x + 1 <= row - 1)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x + 1},{y}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+                        if (y + 1 <= col - 1)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x},{y + 1}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+
                     }
 
                     ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
@@ -258,7 +321,17 @@ namespace Homework
                 }
             }            
         }
+        
+        static string[] eightBlock(string s)
+        {
+            string[] sArray = s.Substring(s.IndexOf( "[") +1 ).TrimEnd(']').Split( ','); // x,y
+            return sArray;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(buttons[0,0].BackColor.ToString());
+        }
         // TODO 預設難度、0的按鈕開啟
     }
 }
