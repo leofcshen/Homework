@@ -148,7 +148,7 @@ namespace Homework
                         ((Button)sender).Enabled = false; // 鎖定按扭
                         testNumber++;
                         txtTest.Text = testNumber.ToString();
-                        int x, y;
+                        int x, y;fewgrwgujg
                         ((Button)sender).BackColor =  Color.Blue;
                         string[] sArray = eightBlock(((Button)sender).Name);
                         x = int.Parse(sArray[0]);
