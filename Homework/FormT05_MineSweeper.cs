@@ -15,6 +15,7 @@ namespace Homework
         public FormT05_MineSweeper()
         {
             InitializeComponent();
+            //ActiveControl = null;
             //MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
         }
         
@@ -98,9 +99,9 @@ namespace Homework
                 for (int j = 0; j < col; j++)
                 {
                     buttons[i, j] = new Button();
-                    buttons[i, j].Size = new Size(30, 30);
+                    buttons[i, j].Size = new Size(35, 35);
                     buttons[i, j].Name = $"btn[{i},{j}]";
-                    buttons[i, j].Location = new Point(30 + 30 * i, 30 + 30 * j);
+                    buttons[i, j].Location = new Point(35 + 34 * i, 35 + 35 * j);
                     buttons[i, j].BackColor = Color.Beige;
                     //buttons[i, j].Text = g.the雷區[i, j].ToString();
                     buttons[i, j].Tag = g.the雷區[i, j].ToString();
@@ -127,6 +128,7 @@ namespace Homework
                 if (((Button)sender).Tag.ToString() == "-9") // 中雷
                 {
                     flag = false;
+                    btnClickAll.Enabled = false;
                     btnUntagBomb.Enabled = false;
                     btnTagBomb.Enabled = false;
                     
@@ -153,7 +155,7 @@ namespace Homework
                         x = int.Parse(sArray[0]);
                         y = int.Parse(sArray[1]);
 
-
+                        // 周圍八格觸發按鈕事件
                         if (x - 1 >= 0 && y - 1 >= 0)
                         {
                             foreach (Button control in panel1.Controls)
@@ -219,17 +221,33 @@ namespace Homework
                             }
                         }
                     }
-
+                    
                     ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                     ((Button)sender).Enabled = false; // 鎖定按扭
+                    ((Button)sender).BackColor = default;
                     testNumber++;
                     txtTest.Text = testNumber.ToString();
 
+                    Image bkg = Image.FromFile(@"..\..\Pic\地雷.png");
+
+
+
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
+                        foreach (Button control in panel1.Controls) // Button 全開並鎖定
+                        {
+                            //control.Text = control.Tag.ToString();
+                            if (control.Tag.ToString() == "-9")
+                            {
+                                control.BackgroundImage = bkg;
+                                control.BackgroundImageLayout = ImageLayout.Zoom;
+                            }
+                            control.Enabled = false;
+                        }
                         flag = false;
                         btnUntagBomb.Enabled = false;
                         btnTagBomb.Enabled = false;
+                        btnClickAll.Enabled = false;
                         FormT05_MineSweeper_Survival fms = new FormT05_MineSweeper_Survival();
                         fms.ShowDialog();
                     }
@@ -248,7 +266,7 @@ namespace Homework
                     // 標記設定
                     ((Button)sender).Text = "|>";
                     ((Button)sender).BackColor = Color.Yellow;
-                    flagNumber++;
+                    flagNumber++;                    
                     txtFlag.Text = flagNumber.ToString();
                     txtBombLeft.Text =(int.Parse(txtBombNumber.Text) - flagNumber).ToString();
                 }
@@ -341,11 +359,7 @@ namespace Homework
             string[] sArray = s.Substring(s.IndexOf( "[") +1 ).TrimEnd(']').Split( ','); // x,y
             return sArray;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(buttons[0,0].BackColor.ToString());
-        }
+        
         // TODO 預設難度、0的按鈕開啟
     }
 }

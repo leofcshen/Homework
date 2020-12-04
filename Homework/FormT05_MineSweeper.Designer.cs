@@ -48,7 +48,6 @@ namespace Homework
             this.txtBombNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gpbBomb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,12 +55,11 @@ namespace Homework
             // 
             this.panel1.Location = new System.Drawing.Point(266, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(975, 523);
+            this.panel1.Size = new System.Drawing.Size(1073, 632);
             this.panel1.TabIndex = 0;
             // 
             // gpbBomb
             // 
-            this.gpbBomb.Controls.Add(this.button1);
             this.gpbBomb.Controls.Add(this.cbbLevel);
             this.gpbBomb.Controls.Add(this.btnClickAll);
             this.gpbBomb.Controls.Add(this.btnReadme);
@@ -211,7 +209,7 @@ namespace Homework
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(223, 39);
             this.btnNewGame.TabIndex = 4;
-            this.btnNewGame.Text = "開新遊戲";
+            this.btnNewGame.Text = "開新遊戲(&N)";
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
@@ -249,21 +247,11 @@ namespace Homework
             this.label1.TabIndex = 0;
             this.label1.Text = "總雷數：";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 32);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormT05_MineSweeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 547);
+            this.ClientSize = new System.Drawing.Size(1350, 657);
             this.Controls.Add(this.gpbBomb);
             this.Controls.Add(this.panel1);
             this.Name = "FormT05_MineSweeper";
@@ -295,6 +283,5 @@ namespace Homework
         private System.Windows.Forms.Button btnUntagBomb;
         private System.Windows.Forms.Button btnReadme;
         private System.Windows.Forms.Button btnClickAll;
-        private System.Windows.Forms.Button button1;
     }
 }
