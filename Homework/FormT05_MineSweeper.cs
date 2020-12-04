@@ -146,10 +146,9 @@ namespace Homework
                     {
                         ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                         ((Button)sender).Enabled = false; // 鎖定按扭
-                        testNumber++;
-                        txtTest.Text = testNumber.ToString();
-                        int x, y;fewgrwgujg
-                        ((Button)sender).BackColor =  Color.Blue;
+                        
+                        int x, y;
+                        //((Button)sender).BackColor =  Color.Blue;
                         string[] sArray = eightBlock(((Button)sender).Name);
                         x = int.Parse(sArray[0]);
                         y = int.Parse(sArray[1]);
@@ -203,7 +202,22 @@ namespace Homework
                                     BombButton_MouseDown(control, e);
                             }
                         }
-
+                        if (x + 1 <= row -1 && y - 1 >= 0)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x + 1},{y - 1}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
+                        if (x - 1 >= 0 && y + 1 <= col - 1)
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x - 1},{y + 1}]")
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }
                     }
 
                     ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
