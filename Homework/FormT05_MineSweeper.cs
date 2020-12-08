@@ -28,6 +28,7 @@ namespace Homework
         string level = "";
         bool flag = true;
         Button[,] buttons = new Button[row, col];
+        Image bkg = Image.FromFile(@"..\..\Pic\地雷.png");
 
         private void btnNewGame_Click(object sender, EventArgs e) // 按扭：開新遊戲
         {
@@ -135,8 +136,13 @@ namespace Homework
                     foreach (Button control in panel1.Controls) // Button 全開並鎖定
                     {
                         control.Text = control.Tag.ToString();
+                        if (control.Text == "0")
+                            control.Text = "";
                         if (control.Text == "-9")
-                            control.BackColor = Color.Red;
+                        {
+                            control.BackgroundImage = bkg;
+                            control.BackgroundImageLayout = ImageLayout.Zoom;
+                        }                            
                         control.Enabled = false;
                     }
                     FormT05_MineSweeper_Die fmd = new FormT05_MineSweeper_Die();
@@ -234,8 +240,7 @@ namespace Homework
                     ((Button)sender).BackColor = default;
                     testNumber++;
                     txtTest.Text = testNumber.ToString();
-
-                    Image bkg = Image.FromFile(@"..\..\Pic\地雷.png");
+                                       
 
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
