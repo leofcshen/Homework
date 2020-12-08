@@ -29,6 +29,7 @@ namespace Homework
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbBomb = new System.Windows.Forms.GroupBox();
             this.cbbLevel = new System.Windows.Forms.ComboBox();
@@ -48,6 +49,8 @@ namespace Homework
             this.txtBombNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
             this.gpbBomb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +63,7 @@ namespace Homework
             // 
             // gpbBomb
             // 
+            this.gpbBomb.Controls.Add(this.lblTimer);
             this.gpbBomb.Controls.Add(this.cbbLevel);
             this.gpbBomb.Controls.Add(this.btnClickAll);
             this.gpbBomb.Controls.Add(this.btnReadme);
@@ -209,7 +213,7 @@ namespace Homework
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(223, 39);
             this.btnNewGame.TabIndex = 4;
-            this.btnNewGame.Text = "開新遊戲(&N)";
+            this.btnNewGame.Text = "開新遊戲(F1)";
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
@@ -247,6 +251,20 @@ namespace Homework
             this.label1.TabIndex = 0;
             this.label1.Text = "總雷數：";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(157, 33);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(71, 20);
+            this.lblTimer.TabIndex = 18;
+            this.lblTimer.Text = "00:00:00";
+            // 
             // FormT05_MineSweeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -256,6 +274,7 @@ namespace Homework
             this.Controls.Add(this.panel1);
             this.Name = "FormT05_MineSweeper";
             this.Text = "FormT05_MineSweeper";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
             this.gpbBomb.ResumeLayout(false);
             this.gpbBomb.PerformLayout();
             this.ResumeLayout(false);
@@ -283,5 +302,7 @@ namespace Homework
         private System.Windows.Forms.Button btnUntagBomb;
         private System.Windows.Forms.Button btnReadme;
         private System.Windows.Forms.Button btnClickAll;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTimer;
     }
 }

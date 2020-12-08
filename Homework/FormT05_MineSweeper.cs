@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Homework
-{
+{    
     public partial class FormT05_MineSweeper : Form
-    {        
+    {
         public FormT05_MineSweeper()
         {
             InitializeComponent();
+            KeyPreview = true;
             //ActiveControl = null;
             //MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
         }
@@ -29,9 +30,37 @@ namespace Homework
         bool flag = true;
         Button[,] buttons = new Button[row, col];
         Image bkg = Image.FromFile(@"..\..\Pic\地雷.png");
+        DateTime TimeNow = new DateTime();
+        TimeSpan TimeCount = new TimeSpan();
+        bool flagTimer = false;
+
+        private void timer1_Tick(object sender, EventArgs e) // Timer：計時器
+        {
+            TimeCount = DateTime.Now - TimeNow;
+            lblTimer.Text = string.Format("{0:00}:{1:00}:{2:00}", TimeCount.Hours, TimeCount.Minutes, TimeCount.Seconds);
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e) // 按鍵觸發快捷鍵
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    btnNewGame_Click(this, EventArgs.Empty);
+                    break;
+            }
+        }
+
+        static string[] XY(string s) // 方法：回傳按下的按鈕 X , Y 座標
+        {
+            string[] sArray = s.Substring(s.IndexOf("[") + 1).TrimEnd(']').Split(','); // x,y
+            return sArray;
+        }
 
         private void btnNewGame_Click(object sender, EventArgs e) // 按扭：開新遊戲
         {
+            timer1.Stop();
+            flagTimer = false;
+            lblTimer.Text = "00:00:00";
             btnClickAll.Enabled = true;
             filedNumber = 0;
             testNumber = 0;
@@ -118,16 +147,24 @@ namespace Homework
         
         private void BombButton_MouseDown(object sender, MouseEventArgs e) // 按鈕：地雷區
         {
+            if (flagTimer == false)
+            {
+                timer1.Start();
+                TimeNow = DateTime.Now;
+                flagTimer = true;
+            }
             if (e.Button == MouseButtons.Left) // 左鍵踩雷
             {
-                if (((Button)sender).Text == "|>") // 標記不能踩
+                if (((Button)sender).Text == "|>") // 有標記不動作
                     return;
 
-                if (((Button)sender).Text != "") // 踩過不能踩
+                if (((Button)sender).Text != "") // 有踩過不動作
                     return;
 
                 if (((Button)sender).Tag.ToString() == "-9") // 中雷
                 {
+                    timer1.Stop();
+                    flagTimer = false;
                     flag = false;
                     btnClickAll.Enabled = false;
                     btnUntagBomb.Enabled = false;
@@ -157,11 +194,11 @@ namespace Homework
                         
                         int x, y;
                         //((Button)sender).BackColor =  Color.Blue;
-                        string[] sArray = eightBlock(((Button)sender).Name);
+                        string[] sArray = XY(((Button)sender).Name); // 取得 X , Y 座標用以當周圍無炸彈時遞迴按下周圍八格
                         x = int.Parse(sArray[0]);
                         y = int.Parse(sArray[1]);
 
-                        //TODO 周圍八格觸發按鈕事件，垃圾Code
+                        // 周圍八格觸發按鈕事件
                         // ┌　┬　┬　┐
                         // │１│２│３│
                         // ├　┼　┼　┤
@@ -234,8 +271,10 @@ namespace Homework
                             }
                         }
                     }
-                    if (((Button)sender).Tag.ToString() != "0") // 沒中雷且不是0
-                        ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
+
+                    if (((Button)sender).Tag.ToString() != "0") // 沒中雷且不是 0，指派 Tag 值給 Text
+                        ((Button)sender).Text = (sender as Button).Tag.ToString();
+
                     ((Button)sender).Enabled = false; // 鎖定按扭
                     ((Button)sender).BackColor = default;
                     testNumber++;
@@ -244,6 +283,9 @@ namespace Homework
 
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
+                        timer1.Stop();
+                        flagTimer = false;
+
                         foreach (Button control in panel1.Controls) // Button 全開並鎖定
                         {
                             //control.Text = control.Tag.ToString();
@@ -259,6 +301,7 @@ namespace Homework
                         btnTagBomb.Enabled = false;
                         btnClickAll.Enabled = false;
                         FormT05_MineSweeper_Survival fms = new FormT05_MineSweeper_Survival();
+                        fms.lblTimer.Text = lblTimer.Text;
                         fms.ShowDialog();
                     }
                 }                
@@ -364,12 +407,6 @@ namespace Homework
             }            
         }
         
-        static string[] eightBlock(string s)
-        {
-            string[] sArray = s.Substring(s.IndexOf( "[") +1 ).TrimEnd(']').Split( ','); // x,y
-            return sArray;
-        }
-        
-        // TODO 預設難度、0的按鈕開啟
+        // TODO 預設難度、雙鍵功能，一堆垃圾Code
     }
 }
