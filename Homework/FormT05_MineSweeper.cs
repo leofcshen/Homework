@@ -141,18 +141,37 @@ namespace Homework
             foreach (Button control in panel1.Controls)
             {
                 control.MouseDown += BombButton_MouseDown;
+                control.MouseUp += BombButton_MouseUp;
             }
             filedNumber = row * col;
-        }        
-        
+        }
+
+        private bool lf = false;
+        private bool rf = false;
+
         private void BombButton_MouseDown(object sender, MouseEventArgs e) // 按鈕：地雷區
         {
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    lf = true;
+            //}
+            //else if (e.Button == MouseButtons.Right)
+            //{
+            //    rf = true;
+            //}
+            //if (lf && rf)
+            //{
+            //    MessageBox.Show("R + L");
+            //    return;
+            //}
+
             if (flagTimer == false)
             {
                 timer1.Start();
                 TimeNow = DateTime.Now;
                 flagTimer = true;
             }
+
             if (e.Button == MouseButtons.Left) // 左鍵踩雷
             {
                 if (((Button)sender).Text == "|>") // 有標記不動作
@@ -187,7 +206,7 @@ namespace Homework
                 }
                 else
                 {
-                    if (((Button)sender).Tag.ToString() == "0" ) // 沒中雷是0
+                    if (((Button)sender).Tag.ToString() == "0" ) // 沒中雷且是0
                     {
                         //((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                         ((Button)sender).Enabled = false; // 鎖定按扭
@@ -319,7 +338,7 @@ namespace Homework
                     // 標記設定
                     ((Button)sender).Text = "|>";
                     ((Button)sender).BackColor = Color.Yellow;
-                    flagNumber++;                    
+                    flagNumber++;
                     txtFlag.Text = flagNumber.ToString();
                     txtBombLeft.Text =(int.Parse(txtBombNumber.Text) - flagNumber).ToString();
                 }
@@ -406,7 +425,21 @@ namespace Homework
                 }
             }            
         }
+
         
+        
+        private void BombButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                lf = false;
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                rf = false;
+            }
+        }
+
         // TODO 預設難度、雙鍵功能，一堆垃圾Code
     }
 }

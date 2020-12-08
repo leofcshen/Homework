@@ -32,6 +32,8 @@ namespace Homework
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbBomb = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.btnClickAll = new System.Windows.Forms.Button();
             this.btnReadme = new System.Windows.Forms.Button();
@@ -50,7 +52,6 @@ namespace Homework
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblTimer = new System.Windows.Forms.Label();
             this.gpbBomb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@ namespace Homework
             // 
             // gpbBomb
             // 
+            this.gpbBomb.Controls.Add(this.label6);
             this.gpbBomb.Controls.Add(this.lblTimer);
             this.gpbBomb.Controls.Add(this.cbbLevel);
             this.gpbBomb.Controls.Add(this.btnClickAll);
@@ -84,10 +86,30 @@ namespace Homework
             this.gpbBomb.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.gpbBomb.Location = new System.Drawing.Point(12, 12);
             this.gpbBomb.Name = "gpbBomb";
-            this.gpbBomb.Size = new System.Drawing.Size(248, 523);
+            this.gpbBomb.Size = new System.Drawing.Size(248, 632);
             this.gpbBomb.TabIndex = 1;
             this.gpbBomb.TabStop = false;
             this.gpbBomb.Text = "統計";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "計時：";
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTimer.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTimer.Location = new System.Drawing.Point(83, 128);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(111, 32);
+            this.lblTimer.TabIndex = 18;
+            this.lblTimer.Text = "00:00:00";
             // 
             // cbbLevel
             // 
@@ -98,7 +120,7 @@ namespace Homework
             "簡單  8* 8 雷數10",
             "普通 16*16 雷數40",
             "困難 30*16 雷數99"});
-            this.cbbLevel.Location = new System.Drawing.Point(73, 378);
+            this.cbbLevel.Location = new System.Drawing.Point(73, 501);
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(164, 24);
             this.cbbLevel.TabIndex = 7;
@@ -106,9 +128,9 @@ namespace Homework
             // btnClickAll
             // 
             this.btnClickAll.Enabled = false;
-            this.btnClickAll.Location = new System.Drawing.Point(14, 321);
+            this.btnClickAll.Location = new System.Drawing.Point(6, 323);
             this.btnClickAll.Name = "btnClickAll";
-            this.btnClickAll.Size = new System.Drawing.Size(86, 38);
+            this.btnClickAll.Size = new System.Drawing.Size(94, 38);
             this.btnClickAll.TabIndex = 17;
             this.btnClickAll.Text = "一鍵開獎";
             this.btnClickAll.UseVisualStyleBackColor = true;
@@ -116,7 +138,7 @@ namespace Homework
             // 
             // btnReadme
             // 
-            this.btnReadme.Location = new System.Drawing.Point(151, 481);
+            this.btnReadme.Location = new System.Drawing.Point(151, 583);
             this.btnReadme.Name = "btnReadme";
             this.btnReadme.Size = new System.Drawing.Size(86, 38);
             this.btnReadme.TabIndex = 16;
@@ -127,7 +149,7 @@ namespace Homework
             // btnUntagBomb
             // 
             this.btnUntagBomb.Enabled = false;
-            this.btnUntagBomb.Location = new System.Drawing.Point(98, 130);
+            this.btnUntagBomb.Location = new System.Drawing.Point(106, 367);
             this.btnUntagBomb.Name = "btnUntagBomb";
             this.btnUntagBomb.Size = new System.Drawing.Size(86, 38);
             this.btnUntagBomb.TabIndex = 15;
@@ -138,7 +160,7 @@ namespace Homework
             // btnTagBomb
             // 
             this.btnTagBomb.Enabled = false;
-            this.btnTagBomb.Location = new System.Drawing.Point(6, 130);
+            this.btnTagBomb.Location = new System.Drawing.Point(106, 323);
             this.btnTagBomb.Name = "btnTagBomb";
             this.btnTagBomb.Size = new System.Drawing.Size(86, 38);
             this.btnTagBomb.TabIndex = 14;
@@ -200,7 +222,7 @@ namespace Homework
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(10, 378);
+            this.lblLevel.Location = new System.Drawing.Point(10, 501);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(57, 20);
             this.lblLevel.TabIndex = 5;
@@ -209,7 +231,7 @@ namespace Homework
             // btnNewGame
             // 
             this.btnNewGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewGame.Location = new System.Drawing.Point(14, 436);
+            this.btnNewGame.Location = new System.Drawing.Point(14, 538);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(223, 39);
             this.btnNewGame.TabIndex = 4;
@@ -256,15 +278,6 @@ namespace Homework
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(157, 33);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(71, 20);
-            this.lblTimer.TabIndex = 18;
-            this.lblTimer.Text = "00:00:00";
-            // 
             // FormT05_MineSweeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -304,5 +317,6 @@ namespace Homework
         private System.Windows.Forms.Button btnClickAll;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Label label6;
     }
 }
