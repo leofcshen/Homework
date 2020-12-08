@@ -19,7 +19,7 @@ namespace Homework
         private Random R = new Random();
 private void btnGuess_Click(object sender, EventArgs e)
         {
-            
+            ClassDataPass.fg = this;
             ClassDataPass.answer = R.Next(1, 100);
             Form15_GuessNumberMsg formGuessMessageBox = new Form15_GuessNumberMsg();
             formGuessMessageBox.ShowDialog();
