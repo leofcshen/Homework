@@ -144,9 +144,9 @@ namespace Homework
                 }
                 else
                 {
-                    if (((Button)sender).Tag.ToString() == "0") // 沒中雷是0
+                    if (((Button)sender).Tag.ToString() == "0" ) // 沒中雷是0
                     {
-                        ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
+                        //((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                         ((Button)sender).Enabled = false; // 鎖定按扭
                         
                         int x, y;
@@ -155,82 +155,87 @@ namespace Homework
                         x = int.Parse(sArray[0]);
                         y = int.Parse(sArray[1]);
 
-                        // 周圍八格觸發按鈕事件
-                        if (x - 1 >= 0 && y - 1 >= 0)
+                        //TODO 周圍八格觸發按鈕事件，垃圾Code
+                        // ┌　┬　┬　┐
+                        // │１│２│３│
+                        // ├　┼　┼　┤
+                        // │４│　│６│
+                        // ├　┼　┼　┤
+                        // │７│８│９│
+                        // └　┴　┴　┘
+                        if (x - 1 >= 0)　// 4
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x - 1},{y - 1}]")
-                                    BombButton_MouseDown(control, e);                               
-                            }
-                        }
-                        if (x - 1 >= 0)
-                        {
-                            foreach (Button control in panel1.Controls)
-                            {
-                                if (control.Name == $"btn[{x - 1},{y}]")
+                                if (control.Name == $"btn[{x - 1},{y}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
                         }
-                        if (y - 1 >= 0)
+                        if (x - 1 >= 0 && y - 1 >= 0) // 1
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x},{y - 1}]")
+                                if (control.Name == $"btn[{x - 1},{y - 1}]" && control.Enabled == true)
+                                    BombButton_MouseDown(control, e);
+                            }
+                        }                       
+                        if (y - 1 >= 0) // 2
+                        {
+                            foreach (Button control in panel1.Controls)
+                            {
+                                if (control.Name == $"btn[{x},{y - 1}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
                         }
-                        if (x + 1 <= row - 1 && y + 1 <= col - 1)
+                        if (x + 1 <= row - 1 && y - 1 >= 0) // 3
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x + 1},{y + 1}]")
+                                if (control.Name == $"btn[{x + 1},{y - 1}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
                         }
-                        if (x + 1 <= row - 1)
+                        if (x + 1 <= row - 1) // 6
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x + 1},{y}]")
+                                if (control.Name == $"btn[{x + 1},{y}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
                         }
-                        if (y + 1 <= col - 1)
+                        if (x + 1 <= row - 1 && y + 1 <= col - 1) // 9
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x},{y + 1}]")
+                                if (control.Name == $"btn[{x + 1},{y + 1}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
-                        }
-                        if (x + 1 <= row -1 && y - 1 >= 0)
+                        }                       
+                        if (y + 1 <= col - 1) // 8
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x + 1},{y - 1}]")
+                                if (control.Name == $"btn[{x},{y + 1}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
-                        }
-                        if (x - 1 >= 0 && y + 1 <= col - 1)
+                        }                       
+                        if (x - 1 >= 0 && y + 1 <= col - 1) // 7
                         {
                             foreach (Button control in panel1.Controls)
                             {
-                                if (control.Name == $"btn[{x - 1},{y + 1}]")
+                                if (control.Name == $"btn[{x - 1},{y + 1}]" && control.Enabled == true)
                                     BombButton_MouseDown(control, e);
                             }
                         }
                     }
-                    
-                    ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
+                    if (((Button)sender).Tag.ToString() != "0") // 沒中雷且不是0
+                        ((Button)sender).Text = (sender as Button).Tag.ToString(); // 指派 Tag 值給 Text
                     ((Button)sender).Enabled = false; // 鎖定按扭
                     ((Button)sender).BackColor = default;
                     testNumber++;
                     txtTest.Text = testNumber.ToString();
 
                     Image bkg = Image.FromFile(@"..\..\Pic\地雷.png");
-
-
 
                     if (testNumber == filedNumber - bombNumber) // 判定是否結束
                     {
