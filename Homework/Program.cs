@@ -18,8 +18,7 @@ namespace Homework
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Index());
             //Application.Run(new Form01_Hello());
-            //Application.Run(new Form02_Loan());
-            faweuoghijawephg
+            //Application.Run(new Form02_Loan());            
             //Application.Run(new Form02_Loan_Report());
             //Application.Run(new Form03_POS());
             //Application.Run(new Form04_Grade());
