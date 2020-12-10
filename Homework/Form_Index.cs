@@ -370,5 +370,14 @@ namespace Homework
             splitContainer3.Panel1.Controls.Add(fm);
             fm.Show();
         }
+
+        private void btnFlip_Click(object sender, EventArgs e)
+        {
+            splitContainer3.Panel1.Controls.Clear();
+            FormT06 ft6 = new FormT06();
+            ft6.TopLevel = false;
+            splitContainer3.Panel1.Controls.Add(ft6);
+            ft6.Show();
+        }
     }
 }

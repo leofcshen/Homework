@@ -207,6 +207,12 @@
     <Compile Include="FormT05_MineSweeper_Survival.Designer.cs">
       <DependentUpon>FormT05_MineSweeper_Survival.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormT06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormT06.Designer.cs">
+      <DependentUpon>FormT06.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormT05_MineSweeper_Survival.resx">
       <DependentUpon>FormT05_MineSweeper_Survival.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormT06.resx">
+      <DependentUpon>FormT06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>
