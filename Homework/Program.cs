@@ -34,7 +34,8 @@ namespace Homework
             //Application.Run(new Form15_GuessNumber());
             //Application.Run(new Form16_Alarm());
             //Application.Run(new FormT05_MineSweeper());
-            Application.Run(new FormT06());
+            //Application.Run(new FormT06());
+            Application.Run(new FormT07());
         }
     }
 }

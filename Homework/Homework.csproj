@@ -213,6 +213,12 @@
     <Compile Include="FormT06.Designer.cs">
       <DependentUpon>FormT06.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormT07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormT07.Designer.cs">
+      <DependentUpon>FormT07.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     <EmbeddedResource Include="FormT06.resx">
       <DependentUpon>FormT06.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormT07.resx">
+      <DependentUpon>FormT07.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Index.resx">
       <DependentUpon>Form_Index.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +346,73 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pic\卡背.jpg" />
+    <Content Include="Pic\圖像_戀柱.jpg" />
+    <Content Include="Pic\圖像_水柱.jpg" />
+    <Content Include="Pic\圖像_炎柱.jpg" />
+    <Content Include="Pic\圖像_蟲柱.jpg" />
+    <Content Include="Pic\圖像_霞柱.jpg" />
+    <Content Include="Pic\圖像_風柱.jpg" />
+    <Content Include="Pic\地雷.png" />
+    <Content Include="Resources\10_of_clubs.png" />
+    <Content Include="Resources\10_of_diamonds.png" />
+    <Content Include="Resources\10_of_hearts.png" />
+    <Content Include="Resources\10_of_spades.png" />
+    <Content Include="Resources\2_of_clubs.png" />
+    <Content Include="Resources\2_of_diamonds.png" />
+    <Content Include="Resources\2_of_hearts.png" />
+    <Content Include="Resources\2_of_spades.png" />
+    <Content Include="Resources\3_of_clubs.png" />
+    <Content Include="Resources\3_of_diamonds.png" />
+    <Content Include="Resources\3_of_hearts.png" />
+    <Content Include="Resources\3_of_spades.png" />
+    <Content Include="Resources\4_of_clubs.png" />
+    <Content Include="Resources\4_of_diamonds.png" />
+    <Content Include="Resources\4_of_hearts.png" />
+    <Content Include="Resources\4_of_spades.png" />
+    <Content Include="Resources\5_of_clubs.png" />
+    <Content Include="Resources\5_of_diamonds.png" />
+    <Content Include="Resources\5_of_hearts.png" />
+    <Content Include="Resources\5_of_spades.png" />
+    <Content Include="Resources\6_of_clubs.png" />
+    <Content Include="Resources\6_of_diamonds.png" />
+    <Content Include="Resources\6_of_hearts.png" />
+    <Content Include="Resources\6_of_spades.png" />
+    <Content Include="Resources\7_of_clubs.png" />
+    <Content Include="Resources\7_of_diamonds.png" />
+    <Content Include="Resources\7_of_hearts.png" />
+    <Content Include="Resources\7_of_spades.png" />
+    <Content Include="Resources\8_of_clubs.png" />
+    <Content Include="Resources\8_of_diamonds.png" />
+    <Content Include="Resources\8_of_hearts.png" />
+    <Content Include="Resources\8_of_spades.png" />
+    <Content Include="Resources\9_of_clubs.png" />
+    <Content Include="Resources\9_of_diamonds.png" />
+    <Content Include="Resources\9_of_hearts.png" />
+    <Content Include="Resources\9_of_spades.png" />
+    <Content Include="Resources\ace_of_clubs.png" />
+    <Content Include="Resources\ace_of_diamonds.png" />
+    <Content Include="Resources\ace_of_hearts.png" />
+    <Content Include="Resources\ace_of_spades.png" />
+    <Content Include="Resources\black_joker.png" />
+    <Content Include="Resources\jack_of_clubs.png" />
+    <Content Include="Resources\jack_of_diamonds.png" />
+    <Content Include="Resources\jack_of_hearts.png" />
+    <Content Include="Resources\jack_of_spades.png" />
+    <Content Include="Resources\king_of_clubs.png" />
+    <Content Include="Resources\king_of_diamonds.png" />
+    <Content Include="Resources\king_of_hearts.png" />
+    <Content Include="Resources\king_of_spades.png" />
+    <Content Include="Resources\queen_of_clubs.png" />
+    <Content Include="Resources\queen_of_diamonds.png" />
+    <Content Include="Resources\queen_of_hearts.png" />
+    <Content Include="Resources\queen_of_spades.png" />
+    <Content Include="Resources\red_joker.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

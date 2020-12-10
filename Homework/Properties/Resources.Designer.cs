@@ -66,5 +66,13 @@ namespace Homework.Properties
                 resourceCulture = value;
             }
         }
+        internal static System.Drawing.Bitmap black_joker
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("black_joker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
