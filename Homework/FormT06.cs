@@ -131,6 +131,8 @@ namespace Homework
 
         private void Button_Click(object sender, EventArgs e) // 按鈕：翻牌區
         {
+            //Button btn = (Button)sender;
+
             if (int.Parse(((Button)sender).Text) % 6 == 1)
             {
                 ((Button)sender).BackgroundImage = bkg1;
@@ -205,7 +207,7 @@ namespace Homework
                         if ((control.Name == $"btn[{x1},{y1}]") || (control.Name == $"btn[{x2},{y2}]"))
                         {
                             control.Enabled = true;
-                            control.BackgroundImage = default;                            
+                            control.BackgroundImage = bkg;
                         }
                     }
                     flip = 0; // 重設翻牌次數

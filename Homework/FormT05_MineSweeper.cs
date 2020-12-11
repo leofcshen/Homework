@@ -16,8 +16,7 @@ namespace Homework
         {
             InitializeComponent();
             KeyPreview = true;
-            //ActiveControl = null;
-            //MessageBox.Show("左鍵：踩雷\n右鍵：標記/取消標記", "操作說明");
+            button1.MouseDown += button1_MouseDown;
         }
         
         int filedNumber = 0; // 雷區數
@@ -33,6 +32,7 @@ namespace Homework
         DateTime TimeNow = new DateTime();
         TimeSpan TimeCount = new TimeSpan();
         bool flagTimer = false;
+        
 
         private void timer1_Tick(object sender, EventArgs e) // Timer：計時器
         {
@@ -426,8 +426,6 @@ namespace Homework
             }            
         }
 
-        
-        
         private void BombButton_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -440,6 +438,32 @@ namespace Homework
             }
         }
 
+        DateTime oldDate = DateTime.Now;
+        MouseButtons preButton = MouseButtons.None;
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            if ((e.Button == MouseButtons.Left && preButton == MouseButtons.Right)
+                || (e.Button == MouseButtons.Right && preButton == MouseButtons.Left))
+            {                
+                TimeSpan ts = DateTime.Now - oldDate;
+                if (ts.TotalMilliseconds < 1000)
+                {
+                    MessageBox.Show("Both");
+                }
+            }
+            oldDate = DateTime.Now;
+            preButton = e.Button;
+
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    MessageBox.Show("左鍵");
+            //}
+            //else if (e.Button == MouseButtons.Right)
+            //{
+            //    MessageBox.Show("右鍵");
+            //}
+        }
         // TODO 預設難度、雙鍵功能，一堆垃圾Code
     }
 }
