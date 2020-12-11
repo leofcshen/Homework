@@ -66,7 +66,7 @@ namespace Homework
             int[] a = { 1,2,3,4,5,6,7,8,9,10,11,12};
             int[,] arr = randomList(a);            
             
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++) // 產生按鈕
             {
                 for (int j = 0; j < 2; j++)
                 {
@@ -82,7 +82,7 @@ namespace Homework
                     panel1.Controls.Add(buttons[i, j]);                    
                 }
             }
-            foreach (Button control in panel1.Controls)
+            foreach (Button control in panel1.Controls) // 註冊翻牌區的按鈕事件
             {
                 control.Click += Button_Click;
             }
@@ -94,7 +94,7 @@ namespace Homework
             int[] a = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 };
             int[,] arr = randomList(a);
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++) // 產生按鈕
             {
                 for (int j = 0; j < 2; j++)
                 {
@@ -110,7 +110,7 @@ namespace Homework
                     panel1.Controls.Add(buttons[i, j]);
                 }                
             }
-            foreach (Button control in panel1.Controls)
+            foreach (Button control in panel1.Controls) // 註冊翻牌區的按鈕事件
             {
                 control.Click += Button_Click;
             }
@@ -123,7 +123,7 @@ namespace Homework
         string strText2 = "";
         int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 
-        private void Button_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e) // 按鈕：翻牌區
         {
             if (int.Parse(((Button)sender).Text) % 6 == 1)
             {
@@ -162,7 +162,7 @@ namespace Homework
                 flip++;
             }
             
-            if (flip == 1)
+            if (flip == 1) // 儲存第一個按鈕的資訊
             {
                 ((Button)sender).Enabled = false;
                 strName1 = ((Button)sender).Name;
@@ -171,7 +171,7 @@ namespace Homework
                 x1 = int.Parse(sArray[0]);
                 y1 = int.Parse(sArray[1]);
             }
-            else if (flip == 2)
+            else if (flip == 2) // 儲存第二個按鈕的資訊並比對
             {
                 ((Button)sender).Enabled = false;
                 strName2 = ((Button)sender).Name;
@@ -189,12 +189,12 @@ namespace Homework
                             control.Enabled = false;
                         }
                     }
-                    flip = 0;
+                    flip = 0; // 重設翻牌次數
                 }
-                else if (int.Parse(strText1) % 6 != int.Parse(strText2) % 6)
+                else if (int.Parse(strText1) % 6 != int.Parse(strText2) % 6)  // 如果圖片不一樣
                 {
-                    Thread.Sleep(1000);
-                    foreach (Button control in panel1.Controls)
+                    Thread.Sleep(1000); // 暫停一秒讓使用者看
+                    foreach (Button control in panel1.Controls) // 搜尋兩次按的按扭重設狀態
                     {
                         if ((control.Name == $"btn[{x1},{y1}]") || (control.Name == $"btn[{x2},{y2}]"))
                         {
@@ -202,11 +202,10 @@ namespace Homework
                             control.BackgroundImage = default;                            
                         }
                     }
-                    flip = 0;
+                    flip = 0; // 重設翻牌次數
                 }
             }
         }
-        // 為了方便觀看，我把值塞在 button.text，但 text 不能隱藏，如果button設定圖片做比對，建議把值塞在button.tag，用tag的值去比對。
-        // 
+        // 為了方便觀看，我把值塞在 button.text，但 text 不能隱藏，如果button設定圖片做比對，建議把值塞在button.tag，用tag的值去比對。        
     }
 }
