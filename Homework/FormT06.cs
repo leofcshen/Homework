@@ -19,6 +19,7 @@ namespace Homework
             InitializeComponent();
         }
 
+        Image bkg = Image.FromFile(@"..\..\Pic\卡背.jpg");
         Image bkg1 = Image.FromFile(@"..\..\Pic\圖像_炎柱.jpg");
         Image bkg2 = Image.FromFile(@"..\..\Pic\圖像_風柱.jpg");
         Image bkg3 = Image.FromFile(@"..\..\Pic\圖像_霞柱.jpg");
@@ -77,7 +78,9 @@ namespace Homework
                     buttons[i, j].Name = $"btn[{i},{j}]";
                     buttons[i, j].Location = new Point(200 * i, 200 * j);
                     buttons[i, j].BackColor = Color.Beige;
-                    buttons[i, j].Text = arr[i, j].ToString();                    
+                    buttons[i, j].Text = arr[i, j].ToString();
+                    buttons[i, j].BackgroundImage = bkg;
+                    buttons[i, j].BackgroundImageLayout = ImageLayout.Zoom;
 
                     panel1.Controls.Add(buttons[i, j]);                    
                 }
@@ -106,7 +109,10 @@ namespace Homework
                     buttons[i, j].Location = new Point(200 * i, 200 * j);
                     buttons[i, j].BackColor = Color.Beige;
                     buttons[i, j].Text = arr[i, j].ToString();
-                    
+                    buttons[i, j].BackgroundImage =
+                    buttons[i, j].BackgroundImage = bkg;
+                    buttons[i, j].BackgroundImageLayout = ImageLayout.Zoom;
+
                     panel1.Controls.Add(buttons[i, j]);
                 }                
             }
