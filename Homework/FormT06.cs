@@ -164,6 +164,7 @@ namespace Homework
             
             if (flip == 1)
             {
+                ((Button)sender).Enabled = false;
                 strName1 = ((Button)sender).Name;
                 strText1 = ((Button)sender).Text;
                 string[] sArray = XY(((Button)sender).Name);
@@ -172,6 +173,7 @@ namespace Homework
             }
             else if (flip == 2)
             {
+                ((Button)sender).Enabled = false;
                 strName2 = ((Button)sender).Name;
                 strText2 = ((Button)sender).Text;
                 string[] sArray = XY(((Button)sender).Name);
@@ -196,7 +198,8 @@ namespace Homework
                     {
                         if ((control.Name == $"btn[{x1},{y1}]") || (control.Name == $"btn[{x2},{y2}]"))
                         {
-                            control.BackgroundImage = default;
+                            control.Enabled = true;
+                            control.BackgroundImage = default;                            
                         }
                     }
                     flip = 0;
