@@ -35,6 +35,7 @@ namespace Homework
             this.btnMode = new System.Windows.Forms.Button();
             this.lalHomework = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnFlip = new System.Windows.Forms.Button();
             this.btnMineSweeper = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNotepad = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@ namespace Homework
             this.lblBless = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tmClock = new System.Windows.Forms.Timer(this.components);
-            this.btnFlip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -157,6 +157,17 @@ namespace Homework
             this.splitContainer2.Size = new System.Drawing.Size(1421, 853);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // btnFlip
+            // 
+            this.btnFlip.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnFlip.Location = new System.Drawing.Point(12, 787);
+            this.btnFlip.Name = "btnFlip";
+            this.btnFlip.Size = new System.Drawing.Size(187, 36);
+            this.btnFlip.TabIndex = 23;
+            this.btnFlip.Text = "翻牌";
+            this.btnFlip.UseVisualStyleBackColor = true;
+            this.btnFlip.Click += new System.EventHandler(this.btnFlip_Click);
             // 
             // btnMineSweeper
             // 
@@ -470,17 +481,6 @@ namespace Homework
             this.tmClock.Enabled = true;
             this.tmClock.Interval = 1000;
             this.tmClock.Tick += new System.EventHandler(this.tmClock_Tick);
-            // 
-            // btnFlip
-            // 
-            this.btnFlip.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnFlip.Location = new System.Drawing.Point(12, 787);
-            this.btnFlip.Name = "btnFlip";
-            this.btnFlip.Size = new System.Drawing.Size(187, 36);
-            this.btnFlip.TabIndex = 23;
-            this.btnFlip.Text = "翻牌";
-            this.btnFlip.UseVisualStyleBackColor = true;
-            this.btnFlip.Click += new System.EventHandler(this.btnFlip_Click);
             // 
             // Form_Index
             // 

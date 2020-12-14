@@ -336,8 +336,8 @@ namespace Homework
         {
             AllocConsole();
             ConsoleColor oriColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("* Don't close this console window or the application will also close.");
+            Console.ForegroundColor = ConsoleColor.Yellow;            
+            Console.WriteLine("* Don't close this console window or the application will also close.");            
             Console.WriteLine("123");
             Console.ForegroundColor = oriColor;
 

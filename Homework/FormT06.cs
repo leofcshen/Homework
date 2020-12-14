@@ -75,6 +75,7 @@ namespace Homework
                     buttons[i, j].Size = new Size(200, 200);
                     buttons[i, j].Font = new Font("Tahoma", 30, FontStyle.Bold);
                     buttons[i, j].ForeColor = Color.Red;
+                    buttons[i, j].TextAlign = ContentAlignment.BottomRight;
                     buttons[i, j].Name = $"btn[{i},{j}]";
                     buttons[i, j].Location = new Point(200 * i, 200 * j);
                     buttons[i, j].BackColor = Color.Beige;
@@ -105,6 +106,7 @@ namespace Homework
                     buttons[i, j].Size = new Size(200, 200);
                     buttons[i, j].Font = new Font("Tahoma", 30, FontStyle.Bold);
                     buttons[i, j].ForeColor = Color.Red;
+                    buttons[i, j].TextAlign = ContentAlignment.BottomRight;
                     buttons[i, j].Name = $"btn[{i},{j}]";
                     buttons[i, j].Location = new Point(200 * i, 200 * j);
                     buttons[i, j].BackColor = Color.Beige;
